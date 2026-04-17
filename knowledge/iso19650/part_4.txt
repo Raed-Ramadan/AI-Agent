@@ -1,0 +1,553 @@
+Organization and digitization of
+information about buildings and civil
+engineering works, including building
+information modelling (BIM) —
+Information management using
+building information modelling —
+Part 4:
+Information exchange
+Organisation et numérisation des informations relatives aux
+bâtiments et ouvrages de génie civil, y compris modélisation des
+informations de la construction (BIM) — Gestion de l’information par
+la modélisation des informations de la construction —
+Partie 4: Échange d’informations
+INTERNATIONAL
+STANDARD
+ISO
+19650-4
+First edition
+2022-08
+Reference number
+ISO 19650-4:2022(E)
+© ISO 2022ii
+ISO 19650-4:2022(E)
+COPYRIGHT PROTECTED DOCUMENT
+© ISO 2022
+All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may
+be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on
+the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address below
+or ISO’s member body in the country of the requester.
+ISO copyright office
+CP 401 • Ch. de Blandonnet 8
+CH-1214 Vernier, Geneva
+Phone: +41 22 749 01 11
+Email: copyright@iso.org
+Website: www.iso.org
+Published in Switzerland
+© ISO 2022 – All rights reservedISO 19650-4:2022(E)
+Foreword........................................................................................................................................................................................................................................iv
+Introduction .................................................................................................................................................................................................................................v
+1 Scope................................................................................................................................................................................................................................. 1
+2 Normative references ..................................................................................................................................................................................... 1
+3	 Terms and definitions.................................................................................................................................................................................... 2
+3.1 Terms relating to phases ............................................................................................................................................................... 2
+3.2 Terms relating to activities ......................................................................................................................................................... 2
+4 Process overview.................................................................................................................................................................................................3
+5 Process steps............................................................................................................................................................................................................ 3
+5.1 Mobilization and information production ..................................................................................................................... 3
+5.1.1 General ........................................................................................................................................................................................ 3
+5.1.2 Mobilization and testing prior to information exchange ............................................................... 3
+5.1.3 Implementation ................................................................................................................................................................... 4
+5.2 Shared state .............................................................................................................................................................................................. 4
+5.3 Published state....................................................................................................................................................................................... 5
+5.4 Change actions........................................................................................................................................................................................ 5
+5.4.1 General ........................................................................................................................................................................................ 5
+5.4.2 Identify issues and risks.............................................................................................................................................. 5
+5.4.3 Allocate issues and risks ............................................................................................................................................. 5
+5.4.4 Implement changes .......................................................................................................................................................... 5
+6 Decisions on change of state....................................................................................................................................................................6
+6.1 Decision A: approve for sharing .............................................................................................................................................. 6
+6.2 Decision B: authorize and accept for publication .................................................................................................... 6
+6.3 Decision criteria.................................................................................................................................................................................... 6
+6.4 Exceptions................................................................................................................................................................................................... 7
+7 Criteria for reviewing an information exchange............................................................................................................... 8
+7.1 Common data environment (CDE) ........................................................................................................................................ 8
+7.2 Conformance ............................................................................................................................................................................................ 8
+7.3 Continuity ................................................................................................................................................................................................... 8
+7.4 Communication...................................................................................................................................................................................... 9
+7.5 Consistency................................................................................................................................................................................................ 9
+7.6 Completeness ........................................................................................................................................................................................ 10
+7.7 Other criteria (informative)..................................................................................................................................................... 10
+Annex A (informative) Open schema and data format standards.....................................................................................11
+Bibliography.............................................................................................................................................................................................................................12
+© ISO 2022 – All rights reserved iii
+Contents PageISO 19650-4:2022(E)
+Foreword
+ISO (the International Organization for Standardization) is a worldwide federation of national standards
+bodies (ISO member bodies). The work of preparing International Standards is normally carried out
+through ISO technical committees. Each member body interested in a subject for which a technical
+committee has been established has the right to be represented on that committee. International
+organizations, governmental and non-governmental, in liaison with ISO, also take part in the work.
+ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of
+electrotechnical standardization.
+The procedures used to develop this document and those intended for its further maintenance are
+described in the ISO/IEC Directives, Part 1. In particular, the different approval criteria needed for the
+different types of ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).
+Attention is drawn to the possibility that some of the elements of this document may be the subject of
+patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of
+any patent rights identified during the development of the document will be in the Introduction and/or
+on the ISO list of patent declarations received (see www.iso.org/patents).
+Any trade name used in this document is information given for the convenience of users and does not
+constitute an endorsement.
+For an explanation of the voluntary nature of standards, the meaning of ISO specific terms and
+expressions related to conformity assessment, as well as information about ISO's adherence to
+the World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT), see
+www.iso.org/iso/foreword.html.
+This document was prepared by Technical Committee ISO/TC 59, Buildings and civil engineering works,
+Subcommittee SC 13, Organization and digitization of information about buildings and civil engineering
+works, including building information modelling (BIM), in collaboration with the European Committee
+for Standardization (CEN) Technical Committee CEN/TC 442, Building Information Modelling (BIM), in
+accordance with the Agreement on technical cooperation between ISO and CEN (Vienna Agreement).
+A list of all parts in the ISO 19650 series can be found on the ISO website.
+Any feedback or questions on this document should be directed to the user’s national standards body. A
+complete listing of these bodies can be found at www.iso.org/members.html.
+iv © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+Introduction
+ISO 19650-1 to ISO 19650-3 require the sharing of project and asset information as part of collaborative
+and convergent processes. These provide the governance and strategy around the execution of
+information management during both the delivery phase and operational phase of the whole life
+cycle. ISO 19650-4 supplements ISO 19650-1 to ISO 19650-3 and ISO 19650-5 by providing the explicit
+process and criteria for each individual information exchange. The intention is to secure the benefits
+arising from collaborative and interoperable building information modelling (BIM) by choosing ‘open’
+schemas, data formats and conventions whilst specifying when alternatives may be appropriate.
+Information exchange occurs within the information production and consumption process at every level
+between project teams and asset/facility management and operation teams (see ISO 19650-2:2018,
+Figure 2 and ISO 19650-3:2020, Figure 3). It is critical that appropriate criteria are applied to ensure
+the reliability of the information and the repeatability of the processes. The requirements around
+information exchange (identified in this document) are distinct from any specific “exchange information
+requirements (EIR)” as used in ISO 19650-1, ISO 19650-2 and ISO 19650-3.
+The information exchange process is based on the choice of how information containers (see
+ISO 19650-1:2018, 3.3.12) are specified to ensure that information can be managed.
+In this context, an information container:
+— is given a persistent identifier and other metadata;
+— can be retrieved, using a common data environment (CDE) and appropriate status metadata;
+— is made persistent, using revisioning and systematic archiving.
+The use of appropriate quality assurance and quality control measures supports the fulfilment
+of a specific exchange information requirement related to an individual information exchange by
+enumerating criteria relating to completeness, compliance to formal exchange schemas, the continuity
+of concepts between exchanges and the elimination of spatial and specification conflicts.
+It promotes a proportional and sustainable approach to information exchange where the immediate
+delivery of information does not limit its future use.
+The concepts and principles relating to the application of the requirements within this document are
+provided in ISO 19650-1, and in the information exchanges specified in ISO 19650-2 and ISO 19650-3.
+EN 17412-1[1] describes a methodology for qualifying an exchange with criteria relating to relating to
+level of information need.
+NOTE Asset delivery and operation have a role in achieving the UN Sustainable Development Goals[2].
+© ISO 2022 – All rights reserved vINTERNATIONAL STANDARD ISO 19650-4:2022(E)
+Organization and digitization of information about
+buildings and civil engineering works, including building
+information modelling (BIM) — Information management
+using building information modelling —
+Part 4:
+Information exchange
+1 Scope
+This document specifies the detailed process and criteria for decision makings when executing
+an information exchange as specified by the ISO 19650 series to ensure the quality of the resulting
+project information model or asset information model. It details the implementation of the concepts
+in ISO 19650-1 and is applicable to any information exchange within the delivery stages covered by
+ISO 19650-2 and operational trigger events covered by ISO 19650-3.
+This document is applicable to assets of all sizes and all levels of complexity. This includes portfolios
+of buildings, campuses, infrastructure networks, individual buildings and pieces of infrastructure.
+The requirements in this document should be applied in a way that is appropriate to the scale and
+complexity of the asset. This document makes use of the phrase “shall consider”. This phrase is used to
+introduce a list of items that the person in question is required to think about carefully in connection
+with the primary requirement described in the subclause. The amount of thought involved, the time
+taken to complete it, and the need for supporting evidence depend on the complexity of the asset,
+the experience of the person(s) involved, and the requirements of any national policy on introducing
+building information modelling. On a relatively small or straightforward asset, it can be possible to
+complete, or dismiss as not relevant, some of these “shall consider” items very quickly. One way to help
+identify which of the “shall consider” statements are relevant can be to review each statement and
+create templates for assets of different sizes and complexity.
+2 Normative references
+The following documents are referred to in the text in such a way that some or all of their content
+constitutes requirements of this document. For dated references, only the edition cited applies. For
+undated references, the latest edition of the referenced document (including any amendments) applies.
+ISO 6707-1, Buildings and civil engineering works — Vocabulary — Part 1: General terms
+ISO 6707-2, Buildings and civil engineering works — Vocabulary — Part 2: Contract terms
+ISO 19650-1:2018, Organization and digitization of information about buildings and civil engineering
+works, including building information modelling (BIM) — Information management using building
+information modelling — Part 1: Concepts and principles
+ISO 19650-2:2018, Organization and digitization of information about buildings and civil engineering
+works, including building information modelling (BIM) — Information management using building
+information modelling — Part 2: Delivery phase of the assets
+ISO 19650-3:2020, Organization and digitization of information about buildings and civil engineering
+works, including building information modelling (BIM) — Information management using building
+information modelling — Part 3: Operational phase of the assets
+© ISO 2022 – All rights reserved 1ISO 19650-4:2022(E)
+ISO 19650-5, Organization and digitization of information about buildings and civil engineering works,
+including building information modelling (BIM) — Information management using building information
+modelling — Part 5: Security-minded approach to information management
+3	 Terms and definitions
+For the purposes of this document, the terms and definitions given in ISO 6707-1, ISO 6707-2, ISO 19650-1
+and the following apply.
+ISO and IEC maintain terminology databases for use in standardization at the following addresses:
+— ISO Online browsing platform: available at https://www.iso.org/obp
+— IEC Electropedia: available at https://www.electropedia.org/
+3.1 Terms relating to phases
+3.1.1
+stage
+distinct period in a project used as a management tool
+Note 1 to entry: A stage generally terminates at a key decision point (ISO 19650-1:2018, 3.2.14).
+Note 2 to entry: Handover can be viewed as a delivery stage and as an operational trigger event.
+Note 3 to entry: Trigger event is defined in ISO 19650-1:2018, 3.2.13.
+[SOURCE: ISO 6707-2:2017, 3.3.4, modified — The original note 1 to entry has been removed; new
+notes 1 to 3 to entry have been added; the preferred term "phase" has been removed.]
+3.2 Terms relating to activities
+3.2.1
+information provider
+actor who provides information in an information container
+EXAMPLE 1 A structural engineer acts as an information provider in preparing a detailed proposal during a
+detailed design stage (3.1.1).
+EXAMPLE 2 A maintenance team acts as an information provider in preparing an inspection report on an
+asset during an operational trigger event.
+Note 1 to entry: Information providers include both the authors of requirements and the providers delivering
+information according to the requirements.
+3.2.2
+information receiver
+actor who receives information in an information container
+Note 1 to entry: An information receiver can be the appointing party or a lead appointed party with responsibility
+for the authorization and acceptance of information into the published state. See ISO 19650-1:2018, Figure 6.
+Note 2 to entry: For appointing party, lead appointed party and appointed party see ISO 19650-1:2018, 3.2.3 and
+3.2.4.
+3.2.3
+information reviewer
+actor who reviews information and its information container
+EXAMPLE An information provider (3.2.1) such as a structural engineer or maintenance team, acts as a
+reviewer before approval from the work in progress (WIP) state.
+2 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+Note 1 to entry: The task team leader acts as reviewer before approval out of work in progress (WIP) state.
+Note 2 to entry: The delivery or operational team including the lead appointed party, act as reviewers before the
+authorization into the published state and its possible acceptance by the appointing party.
+Note 3 to entry: An information reviewer can be an artificial intelligence agent or an automated rules-based
+process.
+4 Process overview
+Each information exchange, whether executed during or at the end of a stage or trigger event, shall
+be executed as specified in ISO 19650-2:2018, 5.6 and 5.7 or ISO 19650-3:2020, 5.6 and the associated
+governance arrangements, as summarized in Figure 1. Each process is detailed in Clause 5, each
+decision in Clause 6 and the criteria in Clause 7.
+Key
+1 generate work in progress (see 5.1)
+2 use shared state (see 5.2)
+3 use published state (see 5.3)
+4 develop change actions (see 5.4)
+A decision A: approve for sharing (a1, see 6.1) or change action (a0, see 5.4) or omission from the shared state
+(a2, see 6.4)
+B decision B: authorize and accept for publication (b1, see 6.2) or change action (b0, see 5.4)
+Figure 1 — Information exchange process
+NOTE 6.4 provides the criteria and examples of information exchanges that can omit the shared state given
+other controls, shown dotted.
+5 Process steps
+5.1 Mobilization and information production
+5.1.1 General
+During delivery stages and operational trigger events information providers shall produce information
+and develop information containers using other shared and/or published resources and reference
+information as background information, and as work in progress (see Figure 1, key 1).
+NOTE Implementation (5.1.3) can be dependent on steps taken during mobilization (5.1.2).
+5.1.2 Mobilization and testing prior to information exchange
+The methods and procedures of undertaking an information exchange shall be tested to ensure flow of
+information, prior to finalizing requirements and exchanging deliverables.
+© ISO 2022 – All rights reserved 3ISO 19650-4:2022(E)
+The information provider shall review and confirm the selected authoring software to use during
+mobilization (ISO 19650-2:2018, 5.4 and ISO 19650-3:2020, 5.4).
+To facilitate the information development process, the information provider shall select authoring
+software that supports:
+— import of the schemas and data formats of relevant reference information;
+— export of the requested schemas and data formats; and
+— interaction with any agreed issue and risk registering and agreed management tools.
+The information receivers and information reviewers shall review and confirm the versions of open
+data formats and proprietary data formats to be used.
+The information receivers shall consider the need and benefits for information exchange using:
+— open schema and data format standards that allow cross-party collaboration and
+— proprietary or native data formats where this does not disadvantage any information receivers'
+immediate or future needs.
+NOTE Open schemas and data formats are summarized in Annex A.
+The information receivers shall check and confirm the selected review and integration software
+(ISO 19650-2:2018, 5.4 and ISO 19650-3:2020, 5.4) capable of the appropriate handling of information
+exchanges including:
+— importing into a persistent information container;
+— federating using applications to create a temporary information resource and
+— linking as information references or semantic web linking.
+5.1.3 Implementation
+All information development and information exchanges shall be executed under the appropriate
+security arrangements or security management plan (ISO 19650-5).
+The information provider shall plan the exchange of information, to support collaborative working and
+the CDE process as described in ISO 19650-1:2018, Clause 12, and exchange it conforming to the agreed
+governance (ISO 19650-2:2018, 5.5 or ISO 19650-3:2020, 5.5) with appropriate status:
+— when the information is in a coherent state (ISO 19650-2:2018, 5.7);
+— early in a delivery stage or operational trigger event and
+— often, when changes have been made.
+NOTE See 6.1 for the subsequent decision A for approval into the shared state.
+5.2 Shared state
+Information reviewers shall review the information container, against the criteria for reviewing an
+information exchange (see Clause 7), using the shared information as reference material and context
+where necessary. (ISO 19650-1:2018, Clause 12). See Figure 1, key 2.
+NOTE 1 See 6.1 for the preceding decision A for approval into the shared state.
+NOTE 2 Reference information can be provided by the appointing party or other teams.
+NOTE 3 See 6.2 for the subsequent decision B for authorization and acceptance into the published state.
+4 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+5.3 Published state
+The information receiver shall use the information exchanged in the published state for the key
+decisions, completion of a delivery stage or operational trigger event and subsequent, stages and trigger
+events (ISO 19650-1:2018, Clause 12). See Figure 1, key 3.
+NOTE See 6.2 for the preceding decision B for authorization and acceptance into the published state.
+5.4 Change actions
+5.4.1 General
+Change action can be required from issues and risks detected at decision A and at decision B (see
+Figure 1, key 4), as illustrated in Figure 2.
+Key
+1 identify issues and risks (see 5.4.2)
+2 allocate issues and risks (see 5.4.3)
+3 implement changes (see 5.4.4)
+Figure 2 — Change action process
+5.4.2 Identify issues and risks
+An information reviewer shall review the information to identify any issues and risks relevant to the
+purpose for the information exchange (see Figure 2).
+EXAMPLE 1 The structural engineer can review their coordination models against any shared coordination
+models.
+EXAMPLE 2 In response to the outcome of a thermal analysis, the mechanical engineer resizes the air handling
+unit, and updates the mechanical coordination model. The electrical engineer reviews the coordination model
+and respond to new electrical supply demands of the mechanical systems.
+EXAMPLE 3 The maintenance team can review that the received report uses agreed equipment identifiers.
+NOTE A collaborative issue register can hold the information delivery risks (see ISO 19650-2:2018, 5.3.6 and
+ISO 19650-3:2020, 5.3.6). Commercial, operational and health-and-safety risks can be handled separately.
+5.4.3 Allocate issues and risks
+An information reviewer shall document all identified issues and risks for revision and corrective
+actions to the lead appointed party or as set out in the appointment. A determination can then be made
+as to whether the issue or risk can be allocated directly or requires a collaborative review (see Figure 2).
+NOTE Documentation can be through BCF[3] , through other messages or by direct entry into a register.
+5.4.4 Implement changes
+The information provider shall implement any necessary revisions and change actions in their work in
+progress state, (see Figure 2), by returning to 5.1.3 (Figure 1, key 1).
+NOTE Only the information provider can modify and revise an information container in their WIP.
+© ISO 2022 – All rights reserved 5ISO 19650-4:2022(E)
+6 Decisions on change of state
+6.1 Decision A: approve for sharing
+An information provider shall review their information using the criteria in Clause 7 prior to either
+withholding or granting approval for the information to transition to the shared state (ISO 19650-1:2018,
+12.3, ISO 19650-2:2018, 5.6.3 and ISO 19650-3:2020, 5.6.3). See Figure 1 and 5.4 for corrective actions.
+An information provider shall consider the effectiveness of the processes in effect:
+— quality assurance processes by the information provider to ensure compliance;
+— quality control processes by the information provider and receivers to check for compliance.
+6.2 Decision B: authorize and accept for publication
+The information receiver shall review an information container using the criteria in Clause 7. The
+information receiver shall either reject or authorize and accept for the published state (ISO 19650-1:2018,
+12.5, ISO 19650-2:2018, 5.7.2 and ISO 19650-3:2020, 5.6.6). See Figure 1.
+NOTE This decision process can be carried out in two steps, the first requiring authorization by the lead
+appointed party and the second requiring acceptance by the appointing party, as described in ISO 19650-2:2018,
+5.7.4 and ISO 19650-3:2020, 5.7.2.
+The information reviewers shall consider the effectiveness in ensuring compliance of the quality
+management processes including:
+— quality control and assurance processes applied by the information provider before sharing;
+— quality control processes applied by information reviewers after sharing.
+6.3 Decision criteria
+An information reviewer shall support or endorse the information exchange prior to decision A on
+sharing or prior to decision B on publication if the acceptance criteria in Clause 7 are met, or otherwise
+raise the pertinent issues for resolution. Figure 3 illustrates sources for criteria.
+All the criteria shall be applied to each information container, except as allowed in 6.4.
+NOTE 1 Criteria can be derived from ISO/TS 12911[4], ISO 29481-1[5] and EN 17412-1[1], and from the
+information standard, shared resources, information production methods and procedures and any EIR as defined
+in ISO 19650-2 and ISO 19650-3.
+NOTE 2 These criteria can be in the information standard, information production methods and procedures
+and the applicable EIR and are outlined in ISO 19650-1:2018, 11.3. See also ISO 19650-2:2018, 5.2.1 and
+ISO 19650-3:2020, 5.2.2.d and 5.4.3. Partial acceptance is discussed in ISO 19650-2:2018 5.7.2 and 5.7.4 and
+ISO 19650-3:2020 5.6.6 and 5.7.2 .
+NOTE 3 Structured information and consistent processes can support systematic and automated compliance
+checking.
+6 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+Key
+a project/asset information standard
+b project/asset shared resources
+c project/asset information production methods and procedures
+d EIR
+7.1 - 7.7 information criteria defined in clause 7.
+Figure 3 — Illustration of the sources of criteria
+6.4 Exceptions
+The review process may exclude information containers that are not subject to revision or change as
+long as the quality, naming and associated metadata are checked by the information receivers.
+The information reviewers shall consider exempting the following cases:
+— electronic representations of physical evidence related to administration, certificates and
+acceptance documents;
+— direct process monitoring signals once appropriate automatic filters and triggers have been
+established following their initial activation including testing;
+— photographs, scans and video material.
+© ISO 2022 – All rights reserved 7ISO 19650-4:2022(E)
+7 Criteria for reviewing an information exchange
+7.1 Common data environment (CDE)
+The information reviewer shall check that the naming and metadata requirements of the CDE are
+correctly applied to the information container.
+The information reviewer shall check the metadata describing:
+— the information necessary to support the required workflow;
+— the information within the container.
+The information reviewer shall check that security and handling requirements have not been breached,
+especially relating to the visibility of the information container to others.
+NOTE 1 Refer to ISO 19650-1:2018, Clause 12, ISO 19650-2:2018, 5.1.7 or ISO 19650-3:2020, 5.1.9 and
+ISO 19650-5.
+NOTE 2 If the CDE is composed of multiple CDE solutions, then it can also be necessary to check that the
+naming and metadata is retained and that the legally significant archive is maintained.
+7.2 Conformance
+The information reviewer shall check the information container against the chosen exchange schema
+and data format.
+NOTE 1 These checks are part of the checks against the project information standard in ISO 19650-2:2018,
+5.6.3, against the asset information standard in ISO 19650-3:2020, 5.6.3 and 5.6.6, and against the acceptance
+criteria mentioned in ISO 19650-2:2018, 5.7.2 and 5.7.4 and ISO 19650-3:2020, 5.7.2.
+EXAMPLE Checking that the schema adheres to ISO 16739-1[6] and the data format adheres to ISO 10303-21[7]
+as agreed in the project/asset information standard.
+7.3 Continuity
+The information reviewer shall check for the continuity of the content compared with:
+— other information containers;
+— previous versions of the current information container;
+— previous status changes;
+— previous delivery stages and operational trigger events;
+— previous delivery or operational phases;
+with respect to:
+— geospatial co-location, including geo-location, site location and asset location;
+— calendar coordination;
+— spatial, physical, and process entity naming including
+process, site, facility, storey/region, types and
+systems and zones, packages and method statements;
+— space/location, component and task entity naming;
+— attribute, property, material and shape/profile naming.
+8 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+NOTE 1 This is necessary to support comparisons and progress tracking, ensuring that only actual changes
+are detected.
+NOTE 2 These checks explain in more detail the information container and information model reviews
+mentioned in ISO 19650-2:2018, 5.6.4, 5.6.5 and 5.7.2, and in ISO 19650-3:2020, 5.6.4, 5.6.5 and 5.6.6.
+7.4 Communication
+The information reviewer shall check that the exchanged information can be or has been stored without
+degradation or loss due to translation or conversion.
+NOTE 1 Degradation can only be detected after the information container has been exchanged, so tests can
+also be conducted during mobilization in collaboration with the information provider, and any lessons learned
+applied.
+The information reviewer shall consider effects of information degradation due to changes of:
+— date format or calendar assumptions;
+— units of measure;
+— character sets or encoding.
+The information reviewer shall consider effecting comparison using:
+— visual inspection;
+— reports; and/or
+— file size and checksums.
+NOTE 2 These checks explain in more detail the information model reviews mentioned in ISO 19650-2:2018,
+5.7.4 and ISO 19650-3:2020, 5.7.2.
+7.5 Consistency
+The information reviewer shall check for the internal consistency with any referenced information
+containers in terms of:
+— spatial, physical and process consistency including the absence of duplication and conflicts such as
+overlaps or gaps;
+— attribute and property consistency such as contradictions;
+— gaps or overlaps with adjacent information containers within the federation strategy;
+— incorrect allocation with other information containers within the federation strategy;
+— appropriate accuracy including quantitative accuracy of locational and property values and thematic
+accuracy of classification and text properties.
+An information reviewer shall consider the intended status code prior to the shared state or the
+assigned status code prior to the published state as specified in ISO 19650-1:2018, 3.3.12 and 12.1.
+NOTE These checks explain in more detail the information container and information model reviews
+mentioned in ISO 19650-2:2018, 5.6.4, 5.6.5 and 5.7.2, and in ISO 19650-3:2020, 5.6.4, 5.6.5 and 5.6.6.
+© ISO 2022 – All rights reserved 9ISO 19650-4:2022(E)
+7.6 Completeness
+An information reviewer shall check for the presence and adequacy of the information against the level
+of information need specified by the EIR and any additional expectations.
+NOTE 1 This can include entities, relationships, properties and shape, and their representations and
+descriptions (see ISO/TS 12911[4] and EN 17412-1 [1]).
+An information reviewer shall consider the following three requirements:
+— to satisfy the purposes associated to the immediate delivery stage or operational trigger event;
+— to support oversight and coordination of the delivery or operational phase, including support for
+coordination of spatial, physical and process aspects;
+— to enable long-term management and societal requirements, using standard naming and
+classification and open standards.
+An information reviewer shall consider:
+— the intended status code prior to the shared state or the assigned status code prior to the published
+state as specified in ISO 19650-1:2018, 3.3.12 and 12.1;
+— using a formalized procedure when checking against the information requirements or checklists
+derived from them, possibly including structured rules using repeatable automated processes;
+— means of sharing checking procedures with information providers through the information
+production methods and procedures.
+NOTE 2 Information Delivery Manuals (IDM), Model View Definitions (MVD) and Information Delivery
+Specifications (IDS) definitions can have a role in checking for the completeness in terms of entities, relationships,
+properties and geometry (see ISO 29481-1 and ISO 29481-3[5]).
+NOTE 3 These checks explain in more detail the checks against level of information need mentioned in
+ISO 19650-2:2018, 5.6.4 and 5.7.2, and in ISO 19650-3:2020, 5.6.4, 5.6.6 and 5.7.2.
+7.7 Other criteria (informative)
+The information reviewer can also check for satisfaction of the asset delivery and/or operational
+requirements using judgement and analysis tools as appropriate. Delivery and operational phase
+requirements can be articulated within the appointment documentation.
+The reviewer can consider:
+— functional criteria;
+— capacity and performance criteria;
+— technical standards;
+— commercial and legal requirements;
+— health and safety considerations.
+NOTE This review can be particularly significant at the end of each delivery stage or operational trigger
+event. See CEN/TR 17439-1 ,6.4[8].
+10 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+Annex A
+(informative)
+Open schema and data format standards
+A.1 Open schema
+Table A.1 provides examples of open schemas enabling interoperability.
+Table A.1 — Open schema
+Name ISO standard Data format File suffixes
+IFC ISO 16739-1[6] spf xml rdf/owl .ifc .ifcxml
+GML ISO 19136 (all parts) [9] xml .gml
+Posc/Cesar ISO 15926 (all parts) [10] .spf
+Other regionally or sector specified open schemas and data formats are in use such as:
+a) CAFMconnect[11] for built asset orientated handover;
+b) COBie[12] for built asset orientated equipment and impact handover;
+c) CFIHOS[13] for plant-orientated handover;
+d) Oscre[14] for various property related transactions.
+Open schema and data formats can be checkable using formal requirements definitions such as
+ISO 29481-3[5] mvdXML/IDS (forthcoming)
+A.2 Open data formats
+Table A.2 provides examples of open data formats enabling interoperability.
+Table A.2 — Open data formats
+Use ISO standard Data format File suffixes
+Spreadsheet document ISO 29500 (all parts)[15] xml, text .docx .xlsx .csv
+Portable document ISO 19005[16] .pdf
+Office document ISO/IEC 26300 (all parts)[17] xml .odt .ods .odp
+RDBMS ISO 9075-1[18] text .sql .gql
+Image ISO/IEC 10918[19] (all parts) .jpg
+Image ISO/IEC 15948[20] .png
+Multi container
+package
+ISO 21597[21] (all parts) zip, rdf-xml .icdd
+Building Collaboration Format[3] (BCF) is an international industry consensus specified open schema
+and data format for the identification, communication and exchange of issues.
+ISO/TR 22299[22] covers the significance of information container standards in more detail.
+© ISO 2022 – All rights reserved 11ISO 19650-4:2022(E)
+Bibliography
+[1] EN 17412-1, Building Information Modelling -Level of Information Need - Part 1: Concepts and
+principles
+[2] ISO, TC251 Asset management - Achieving the UN Sustainable Development Goals https://
+committee.iso.org/files/live/sites/tc251/files/guidance/ISO TC251 SDG March 2018.pdf
+[3] BCF https://technical.buildingsmart.org/standards/bcf/
+[4] ISO/TS 12911, Framework for building information modelling (BIM) guidance
+[5] ISO 29481, Building information models — Information delivery manual
+[6] ISO 16739-1, Industry Foundation Classes (IFC) for data sharing in the construction and facility
+management industries — Part 1: Data schema
+[7] ISO 10303-21, Industrial automation systems and integration — Product data representation and
+exchange — Part 21: Implementation methods: Clear text encoding of the exchange structure
+[8] CEN/TR 17439-1, Guidance on how to implement EN ISO 19650-1 and -2 in Europe
+[9] ISO 19136 (all parts), Geographic information — Geography Markup Language (GML)
+[10] ISO 15926 (all parts), Industrial automation systems and integration — Integration of life cycle
+data for process plants including oil and gas production facilities
+[11] CAFMconnect https://www.cafm-connect.org/
+[12] COBie https://www.nationalbimstandard.org/files/NBIMS-US_V3_4.2_COBie.pdf
+[13] CFIHOS https://www.jip36-cfihos.org/
+[14] Oscre: https://www.oscre.org/
+[15] ISO/IEC 29500 (all parts), Document description and processing languages — Office Open XML file
+formats
+[16] ISO 19005 (all parts), Document management — Electronic document file format for long-term
+preservation
+[17] ISO/IEC 26300 (all parts), Information technology — Open Document Format for Office Applications
+(OpenDocument) v1.0
+[18] ISO 9075-1, Information technology — Database languages — SQL
+[19] ISO/IEC 10918 (all parts), Information technology — Digital compression and coding of continuoustone still images
+[20] ISO/IEC 15948, Information technology — Computer graphics and image processing — Portable
+Network Graphics (PNG): Functional specification
+[21] ISO 21597 (all parts), Information container for linked document delivery — Exchange specification
+[22] ISO/TR 22299, Document management — Digital file format recommendations for long-term
+storage
+12 © ISO 2022 – All rights reservedISO 19650-4:2022(E)
+ICS 35.240.67; 93.010; 91.010.01
+Price based on 12 pages
+© ISO 2022 – All rights reserved

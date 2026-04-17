@@ -1,0 +1,1212 @@
+© ISO 2018
+Organization and digitization of
+information about buildings and civil
+engineering works, including building
+information modelling (BIM) —
+Information management using
+building information modelling —
+Part 1:
+Concepts and principles
+Organisation et numérisation des informations relatives aux
+bâtiments et ouvrages de génie civil, y compris modélisation des
+informations de la construction (BIM) — Gestion de l'information par
+la modélisation des informations de la construction —
+Partie 1: Concepts et principes
+INTERNATIONAL
+STANDARD
+ISO
+19650-1
+First edition
+2018-12
+Reference number
+ISO 19650-1:2018(E)ISO 19650-1:2018(E)
+ii © ISO 2018 – All rights reserved
+COPYRIGHT PROTECTED DOCUMENT
+© ISO 2018
+All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may
+be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting
+on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address
+below or ISO’s member body in the country of the requester.
+ISO copyright office
+CP 401 • Ch. de Blandonnet 8
+CH-1214 Vernier, Geneva
+Phone: +41 22 749 01 11
+Fax: +41 22 749 09 47
+Email: copyright@iso.org
+Website: www.iso.org
+Published in SwitzerlandISO 19650-1:2018(E)
+Foreword ..........................................................................................................................................................................................................................................v
+Introduction................................................................................................................................................................................................................................vi
+1 Scope ................................................................................................................................................................................................................................. 1
+2 Normative references...................................................................................................................................................................................... 1
+3	 Terms and definitions..................................................................................................................................................................................... 1
+3.1 General terms........................................................................................................................................................................................... 1
+3.2 Terms related to assets and projects ................................................................................................................................... 2
+3.3 Terms related to information management................................................................................................................... 3
+4 Asset and project information, perspectives and collaborative working .................................................6
+4.1 Principles ..................................................................................................................................................................................................... 6
+4.2 Information management according to the ISO 19650 series....................................................................... 6
+4.3 Information management perspectives ............................................................................................................................ 7
+5	 Definition of information requirements and resulting information models........................................8
+5.1 Principles ..................................................................................................................................................................................................... 8
+5.2 Organizational information requirements (OIR) ...................................................................................................10
+5.3 Asset information requirements (AIR) ...........................................................................................................................10
+5.4 Project information requirements (PIR) .......................................................................................................................10
+5.5 Exchange information requirements (EIR).................................................................................................................10
+5.6 Asset information model (AIM).............................................................................................................................................11
+5.7 Project information model (PIM).........................................................................................................................................11
+6 The information delivery cycle...........................................................................................................................................................11
+6.1 Principles ..................................................................................................................................................................................................11
+6.2 Alignment with the asset life cycle .....................................................................................................................................11
+6.3 Setting information requirements and planning for information delivery .....................................13
+6.3.1 General principles........................................................................................................................................................13
+6.3.2 Delivery team provides information for asset owner/operator or client
+decisions ..............................................................................................................................................................................15
+6.3.3 Information verification and validation at start and end of project stages................15
+6.3.4 Information is drawn from the whole delivery team ....................................................................16
+6.3.5 Summary of information delivery from project and asset delivery teams .................17
+7 Project and asset information management functions.............................................................................................18
+7.1 Principles ..................................................................................................................................................................................................18
+7.2 Asset information management functions...................................................................................................................19
+7.3 Project information management functions ..............................................................................................................19
+7.4 Task information management functions.....................................................................................................................19
+8 Delivery team capability and capacity........................................................................................................................................20
+8.1 Principles ..................................................................................................................................................................................................20
+8.2 Extent of capability and capacity review.......................................................................................................................20
+9 Information container-based collaborative working..................................................................................................20
+10 Information delivery planning............................................................................................................................................................21
+10.1 Principles ..................................................................................................................................................................................................21
+10.2 Timing of information delivery..............................................................................................................................................21
+10.3 Responsibility matrix .....................................................................................................................................................................22
+10.4 Defining the federation strategy and breakdown structure for information containers.....22
+11 Managing the collaborative production of information ...........................................................................................23
+11.1 Principles ..................................................................................................................................................................................................23
+11.2 Level of information need...........................................................................................................................................................23
+11.3 Information quality..........................................................................................................................................................................23
+12	 Common data environment (CDE) solution and workflow ...................................................................................24
+© ISO 2018 – All rights reserved iii
+Contents PageISO 19650-1:2018(E)
+12.1 Principles ..................................................................................................................................................................................................24
+12.2 The work in progress state........................................................................................................................................................25
+12.3 The check/review/approve transition............................................................................................................................25
+12.4 The shared state..................................................................................................................................................................................25
+12.5 The review/authorize transition..........................................................................................................................................26
+12.6 The published state..........................................................................................................................................................................26
+12.7 The archive state ................................................................................................................................................................................26
+13 Summary of “building information modelling (BIM) according to the ISO 19650 series” ...26
+Annex A (informative) Illustrations of federation strategies and information container
+breakdown structures .................................................................................................................................................................................30
+Bibliography .............................................................................................................................................................................................................................34
+iv © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Foreword
+ISO (the International Organization for Standardization) is a worldwide federation of national standards
+bodies (ISO member bodies). The work of preparing International Standards is normally carried out
+through ISO technical committees. Each member body interested in a subject for which a technical
+committee has been established has the right to be represented on that committee. International
+organizations, governmental and non-governmental, in liaison with ISO, also take part in the work.
+ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of
+electrotechnical standardization.
+The procedures used to develop this document and those intended for its further maintenance are
+described in the ISO/IEC Directives, Part 1. In particular, the different approval criteria needed for the
+different types of ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).
+Attention is drawn to the possibility that some of the elements of this document may be the subject of
+patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of
+any patent rights identified during the development of the document will be in the Introduction and/or
+on the ISO list of patent declarations received (see www.iso.org/patents).
+Any trade name used in this document is information given for the convenience of users and does not
+constitute an endorsement.
+For an explanation of the voluntary nature of standards, the meaning of ISO specific terms and
+expressions related to conformity assessment, as well as information about ISO's adherence to the
+World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT) see www.iso
+.org/iso/foreword.html.
+This document was prepared by Technical Committee ISO/TC 59, Buildings and civil engineering works,
+SC 13, Organization and digitization of information about buildings and civil engineering works, including
+building information modelling (BIM).
+A list of all parts in the ISO 19650 series can be found on the ISO website.
+Any feedback or questions on this document should be directed to the user’s national standards body. A
+complete listing of these bodies can be found at www.iso.org/members.html.
+© ISO 2018 – All rights reserved vISO 19650-1:2018(E)
+Introduction
+This document sets out the recommended concepts and principles for business processes across the
+built environment sector in support of the management and production of information during the
+life cycle of built assets (referred to as “information management”) when using building information
+modelling (BIM). These processes can deliver beneficial business outcomes to asset owners/operators,
+clients, their supply chains and those involved in project funding including increase of opportunity,
+reduction of risk and reduction of cost through the production and use of asset and project information
+models. In this document, the verbal form “should” is used to indicate a recommendation.
+This document is primarily intended for use by:
+— those involved in the procurement, design, construction and/or commissioning of built assets; and
+— those involved in delivering asset management activities, including operations and maintenance.
+This document is applicable to built assets and construction projects of all sizes and all levels of
+complexity. This includes large estates, infrastructure networks, individual buildings and pieces
+of infrastructure and the projects or sets of projects that deliver them. However, the concepts and
+principles included in this document should be applied in a way that is proportionate and appropriate to
+the scale and complexity of the asset or project. This is particularly the case where small and mediumsized enterprises are mainly appointed for asset management or project delivery. It is also important
+that procurement and mobilization of asset or project appointed parties should be integrated as far as
+possible with existing processes for technical procurement and mobilization.
+The concepts and principles contained in this document are aimed at all those involved in the asset life
+cycle. This includes, but is not limited to, the asset owner/operator, the client, the asset manager, the
+design team, the construction team, an equipment manufacturer, a technical specialist, a regulatory
+authority, an investor, an insurer and an end-user.
+The specific requirements for information management during the delivery of built assets are provided
+in ISO 19650-2. These are based on the concepts and principles within this document, but on its own
+this document includes no obligation to apply ISO 19650-2 or any other part of the ISO 19650 series to
+be published.
+There are many different ways that asset owners/operators or clients can best meet their particular
+requirements or respond to their national contexts. This includes procurement routes and appointment
+arrangements. The concepts and principles for information management described in this document
+should be adopted and applied in accordance with the specific circumstances and requirements of the
+asset management or project delivery activities. The information requirements should specify or guide
+how this will be achieved and the details should be agreed in time for the requirements to be delivered
+efficiently and effectively.
+Collaboration between the participants involved in construction projects and in asset management
+is pivotal to the efficient delivery and operation of assets. Organizations are increasingly working
+in new collaborative environments to achieve higher levels of quality and greater re-use of existing
+knowledge and experience. A significant outcome of these collaborative environments is the potential
+to communicate, re-use and share information efficiently, and to reduce the risk of loss, contradiction
+or misinterpretation.
+True collaborative working requires mutual understanding and trust and a deeper level of standardized
+process than has typically been experienced, if the information is to be produced and made available
+in a consistent timely manner. Information requirements need to pass along supply chains to the point
+where information can be most efficiently produced, and information needs to be collated as it is passed
+back. At present, considerable resources are spent on making corrections to unstructured information
+or incorrect management of information by untrained personnel, on solving problems arising from
+uncoordinated efforts of delivery teams, and on solving problems related to information reuse and
+reproduction. These delays can be reduced if the concepts and principles within this document are
+adopted.
+vi © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+To improve future editions of the ISO 19650 series, national asset owners, public clients and authorities
+are recommended to gather information and experiences about its implementation and use.
+The ISO 19650 series can benefit from a formal process for managing assets, for example as in the
+ISO 55000 series. The ISO 19650 series can also benefit from a systematic approach to quality within an
+organization, for example as in ISO 9001, although certification to ISO 9001 is not a requirement of the
+ISO 19650 series. Other standards that relate to information structures and delivery methods are also
+listed in the Bibliography.
+© ISO 2018 – All rights reserved viiOrganization and digitization of information about
+buildings and civil engineering works, including building
+information modelling (BIM) — Information management
+using building information modelling —
+Part 1:
+Concepts and principles
+1 Scope
+This document outlines the concepts and principles for information management at a stage of maturity
+described as “building information modelling (BIM) according to the ISO 19650 series”.
+This document provides recommendations for a framework to manage information including
+exchanging, recording, versioning and organizing for all actors.
+This document is applicable to the whole life cycle of any built asset, including strategic planning,
+initial design, engineering, development, documentation and construction, day-to-day operation,
+maintenance, refurbishment, repair and end-of-life.
+This document can be adapted to assets or projects of any scale and complexity, so as not to hamper the
+flexibility and versatility that characterize the large range of potential procurement strategies and so
+as to address the cost of implementing this document.
+2 Normative references
+There are no normative references in this document.
+3	 Terms and definitions
+For the purposes of this document, the following terms and definitions apply.
+ISO and IEC maintain terminological databases for use in standardization at the following addresses:
+— ISO Online browsing platform: available at https://www.iso.org/obp
+— IEC Electropedia: available at http://www.electropedia.org/
+3.1 General terms
+3.1.1
+responsibility matrix
+chart that describes the participation by various functions in completing tasks or deliverables
+Note 1 to entry: A responsibility matrix can indicate accountability, consultation and informing, alongside the
+obligation to complete tasks or deliverables.
+[SOURCE: ISO 37500:2014, 3.16, modified — The word “roles” has been replaced with “functions”; the
+words “for an outsourcing arrangement” have been removed; Note 1 to entry has been added.]
+INTERNATIONAL STANDARD ISO 19650-1:2018(E)
+© ISO 2018 – All rights reserved 1ISO 19650-1:2018(E)
+3.1.2
+space
+limited three-dimensional extent defined physically or notionally
+[SOURCE: ISO 12006-2:2015, 3.1.8]
+3.2 Terms related to assets and projects
+3.2.1
+actor
+person, organization or organizational unit involved in a construction process
+Note 1 to entry: Organizational units include, but are not limited to, departments, teams.
+Note 2 to entry: In the context of this document, construction processes take place during the delivery phase
+(3.2.11) and the operational phase (3.2.12).
+[SOURCE: ISO 29481-1:2016, 3.1, modified — The words “such as a department, team, etc.” have been
+removed; Note 1 and 2 to entry have been added.]
+3.2.2
+appointment
+agreed instruction for the provision of information (3.3.1) concerning works, goods or services
+Note 1 to entry: This term is used whether or not there is a formal appointment between the parties.
+3.2.3
+appointed party
+provider of information (3.3.1) concerning works, goods or services
+Note 1 to entry: A lead appointed party should be identified for each delivery team (3.2.6) but this can be the
+same organization as one of the task teams (3.2.7).
+Note 2 to entry: This term is used whether or not there is a formal written appointment (3.2.2) in place.
+3.2.4
+appointing party
+receiver of information (3.3.1) concerning works, goods or services from a lead appointed party (3.2.3)
+Note 1 to entry: In some countries the appointing party can be termed client (3.2.5), owner or employer but the
+appointing party is not limited to these functions.
+Note 2 to entry: This term is used whether or not there is a formal appointment (3.2.2) between the parties.
+3.2.5
+client
+actor (3.2.1) responsible for initiating a project and approving the brief
+3.2.6
+delivery team
+lead appointed party (3.2.3) and their appointed parties
+Note 1 to entry: A delivery team can be any size, from one person carrying out all the necessary functions through
+to complex, multi-layered task teams (3.2.7). The size and structure of each delivery team are in response to the
+scale and complexity of the asset management or project delivery activities.
+Note 2 to entry: Multiple delivery teams can be appointed simultaneously and/or sequentially in connection with
+a single asset or project, in response to the scale and complexity of the asset management or project delivery
+activities.
+Note 3 to entry: A delivery team can consist of multiple task teams from within the lead appointed party’s
+organization and any appointed parties.
+2 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Note 4 to entry: A delivery team can be assembled by the appointing party (3.2.4) rather than the lead
+appointed party.
+3.2.7
+task team
+individuals assembled to perform a specific task
+3.2.8
+asset
+item, thing or entity that has potential or actual value to an organization
+[SOURCE: ISO 55000:2014, 3.2.1, modified — Note 1, 2 and 3 to entry have been removed.]
+3.2.9
+project information
+information (3.3.1) produced for, or utilized in, a particular project
+[SOURCE: ISO 6707-2:2017, 3.2.3]
+3.2.10
+life cycle
+life of the asset (3.2.8) from the definition of its requirements to the termination of its use, covering its
+conception, development, operation, maintenance support and disposal
+[SOURCE: ISO/TS 12911:2012, 3.13, modified — The words “stages and activities spanning the life of
+the system” have been replaced with “life of the asset”; NOTEs 1 and 2 have been removed.]
+3.2.11
+delivery phase
+part of the life cycle (3.2.10), during which an asset (3.2.8) is designed, constructed and commissioned
+Note 1 to entry: Delivery phase normally reflects a stage-based approach to a project.
+3.2.12
+operational phase
+part of the life cycle (3.2.10), during which an asset (3.2.8) is used, operated and maintained
+3.2.13
+trigger event
+planned or unplanned event that changes an asset (3.2.8) or its status during its life cycle (3.2.10), which
+results in information exchange (3.3.7)
+Note 1 to entry: During the delivery phase (3.2.11), trigger events normally reflect the ends of project stages.
+3.2.14
+key decision point
+point in time during the life cycle (3.2.10) when a decision crucial to the direction or viability of the
+asset (3.2.8) is made
+Note 1 to entry: During a project these generally align with project stages.
+3.3 Terms related to information management
+3.3.1
+information
+reinterpretable representation of data in a formalized manner suitable for communication,
+interpretation or processing
+Note 1 to entry: Information can be processed by human or automatic means.
+[SOURCE: IEC 82045-1:2001, 3.1.4, modified — The term has been changed from “data” to “information”:
+in the definition, the word “information” has been replaced with “data”.]
+© ISO 2018 – All rights reserved 3ISO 19650-1:2018(E)
+3.3.2
+information requirement
+specification for what, when, how and for whom information (3.3.1) is to be produced
+3.3.3
+organizational information requirements
+OIR
+information requirements (3.3.2) in relation to organizational objectives
+3.3.4
+asset information requirements
+AIR
+information requirements (3.3.2) in relation to the operation of an asset (3.2.8)
+3.3.5
+project information requirements
+PIR
+information requirements (3.3.2) in relation to the delivery of an asset (3.2.8)
+3.3.6
+exchange information requirements
+EIR
+information requirements (3.3.2) in relation to an appointment (3.2.2)
+3.3.7
+information exchange, verb
+act of satisfying an information requirement (3.3.2) or part thereof
+3.3.8
+information model
+set of structured and unstructured information containers (3.3.12)
+3.3.9
+asset information model
+AIM
+information model (3.3.8) relating to the operational phase (3.2.12)
+3.3.10
+project information model
+PIM
+information model (3.3.8) relating to the delivery phase (3.2.11)
+Note 1 to entry: During the project, the project information model can be used to convey the design intent
+(sometimes called the design intent model) or the virtual representation of the asset (3.2.8) to be constructed
+(sometimes called the virtual construction model).
+3.3.11
+federation
+creation of a composite information model (3.3.8) from separate information containers (3.3.12)
+Note 1 to entry: The separate information containers used during federation can come from different task teams
+(3.2.7).
+3.3.12
+information container
+named persistent set of information (3.3.1) retrievable from within a file, system or application storage
+hierarchy
+EXAMPLE Including sub-directory, information file (including model, document, table, schedule), or distinct
+sub-set of an information file such as a chapter or section, layer or symbol.
+4 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Note 1 to entry: Structured information containers include geometrical models, schedules and databases.
+Unstructured information containers include documentation, video clips and sound recordings.
+Note 2 to entry: Persistent information exists over a timescale long enough for it to have to be managed, i.e. this
+excludes transient information such as internet search results.
+Note 3 to entry: Naming of an information container should be according to an agreed naming convention.
+3.3.13
+status code
+meta-data describing the suitability of the content of an information container (3.3.12)
+3.3.14
+building information modelling
+BIM
+use of a shared digital representation of a built asset (3.2.8) to facilitate design, construction and
+operation processes to form a reliable basis for decisions
+Note 1 to entry: Built assets include, but are not limited to, buildings, bridges, roads, process plants.
+[SOURCE: ISO 29481-1:2016, 3.2, modified — The word “object” has been replaced with “asset”; the
+words “including buildings, bridges, roads, process plants, etc.” have been removed; original Note 1 to
+entry has been replaced with a new one.]
+3.3.15
+common data environment
+CDE
+agreed source of information (3.3.1) for any given project or asset (3.2.8), for collecting, managing and
+disseminating each information container (3.3.12) through a managed process
+Note 1 to entry: A CDE workflow describes the processes to be used and a CDE solution can provide the technology
+to support those processes.
+3.3.16
+level of information need
+framework which defines the extent and granularity of information (3.3.1)
+Note 1 to entry: One purpose of defining the level of information need is to prevent delivery of too much
+information.
+3.3.18
+capability
+measure of ability to perform and function
+Note 1 to entry: In the context of this document, this relates to skill, knowledge or expertise to manage
+information (3.3.1).
+[SOURCE: ISO 6707-1:2017, 3.7.1.11, modified — Note 1 to entry has been added.]
+3.3.19
+capacity
+resources available to perform and function
+Note 1 to entry: In the context of this document, this relates to means, resources and procedures to manage
+information (3.3.1).
+© ISO 2018 – All rights reserved 5ISO 19650-1:2018(E)
+4 Asset and project information, perspectives and collaborative working
+4.1 Principles
+Asset information models (AIM) and project information models (PIM) are the structured repositories
+of information needed for making decisions during the whole life cycle of a built environment asset.
+This includes the design and construction of new assets, refurbishment of existing assets, and the
+operation and maintenance of an asset. It should be expected that the amount of information stored in
+information models, and the different purposes it will be used for, will mostly increase during project
+delivery and asset management.
+AIM and PIM can include structured and unstructured information. Examples of structured information
+include geometrical models, schedules and databases. Examples of unstructured information include
+documentation, video clips and sound recordings. Physical sources of information, such as soil and
+product samples, should be managed using the information management process described in this
+document through appropriate cross-references, for example sample numbers.
+Most projects involve work on an existing asset, even if this is a previously undeveloped site. These
+projects should include some pre-existing asset information to support the development of the project
+brief and be available for lead appointed parties working on the project.
+Information management processes within this document include the transfer of relevant information
+between an AIM and a PIM at the start and end of a project.
+Asset and project information has substantial value to appointing, lead appointed and appointed parties
+involved in asset management and project delivery. This includes where no formal appointments exist.
+Appointing, lead appointed and appointed parties include the owners, operators and managers of built
+assets, and those delivering design and construction projects. Asset and project information is also
+valuable to policymakers, regulators, investors, insurers and other external parties.
+The concepts and principles contained within this document should be applied in a way that is
+proportionate and appropriate to the scale and complexity of the asset or project.
+4.2 Information management according to the ISO 19650 series
+The recommendations and requirements for information management in the ISO 19650 series are
+based on appointing, lead appointed and appointed parties working collaboratively together, and all
+parties should participate in the implementation of the ISO 19650 series.
+Information management can be represented as a sequence of maturity stages, shown as Stages 1, 2
+and 3 in Figure 1. This Figure shows that development of standards, advances in technology and more
+sophisticated forms of information management all combine to deliver increasing business benefit.
+The ISO 19650 series has application mainly at Stage 2 maturity, but also can be partly applied at
+Stages 1 and 3.
+Stage 2 maturity is also identified as “BIM according to the ISO 19650 series”. This is where a mixture
+of manual and automated information management processes are used to generate a federated
+information model. The information model includes all information containers delivered by task teams
+in relation to an asset or a project.
+6 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Figure 1 — A perspective on stages of maturity of analogue and digital information
+management
+4.3 Information management perspectives
+Different information management perspectives should be recognized by the information management
+process and should be incorporated in the process in the following ways:
+— in the specification of information requirements;
+— in the planning for information delivery; and
+— in the delivery of information.
+Information management perspectives should be defined on a case-by-case basis, but the four
+perspectives described in Table 1 are recommended. Other perspectives can also be helpful, depending
+on the nature of the asset or project.
+© ISO 2018 – All rights reserved 7ISO 19650-1:2018(E)
+Table 1 — Information management perspectives
+Perspective Purpose Example deliverables
+Asset owner’s perspective
+To establish and maintain the purpose of the
+asset or project. To make the strategic business decisions.
+Business plan
+Strategic asset portfolio review
+Life cycle cost analysis
+Asset user’s perspective
+To identify the true requirements of the user
+and make sure the asset solution has the
+right qualities and capacities.
+Project brief
+AIM
+PIM
+Product documentation
+Project delivery or asset
+management perspective
+To plan and organize the work, mobilize
+the right resources, coordinate and control
+development.
+Plans, for example BIM Execution Plans
+Organizational charts
+Function definitions
+Society’s perspective
+To make sure the community’s interest is
+taken care of during the asset life cycle (planning, delivery and operation).
+Political decisions
+Area plans
+Building permits, concessions
+NOTE The example deliverables are relevant to the point of view of each perspective and do not indicate ownership of the
+deliverables or who does the work to produce the deliverables.
+5	 Definition of information requirements and resulting information models
+5.1 Principles
+The appointing party should understand what information is required concerning their asset(s) or
+project(s) to support their organizational or project objectives. These requirements can come from
+their own organization or interested external parties. The appointing party should be able to express
+these requirements to other organizations and individuals that have to know them to either specify or
+inform their work. This applies to assets and projects of all sizes, but the principles in this document
+should be applied proportionately. Less experienced appointing parties can seek expert assistance to
+help with these tasks.
+Appointed parties, including lead appointed parties, can add their own information requirements to
+those they receive. Some of the information requirements can be passed to their own appointed parties,
+particularly where information exchange within a delivery team is necessary and this information is
+not to be exchanged with the appointing party.
+The appointing party should state their purposes for requiring information deliverables, including the
+aspects of the asset that are intended to be managed. These purposes can include:
+— asset register: a register of assets should be provided to support accurate auditing and reporting;
+this should include both spatial and physical assets and their groupings;
+— support for compliance and regulatory responsibilities: the appointing party should specify the
+information required to support the maintenance of the health and safety of the users of the asset;
+— risk management: information should be required or suppressed to support risk management,
+especially to identify and review the risks that a project or asset can be exposed to, for example
+natural hazards, extreme weather events or fire; or
+— support for business questions: the appointing party should specify the information required
+to support the review of the business case for ownership and operation of the asset; this should
+8 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+include continuous development of the following impacts and beneficial aspects of the asset from
+the earliest deliverable onwards:
+— management of capacity and utilization: documentation of the intended capacity and utilization
+of the asset should be provided as it is required to support comparisons of actual use and
+utilization and portfolio management;
+— management of security and surveillance: information should be required or suppressed to
+support the management of the security and surveillance of the asset and neighbouring or
+adjacent sites in line with security requirements;
+— support for renovation: renovation of each space or location and the whole asset should be
+supported with detailed information about the capacity, in terms of areas, spaces, occupancy,
+environmental conditions and structural load bearing;
+— predicted and actual impacts: the appointing party should require information relating to the
+impacts from quality, cost, scheduling, carbon (CO2e), energy, waste, water consumption or
+other environmental effects;
+— operations: information necessary for the normal operations of the asset should be provided to
+help the appointing party anticipate the cost of asset operation;
+— maintenance and repair: information on the recommended maintenance tasks, including
+planned preventative maintenance, should be provided to help the appointing party to anticipate
+and plan for costs of maintenance;
+— replacement: information on the reference or expected replacement service life and costs
+should be available to the appointing party to anticipate the costs of replacement; recycling
+of the physical assets should be supported with detailed information relating to the principal
+constituent materials; and
+— decommissioning and disposal: information on the recommended decommissioning should be
+provided to help the appointing party anticipate and plan for end-of-life costs.
+Information requirements associated with the delivery phase of an asset should be expressed in terms
+of the project stages that the appointing party or lead appointed party intends to use. Information
+requirements associated with the operational phase of an asset should be expressed in terms of
+foreseeable life cycle trigger events such as planned or reactive maintenance, fire equipment inspection,
+component replacement or change of asset management provider.
+The different types of information requirements and information models are shown in Figure 2 and
+explained in 5.2 to 5.7.
+NOTE In this figure, “encapsulates” means “provides the input to”, “contributes to” means “provides an input
+to”, “specifies” means “determines the content, structure and methodology”.
+Figure 2 — Hierarchy of information requirements
+© ISO 2018 – All rights reserved 9ISO 19650-1:2018(E)
+5.2	 Organizational information requirements (OIR)
+OIR explain the information needed to answer or inform high-level strategic objectives within the
+appointing party. These requirements can arise for a variety of reasons, including:
+— strategic business operation;
+— strategic asset management;
+— portfolio planning;
+— regulatory duties; or
+— policy-making.
+OIR can exist for reasons other than asset management, for example in relation to submitting annual
+financial accounts. These OIR are not considered further in this document.
+5.3	 Asset information requirements (AIR)
+AIR set out managerial, commercial and technical aspects of producing asset information. The
+managerial and commercial aspects should include the information standard and the production
+methods and procedures to be implemented by the delivery team.
+The technical aspects of the AIR specify those detailed pieces of information needed to answer the
+asset-related OIR. These requirements should be expressed in such a way that they can be incorporated
+into asset management appointments to support organizational decision-making.
+A set of AIR should be prepared in response to each trigger event during asset operation and where
+appropriate should also refer to security requirements.
+Where there is a supply chain, the AIR received by a lead appointed party can be sub-divided and passed
+on in any of its own appointments. AIR received by a lead appointed party can be augmented with its
+own information requirements.
+Across an asset management strategy and plan there can exist several different appointments. The AIR
+from all these should form a single coherent and coordinated set of information requirements, sufficient
+to address all the asset-related OIR.
+5.4	 Project information requirements (PIR)
+PIR explain the information needed to answer or inform high-level strategic objectives within the
+appointing party in relation to a particular built asset project. PIR are identified from both the project
+management process and the asset management process.
+A set of information requirements should be prepared for each of the appointing party’s key decision
+points during the project.
+Repeat clients may develop a generic set of PIR that can be adopted, with or without amendment, on all
+of their projects.
+5.5	 Exchange information requirements (EIR)
+EIR set out managerial, commercial and technical aspects of producing project information. The
+managerial and commercial aspects should include the information standard and the production
+methods and procedures to be implemented by the delivery team.
+The technical aspects of the EIR should specify those detailed pieces of information needed to
+answer the PIR. These requirements should be expressed in such a way that they can be incorporated
+into project-related appointments. EIR should normally align with trigger events representing the
+completion of some or all project stages.
+10 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+EIR should be identified wherever appointments are being established. In particular, EIR received by a
+lead appointed party can be sub-divided and passed on in any of its own appointments, and so on along
+the supply chain. EIR received by appointed parties, including lead appointed parties, can be augmented
+with their own EIR. Some of the EIR can be passed to their own appointed parties, particularly where
+information exchange within a delivery team is necessary and this information is not to be exchanged
+with the appointing party.
+Across a project there can exist several different appointments. The EIR from all these appointments
+should form a single coherent and coordinated set of information requirements, sufficient to address all
+the PIR.
+5.6 Asset information model (AIM)
+The AIM supports the strategic and day-to-day asset management processes established by the
+appointing party. It can also provide information at the start of the project delivery process. For example,
+the AIM can contain equipment registers, cumulative maintenance costs, records of installation and
+maintenance dates, property ownership details and other details that the appointing party regards as
+valuable and wishes to manage in a systematic way.
+5.7 Project information model (PIM)
+The PIM supports the delivery of the project and contributes to the AIM to support asset management
+activities. The PIM should also be stored to provide a long-term archive of the project and for auditing
+purposes. For example, the PIM can contain details of project geometry, location of equipment,
+performance requirements during project design, method of construction, scheduling, costing and
+details of installed systems, components and equipment, including maintenance requirements, during
+project construction.
+6 The information delivery cycle
+6.1 Principles
+The specification and delivery of project and asset information follows four overarching principles,
+each of which is the subject of more detailed discussion in this document:
+1. Information is needed for decision-making during all parts of the asset life cycle, including when
+there is an intention to develop a new asset, modify or enhance an existing asset, or decommission
+an asset, all as part of the overall asset management system.
+2. Information is specified progressively through sets of requirements defined by the appointing
+party, and the delivery of information is planned and progressively delivered by the delivery teams.
+In addition, some reference information can also be provided by the appointing party to one or
+more appointed parties.
+3. Where a delivery team contains more than one party then information requirements should be
+passed to the most relevant party or the point at which the information can be most easily provided.
+4. Information exchange involves the sharing and coordination of information through a CDE, using
+open standards whenever possible and clearly defined operating procedures to enable a consistent
+approach by all organizations involved.
+These principles should be applied in a way that is proportionate to the asset management or project
+delivery context.
+6.2 Alignment with the asset life cycle
+AIM and PIM are produced throughout the information life cycle. These information models are used
+during the asset life cycle for making asset-related and project-related decisions.
+© ISO 2018 – All rights reserved 11ISO 19650-1:2018(E)
+Figure 3 shows the asset life cycle for operational and delivery phases of an asset (the green circle)
+and some information management activities (points A to C). In addition to the three points shown in
+the figure, verification of designers’ intentions should take place through review of asset performance
+during the operational phase. Timing will depend on when and how frequently tests after completion
+and performance review are done. If the verification fails then remedial works can be required. During
+the operational phase, trigger events take place that can require an information management response,
+resulting in one or more information exchanges.
+Figure 3 also shows that the ISO 19650 series for information management takes place within the
+context of an asset management system, such as ISO 55000, or a project management framework,
+such as ISO 21500, which itself takes place within organizational management according to a quality
+management system, such as ISO 9001. Other standards such as ISO 8000 (data quality) and ISO/
+IEC 27000 (information security management) and ISO 31000 (risk management) are also relevant but
+are omitted from the figure for clarity.
+The following key principles (as set out in ISO 55000) are important for asset information management
+as set out in the ISO 19650 series:
+— the appointing party specifically links asset management to the achievement of its business
+objectives through asset management policies, strategies and plans;
+— appropriate and timely asset information is one of the fundamental requirements for successful
+asset management; and
+— leadership and governance in relation to asset information management comes from the top
+management within the asset owner/operator.
+The following key principles (as set out in ISO 9001) are important for asset information management
+as set out in the ISO 19650 series:
+— there is a focus on the customer (the recipient or user of asset or project information);
+— a Plan-Do-Check-Act cycle is used (to develop and provide asset or project information);
+— engagement of people and the encouragement of appropriate behaviours is central to the delivery of
+consistent outputs; and
+— there is a focus on sharing of lessons learned and continual improvement.
+12 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Key
+A start of delivery phase — transfer of relevant information from AIM to PIM
+B progressive development of the design intent model into the virtual construction model (see 3.3.10, Note 1
+to entry)
+C end of delivery phase — transfer of relevant information from PIM to AIM
+Figure 3 — Generic project and asset information management life cycle
+6.3	 Setting information requirements and planning for information delivery
+6.3.1 General principles
+All asset and project information that is to be supplied during the asset life cycle should be specified by
+the appointing party through sets of information requirements. The relevant information requirements
+should be issued to each prospective lead appointed party as part of the procurement process. This also
+applies when work instructions are issued by one part of an organization to another part of the same
+organization. A response to each requirement should be prepared by the prospective lead appointed
+party and reviewed by the appointing party before appointment. The response to the information
+requirements is then managed and developed by each lead appointed party and included in the plan for
+their asset management or project delivery activities. Information is managed and delivered by each
+lead appointed party and accepted by the party specifying the requirements. Feedback loops provide
+for information deliverables to be revised if necessary. The generic flowchart for this process is shown
+in Figure 4.
+A documented risk assessment for delivery of asset or project information should be included in the
+overall asset or project risk assessment, so that the nature of the information delivery risks, their
+© ISO 2018 – All rights reserved 13ISO 19650-1:2018(E)
+consequences and likelihood of occurring are understood, communicated and managed. The concepts
+and principles in this document should be considered in the information delivery risk assessment.
+Information requirements are defined to address the questions that have to be answered to make key
+asset-related decisions at different points during the delivery and operation of the asset. Information
+delivery plans are made every time a lead appointed party is appointed in relation to asset management
+or project delivery activities. This includes the parallel appointments made by the appointing party in
+relation to design, construction or any other services, and the sequential appointments made to form a
+supply chain, for example, within a construction team.
+Figure 4 — Generic specification and planning for information delivery
+Figure 5 illustrates the sub-division of information management processes and how they apply to each
+appointment within a project. A similar sub-division of processes should apply for each appointment
+during asset management.
+Figure 5 — Illustration of the sub-division of processes
+The cascade of information requirements and the supply of information have some key features that
+are explained in 6.3.2 to 6.3.5 and illustrated for one particular form of procurement.
+Further principles concerning information management functions, collaborative working and appointed
+party capability are set out in Clauses 7, 8 and 9. Further principles concerning information delivery
+planning are set out in Clause 10. Further principles concerning information production and delivery
+are set out in Clauses 11 and 12.
+14 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+6.3.2 Delivery team provides information for asset owner/operator or client decisions
+Figure 6 shows one instance of a key decision to be made by the appointing party. That decision is made
+at a key decision point, the diamond, where a set of information requirements is defined and cascaded
+to the delivery team (lead appointed party and appointed parties as appropriate). The information is
+delivered through information exchange, the solid circle.
+The appointing party should define the occasions or times when they have to make key decisions, and
+precisely what information they require from the delivery team to make each decision. Any significant
+changes to the information requirements should be discussed and agreed between the appointing party
+and the lead appointed party, either of whom may make such a request.
+Figure 6 — Relationship between key decision and information from a lead appointed party
+6.3.3	 Information verification and validation at start and end of project stages
+Figure 7 shows information exchange occurring between the end of one project delivery stage and the
+start of the next project delivery stage.
+The solid circle represents the information exchange. The vertical arrows represent information
+requirements and information deliverables flowing between appointing party and lead appointed party.
+The circular arrows to the left of the vertical arrows represent the delivery of information by the lead
+appointed party, the checking of that information by the appointing party against the requirements,
+and any iteration that is needed to complete the information exchange (for example where required
+information is missing or not supplied to the required quality). The circular arrows to the right of the
+vertical arrows represent the provision of information from the appointing party to the lead appointed
+party, the checking of that information against what is needed to start the next project stage, and any
+iteration to complete the information exchange.
+Within the validation and verification methods it is vital that the approval and acceptance procedures
+should be agreed and documented before any information exchange takes place.
+It is particularly important that a second information check, to start a project stage, is made where
+there is a change of appointed party between one stage and the next, with particular attention to the
+usability of the information received. The second check should also take place when there is a delay
+before the next project stage starts. There can be some situations where the second information check
+is not needed, for example when the same lead appointed party is delivering both project stages and no
+delay in the project schedule occurs between these stages.
+© ISO 2018 – All rights reserved 15ISO 19650-1:2018(E)
+Information should also be checked if there is a change of lead appointed party during a project stage. In
+these circumstances, any limitations on the use of the previously appointed party’s information should
+be taken into account.
+Figure 7 — Information checking during information exchange
+6.3.4 Information is drawn from the whole delivery team
+Figure 8 shows how the information delivered at information exchange is collated from extended
+delivery teams for design work, on the left, and for construction work, on the right. For the form
+of procurement being illustrated, the horizontal dotted lines represent, as an example, levels of
+appointment. Each lead appointed party may delegate all or part of the information requirements
+received from their appointing party and may also add information requirements of their own. The
+role of each lead appointed party in satisfying the AIR or EIR, as appropriate, should be defined in
+the delivery plans. Information is collated by each lead appointed party from their delivery team and
+delivered to the appointing party, with checking and possible re-submission as explained in Figure 7.
+If new parties join the delivery team, the delivery plan should be updated to include and confirm the
+information they will be contributing to future information exchanges.
+16 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Key
+information exchange within delivery team, into PIM or AIM
+lead appointed parties and appointed parties (task teams and delivery teams)
+Figure 8 — Example of information being provided by whole delivery teams
+6.3.5 Summary of information delivery from project and asset delivery teams
+Figure 9 illustrates the cascade of requirements and the delivery of information for one particular type
+of procurement. It is possible to use different arrangements of project stages, different key decision
+points and different information exchanges from those illustrated. One example is the supply of
+progress information from the construction lead to the client during construction. However, the key
+features explained in 6.3.2, 6.3.3 and 6.3.4 should apply to all arrangements of project delivery and
+asset management.
+© ISO 2018 – All rights reserved 17ISO 19650-1:2018(E)
+Key
+asset owner or project client key decision points
+information exchange within delivery team, into PIM or AIM
+lead appointed parties and appointed parties (task teams and delivery teams)
+information verification and validation
+flow of information deliverables
+NOTE In certain situations information exchanges can also occur between appointed parties. For simplicity
+these have not been shown in the Figure.
+Figure 9 — Example of information delivery through information exchange to support key
+appointing party decisions
+7 Project and asset information management functions
+7.1 Principles
+Clarity of functions, responsibility, authority and the scope of any task are essential aspects of effective
+information management. Functions should be embedded into appointments, either through a specific
+schedule of services or by referring to more general obligations.
+18 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+This document identifies the types of information management functions that should be considered
+and their responsibilities, and should be read in conjunction with other appointment documentation.
+Information management functions, responsibility and authority should be allocated to parties on the
+basis of their appropriateness and ability to perform them. In smaller businesses or projects, multiple
+functions may be performed by the same individual or party.
+Information management functions should not refer to design responsibilities. However, for smaller or
+less complex assets or projects, information management functions may be performed alongside other
+functions such as asset management, project management, design team leadership or construction
+leadership.
+It is important not to confuse functions and responsibilities with job titles or with professional or other
+designations.
+In complex asset management or project delivery activities, it is possible to define a specific function
+of information facilitation or information process management to support team-working and
+collaboration. This should enable better focus on these different aspects of information management
+for the efficient implementation of the information management process.
+7.2 Asset information management functions
+The complexity of asset information management functions should reflect the scale and complexity of
+the asset or portfolio of assets being managed. It is important that functions are assigned at all times
+during the asset life cycle. However, given the long-term nature of asset management it is almost certain
+that functions will be fulfilled by a succession of organizations or individuals. It is therefore important
+that succession planning is properly addressed in the information management process.
+In relation to assets, asset information management can be assigned to one or more individuals
+from the appointing party’s staff. Asset information management involves leadership in validating
+information supplied from each appointed party and leadership in authorizing it for inclusion in the
+AIM. The function of asset information management should be assigned from the earliest stage of asset
+management.
+At the end of any project, the key information to be handed over should include information required for
+operation and maintenance of the asset. Therefore asset information management should be involved
+in all stages of project delivery as defined in Table 1.
+7.3 Project information management functions
+The complexity of project information management functions should reflect the extent and complexity
+of project information. It is important that functions are assigned at all times during the project, but the
+sequence of appointments and their scope should reflect the procurement route being used.
+Project information management involves leadership in establishing the project’s information standard,
+the production methods and procedures, and the project’s CDE.
+The appointing party allocates responsibility for the delivery of information to the lead appointed
+parties as appropriate. Allocation of these responsibilities should be project specific and should be
+documented in the appointment document(s).
+7.4 Task information management functions
+Where delivery teams are sub-divided into task teams, information management functions should
+be assigned for each task team. Information management at a task team level is concerned both with
+the information associated with that task and with the requirement to coordinate information across
+multiple tasks.
+© ISO 2018 – All rights reserved 19ISO 19650-1:2018(E)
+8 Delivery team capability and capacity
+8.1 Principles
+The appointing party should review the capability and capacity of the prospective delivery team to meet
+the information requirements. This review can be done by the appointing party, by the prospective
+delivery team themselves or by an independent party. The scope of the review should be made available
+to the prospective delivery team. The review can be completed in more than one step, for example
+where prequalification is being used, but should be completed before the appointment is made.
+Capability refers to being able to perform a given activity, for example by having the necessary experience,
+skill or technical resources. Capacity refers to be able to complete an activity in the required time.
+When a new appointment is made during a framework agreement or similar long-term arrangement,
+then the scope of the review may be reduced to just the relevant aspects of capability and capacity. For
+example, in a project framework agreement the experience of the prospective delivery team and the
+access to information technologies need not be assessed for each new project unless the requirements
+are significantly different from previous projects. In an asset maintenance framework agreement, the
+capability of the prospective delivery team need only be reassessed at pre-defined intervals during the
+framework rather than before every maintenance activity.
+8.2 Extent of capability and capacity review
+The review of prospective delivery team capability and capacity should include at least the following:
+— the commitment to comply with this document and the information requirements;
+— the ability of the prospective delivery team to work in a collaborative way, and their experience in
+information container-based collaborative working;
+— access to and experience of the information technologies specified or envisaged within the
+information requirements, or proposed by the delivery team; and
+— the quantity of experienced and suitably equipped personnel within the prospective delivery team
+with availability to work on the proposed asset or project tasks.
+9 Information container-based collaborative working
+The collaborative production of information should be defined in general terms of structured
+information to allow the fundamental principles of information container-based collaborative working
+to be achieved. These fundamental principles are as follows:
+a) authors produce information, subject to intellectual property agreements, which they control
+and check, only sourcing approved information from others where required by way of reference,
+federation or direct information exchange;
+b) provision of clearly defined information requirements at high level, by interested parties associated
+with the project or asset, and at detailed level by the appointing party;
+c) consideration of the proposed approach, capability and capacity of each delivery team prior to
+appointment by an appointing party against the requirements;
+d) provision of a CDE to manage and store shared information, with appropriate and secure availability
+to all individuals or parties who are required to produce, use and maintain that information;
+e) information models to be developed using technologies that are able to conform to this document;
+f) processes related to security of information should be put in place during the whole life time of the
+asset to address issues such as unauthorized access, information loss or corruption, degradation
+and, as far as is practicable, obsolescence.
+20 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+10 Information delivery planning
+10.1 Principles
+Planning for information delivery is the responsibility of each lead appointed party and appointed party.
+Plans should be formulated in response to the information requirements set out by the appointing party
+and should reflect the scope of the appointment within the overall asset life cycle. Each information
+delivery plan should state:
+— how information will meet the requirements defined in the AIR or EIR;
+— when information is going to be delivered, initially with respect to project stages or asset
+management milestones and later with respect to actual delivery dates;
+— how information is going to be delivered;
+— how information is going to be coordinated with information from other relevant appointed parties;
+— what information is going to be delivered;
+— who is going to be responsible for delivering the information; and
+— who the intended recipient of the information will be.
+At least some of the planning for information delivery should be carried out by the lead appointed
+party or appointed party before appointment, as this should form part of the review carried out by the
+appointing party. More detailed planning can then be required after the appointment is made as part
+of mobilization. Additional information delivery planning should take place if changes are made to the
+information requirements or to the delivery team.
+The delivery team should review the information management solution before any technical design,
+construction or asset management tasks start. This should include the following:
+— the necessary appointment conditions and amendments have been prepared and agreed;
+— the information management processes are in place;
+— the information delivery plan takes account of the delivery team’s capacity;
+— the delivery team has the appropriate skills and competencies; and
+— the technology supports and enables the management of information according to this document.
+Allowance should be made in the schedule for training in relation to skills and competencies.
+Information should be delivered through pre-defined information exchanges. Information exchange
+can take place between the appointing and lead appointed parties, as well as between lead appointed
+parties.
+The delivery of information in accordance with the information requirements should be one of the
+criteria for completion of a project or asset management activity. Each information container should be
+directly related to one or more pre-defined information requirements.
+10.2 Timing of information delivery
+An information delivery plan should be defined for the whole project or for the short and medium term
+of asset management according to the schedule and appointment of the parties. In complex situations,
+this can be generated by merging the delivery plans for each project or asset management task.
+The timing of each information delivery should be included in each information delivery plan, with
+reference to project and asset management schedules when these are known.
+© ISO 2018 – All rights reserved 21ISO 19650-1:2018(E)
+10.3 Responsibility matrix
+A responsibility matrix should be generated as part of the information delivery planning process in one
+or more levels of detail. The axes of a responsibility matrix should identify:
+— information management functions; and
+— either project or asset information management tasks, or information deliverables as appropriate.
+The content of a responsibility matrix should show the appropriate detail relevant to the axes.
+10.4	Defining the federation strategy and breakdown structure for information
+containers
+The purpose of the federation strategy and the information container breakdown structure is to help
+plan the production of information by separate task teams to the appropriate level of information need
+as described in 11.2.
+The federation strategy should be developed during information planning activities. It should explain
+how the information model is intended to be divided into one or more sets of information containers.
+Allocation can be done by viewing the information model in different views, such as functional,
+spatial or geometrical. The functional allocation concept is supported by a semantic model view. The
+geometrical model view is commonly used during the delivery phase.
+The federation strategy should be developed into one or more information container breakdown
+structures during detailed planning to explain in more detail how information containers relate to
+each other. The federation strategy and the information container breakdown structure explain the
+methodology to manage interfaces associated with the asset during its delivery phase or operational
+phase. Different arrangements of information containers should be defined for different purposes, such
+as functional compatibility, spatial coordination or geometrical interfaces. This should be proportionate
+to the complexity of the asset or project. Explanations and examples of different applications of
+federation and information container breakdown are given in Annex A.
+The federation strategy and information container breakdown structure should be updated as new task
+teams are appointed. Updates can also be required as the nature of the work being carried out changes,
+especially when this changes from asset management to project delivery and vice versa.
+Information containers within the information container breakdown structure should be crossreferenced to task teams. Where the federation strategy and information container breakdown
+structure define only one set of information containers, each task team should be allocated one or more
+information containers from within the set and each information container should be allocated to only
+one task team.
+The definition of the federation strategy and the information container breakdown structure are both
+strategic activities related to the project or asset and they should be agreed collaboratively. They should
+be owned and managed by functions that understand the strategic approach to project delivery and
+asset management.
+The federation strategy and the information container breakdown structure should be communicated
+to all organizations involved in project or asset activities. It can be helpful for illustrations or detailed
+descriptions to be prepared and circulated. The security implications of communicating the federation
+strategy or information container breakdown structure should be considered and this can restrict their
+circulation.
+22 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+11 Managing the collaborative production of information
+11.1 Principles
+A CDE solution and workflow should be implemented to allow information to be accessed by those
+who require it to undertake their function. The solution can be implemented in several ways and
+using a range of different technologies. In “BIM according to the ISO 19650 series” the CDE solution
+and workflow enable the development of a federated information model. This comprises information
+models from different lead appointed parties, delivery teams or task teams. Security and information
+quality should be considered and, where appropriate, integrated into the definition of or the proposals
+for the CDE. More detailed concepts and principles regarding the CDE solution and workflow are in
+Clause 12.
+Issues in the information model should be avoided during the production of information rather than
+detected after the delivery of information. Issues could be spatial, for example structural elements
+and building services occupying the same space, or functional, for example fire protection materials
+being incompatible with the required fire rating of a wall. Spatial coordination issues can be of different
+kinds, for example “hard” where two objects are occupying the same space or “soft” where one item
+occupies the operating or maintenance space of another item, or “time” where two objects are present
+in the same place at the same time. This principle reinforces the requirement for a federation strategy
+(see 10.4).
+Generic information should be used before the final product has been selected or manufactured,
+indicating the space required for installation, connection, maintenance and replacement, and be
+replaced by specific information as soon as this is available.
+All rights relating to information should be governed by agreements made between the relevant parties.
+11.2 Level of information need
+The level of information need of each information deliverable should be determined according to its
+purpose. This should include the appropriate determination of quality, quantity and granularity of
+information. This is referred to as its level of information need and this can vary from deliverable to
+deliverable.
+A range of metrics exist to determine levels of information need. For example, two complementary
+but independent metrics can define the geometrical and alphanumerical content in terms of quality,
+quantity and granularity. Once these metrics have been defined, they should be used to determine the
+levels of information need across the whole project or asset. All this should be described clearly within
+the OIR, PIR, AIR or EIR.
+The levels of information need should be determined by the minimum amount of information needed to
+answer each relevant requirement, including information required by other appointed parties, and no
+more. Anything beyond this minimum is considered as waste. Lead appointed parties should consider
+the risk that importing object information automatically into information models can introduce a
+higher level of information need than is required.
+The relevance of an information deliverable is not always correlated to its granularity. Level of
+information need is, however, closely linked to the federation strategy (see 10.4).
+The granularity of alphanumerical information should be considered to be at least as important as that
+of geometrical information.
+11.3	Information quality
+Information managed in the CDE should be understandable by all parties. The following should be
+agreed to support this:
+— information formats;
+© ISO 2018 – All rights reserved 23ISO 19650-1:2018(E)
+— delivery formats;
+— structure of the information model;
+— the means of structuring and classifying information; and
+— attribute names for metadata, for examples properties of construction elements and information
+deliverables.
+Classification of objects should be in accordance with the principles in ISO 12006-2. Object information
+should be in accordance with ISO 12006-3, to support object exchange.
+Automated checking of information in the CDE should be considered.
+12	Common data environment (CDE) solution and workflow
+12.1 Principles
+A CDE solution and workflow should be used for managing information during asset management and
+project delivery. During the delivery phase, the CDE solution and workflow support the information
+management processes in ISO 19650-2:2018, 5.6 and 5.7.
+At the end of a project, information containers required for asset management should be moved from
+the PIM to the AIM. Remaining project information containers, including any in the archive state, should
+be retained as read-only in case of dispute and to help lessons to be learned. The timescale for retaining
+project information containers should be defined in the EIR.
+The current revision of each information container within the CDE should be in one of the following
+three states:
+— work in progress (see 12.2);
+— shared (see 12.4); or
+— published (see 12.6).
+Current information containers can exist across all three states, depending on their development.
+There should also be an archive state (see 12.7) providing a journal of all information container
+transactions and an audit trail of their development.
+These states are shown in the conceptual diagram in Figure 10. Figure 10 deliberately does not
+illustrate the complexities of the CDE workflow, involving multiple iterations of information container
+development, multiple reviews, approvals and authorizations, and multiple journal entries into the
+archive recording information containers in any of the other states.
+The transition from one state to another should be subject to approval and authorization processes (see
+12.3 and 12.5).
+Each information container managed through the CDE should have metadata including:
+1. a revision code, in accordance with an agreed standard for example IEC 82045-1; and
+2. a status code, showing the permitted use(s) of information.
+Metadata is initially indicated by its author and then amended by the approval and authorization
+processes. Using an information container for anything other than the use indicated by its status code
+is at the risk of the user.
+The CDE solution can include both a database management capability to manage information container
+attributes and meta-data, and a transmittal capability to issue update notices to team members and to
+maintain the audit trail of information handling.
+24 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+The whole information model is not always held in one place, particularly for large or complex assets or
+projects, or widely dispersed teams. Information container-based collaborative working allows for CDE
+workflow to be distributed across different computer systems or technology platforms.
+The advantages of adopting such a CDE solution and workflow include:
+— responsibility for the information within each information container remains with the organization
+that produced it, and although it is shared and reused only that organization is allowed to change
+the contents;
+— shared information containers reduce the time and cost in producing coordinated information; and
+— a full audit trail of information production is available for use during and after each project delivery
+and asset management activity.
+Figure 10 — Common data environment (CDE) concept
+12.2 The work in progress state
+The work in progress state is used for information while it is being developed by its task team. An
+information container in this state should not be visible or accessible to any other task team. This is
+particularly important if the CDE solution is implemented through a shared system, for example a
+shared server or web-portal.
+12.3 The check/review/approve transition
+The check/review/approve transition compares the information container against the information
+delivery plan and against the agreed standards, methods and procedures for producing information.
+The check/review/approve transition should be made by the originating task team.
+12.4 The shared state
+The purpose of the shared state is to enable constructive and collaborative development of the
+information model within a delivery team.
+Information containers in the shared state should be consulted by all appropriate appointed parties
+(including those in other delivery teams) for the purpose of coordination with their own information,
+© ISO 2018 – All rights reserved 25ISO 19650-1:2018(E)
+subject to any security-related restrictions. These information containers should be visible and
+accessible but should not be editable. If editing is required, an information container should be returned
+to the work in progress state for amendment and resubmission by its author.
+The shared state is also used for information containers that have been approved for sharing with the
+appointing party and are ready for authorization. This use of the shared state can be termed the client
+shared state.
+12.5 The review/authorize transition
+The review/authorize transition compares all the information containers at information exchange
+against the relevant information requirements for coordination, completeness and accuracy. If
+an information container meets the information requirements, its state is changed to published.
+Information containers not meeting the information requirements should be returned to the work in
+progress state for amendment and resubmission.
+Authorization separates information (in the published state) that may be relied on for the next stage
+of project delivery, including more detailed design or construction, or for asset management, from
+information that can still be subject to change (in the work in progress state or the shared state).
+12.6 The published state
+The published state is used for information that has been authorized for use, for example in the
+construction of a new project or in the operation of an asset.
+The PIM at the end of a project or the AIM during asset operation contains only information in the
+published state or the archive state.
+12.7 The archive state
+The archive state is used to hold a journal of all information containers that have been shared and
+published during the information management process as well as an audit trail of their development.
+An information container referenced in the archive state that was previously in the published state
+represents information that potentially has been used for more detailed design work, for construction
+or for asset management.
+13 Summary of “building information modelling (BIM) according to the ISO
+19650 series”
+Information management is distinct from information production and delivery, but is closely linked to
+them. Information management should be applied during the whole life cycle of the asset. Information
+management functions should be assigned to the most appropriate organizations (appointing party,
+appointed parties, lead appointed parties) and should not necessarily require appointment of new
+organizations.
+The quantity of information being managed generally increases both during the delivery phase
+and during the operational phase. However, only relevant information should be made available or
+transferred between operational phase and delivery phase activities and vice versa.
+An information management process is started each time a new delivery phase or operational phase
+appointment is made, irrespective of whether this appointment is formal or informal. This process
+involves preparation of information requirements, review of prospective appointed parties in relation
+to information management, initial and detailed planning for how and when information will be
+delivered, and review of information deliverables against the information requirements before they are
+integrated with operational systems. The information management process should be applied in a way
+that is proportionate to the scale and complexity of the project or asset management activities.
+26 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Information requirements are cascaded to the most relevant appointed party within a delivery team.
+Information deliverables are collated by the lead appointed party before delivery to the appointing
+party through information exchange. Information exchange is also used to transfer information
+between lead appointed parties where this has been authorized by the appointing party.
+The CDE workflow is used to support collaborative production, management, sharing and exchange of
+all information during operational and delivery phases.
+Information models containing federated information deliverables are produced as a result of the CDE
+workflow to address the perspectives of all interested parties.
+Within the information management process, the number and description of sub-divisions of the asset
+life cycle (solid rectangles), points of information exchange (solid circles) and decision points for delivery
+teams, interested parties or appointing party (diamonds) should reflect local practice, interested party
+and appointing party requirements, and any agreements or requirements specific to project delivery or
+asset management.
+These concepts and principles are summarized in Figure 11.
+© ISO 2018 – All rights reserved 27ISO 19650-1:2018(E)
+28 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Key
+information production
+information management process
+flow of information deliverables
+iteration to complete information exchange
+stakeholder decision point
+delivery team decision point
+information exchange
+Figure 11 — Overview and illustration of the information management process
+© ISO 2018 – All rights reserved 29ISO 19650-1:2018(E)
+Annex A
+(informative)
+Illustrations of federation strategies and information container
+breakdown structures
+A.1 General
+Federation strategies and information container breakdown structures are important concepts in
+managing federated information models in “BIM according to the ISO 19650 series”.
+Federation and information container breakdown should be used to:
+— allow different task teams to work on different parts of the information model simultaneously
+without introducing coordination issues, for example spatial clashes or functional incompatibilities;
+— support information security;
+— ease information transmission by reducing the sizes of individual information containers.
+Federation and information container breakdown can also be used to help define scopes of service for
+task teams.
+A.2 Simultaneous working
+A federation strategy to allow simultaneous working should define the spatial boundaries within which
+each task team should locate the systems, components or construction elements it is responsible for.
+For an asset that is primarily linear, such as a rail tunnel, the federation strategy can be defined by a
+dimensioned cross-section of the tunnel. This is illustrated in Figure A.1 and in this case the strategy is
+linked to different types of systems to be accommodated in the tunnel.
+For an asset such as a building, the federation strategy can be defined through a set of interlocking
+spaces. This is illustrated in Figure A.2. An information container breakdown is illustrated in Figure A.3.
+Both of these are linked to different design disciplines.
+A.3 Information security
+A federation strategy or information container breakdown structure to support information security
+should separate containers or spatial sections of the asset according to the permissions for accessing
+information.
+For an asset related to criminal justice, such as a prison, different levels of restriction can be placed on
+general site information (such as location, vehicle access routes), on general design and construction
+information (such as floor plans, space adjacencies, heating and ventilation treatments) and on securityspecific information (such as details of cell and wing locks, details of surveillance systems, evacuation
+or containment procedures). This is illustrated in Figure A.4.
+30 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+A.4 Information transmission
+A federation strategy to assist with transmission of information containers within a delivery team or to
+and from an appointing party should consider the maximum file size that is practicable for upload and
+download with the specified IT infrastructure, for example 250 Mb. The information model should then
+be sub-divided so that no single information container is larger than 250 Mb.
+Key
+1 overhead line electrification 7 drainage system
+2 electrical system 8 communications system
+3 train 9 signaling system
+4 water system 10 signage
+5 kinetic envelope 11 tunnel structure
+6 track system 12 emergency walkway
+Figure A.1 — Illustration of federation of tunnel cross-section systems in a rail project
+© ISO 2018 – All rights reserved 31ISO 19650-1:2018(E)
+Key
+yellow architecture
+blue structure
+green, red, purple mechanical, electrical and plumbing systems
+Figure A.2 — Illustration of spatial federation strategy by discipline in a building project
+Figure A.3 — Illustration of information container breakdown structure for simultaneous
+working
+32 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+Figure A.4 — Illustration of information container breakdown structure for information
+security
+© ISO 2018 – All rights reserved 33ISO 19650-1:2018(E)
+Bibliography
+[1] ISO 6707-1:2017, Buildings and civil engineering works — Vocabulary — Part 1: General terms
+[2] ISO 6707-2:2017, Buildings and civil engineering works — Vocabulary — Part 1: Contract and
+communication terms
+[3] ISO 8000, Data quality
+[4] ISO 9001, Quality management systems — Requirements
+[5] ISO 12006-2:2015, Building construction — Organization of information about construction
+works — Part 2: Framework for classification
+[6] ISO 12006-3, Building construction — Organization of information about construction works —
+Part 3: Framework for object-oriented information
+[7] ISO/TS 12911:2012, Framework for building information modelling (BIM) guidance
+[8] ISO 16739, Industry Foundation Classes (IFC) for data sharing in the construction and facility
+management industries
+[9] ISO 19650-2, Organization of information about construction works — Information management
+using building information modelling — Part 2: Delivery phase of assets
+[10] ISO 21500, Guidance on project management
+[11] ISO 22263, Organization of information about construction works — Framework for management
+of project information
+[12] ISO/IEC/IEEE 24765, Systems and software engineering — Vocabulary
+[13] ISO/IEC 27000, Information technology — Security techniques — Information security management
+systems — Overview and vocabulary
+[14] ISO 29481-1:2016, Building information models — Information delivery manual — Part 1:
+Methodology and format
+[15] ISO 31000, Risk management — Guidelines
+[16] ISO 37500:2014, Guidance on outsourcing
+[17] ISO 55000:2014, Asset management — Overview, principles and terminology
+[18] IEC 82045-1, Document management — Part 1: Principles and methods
+34 © ISO 2018 – All rights reservedISO 19650-1:2018(E)
+© ISO 2018 – All rights reserved
+ICS 35.240.67; 91.010.01
+Price based on 34 pages

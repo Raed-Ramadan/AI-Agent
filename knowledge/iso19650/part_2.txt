@@ -1,0 +1,1071 @@
+© ISO 2018
+Organization and digitization of
+information about buildings and civil
+engineering works, including building
+information modelling (BIM) —
+Information management using
+building information modelling —
+Part 2:
+Delivery phase of the assets
+Organisation et numérisation des informations relatives aux
+bâtiments et ouvrages de génie civil, y compris modélisation des
+informations de la construction (BIM) — Gestion de l'information par
+modélisation des informations de la construction —
+Partie 2: Phase de réalisation des actifs
+INTERNATIONAL
+STANDARD
+ISO
+19650-2
+First edition
+2018-12
+Reference number
+ISO 19650-2:2018(E)ISO 19650-2:2018(E)
+ii © ISO 2018 – All rights reserved
+COPYRIGHT PROTECTED DOCUMENT
+© ISO 2018
+All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may
+be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting
+on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address
+below or ISO’s member body in the country of the requester.
+ISO copyright office
+CP 401 • Ch. de Blandonnet 8
+CH-1214 Vernier, Geneva
+Phone: +41 22 749 01 11
+Fax: +41 22 749 09 47
+Email: copyright@iso.org
+Website: www.iso.org
+Published in SwitzerlandISO 19650-2:2018(E)
+Foreword ..........................................................................................................................................................................................................................................v
+Introduction................................................................................................................................................................................................................................vi
+1 Scope ................................................................................................................................................................................................................................. 1
+2 Normative references...................................................................................................................................................................................... 1
+3	 Terms, definitions and symbols............................................................................................................................................................ 1
+3.1 Terms and definitions ....................................................................................................................................................................... 1
+3.1.1 General terms ..................................................................................................................................................................... 1
+3.1.2 Terms related to assets and projects.............................................................................................................. 2
+3.1.3 Terms related to information management ............................................................................................. 2
+3.2 Symbols ......................................................................................................................................................................................................... 2
+4 Information management during the delivery phase of assets........................................................................... 3
+5 Information management process during the delivery phase of assets.....................................................3
+5.1 Information management process — Assessment and need ......................................................................... 3
+5.1.1 Appoint individuals to undertake the information management function ................... 3
+5.1.2 Establish the project’s information requirements.............................................................................. 4
+5.1.3 Establish the project’s information delivery milestones............................................................... 4
+5.1.4 Establish the project’s information standard ......................................................................................... 4
+5.1.5 Establish the project’s information production methods and procedures ................... 5
+5.1.6 Establish the project’s reference information and shared resources................................. 5
+5.1.7 Establish the project’s common data environment........................................................................... 5
+5.1.8 Establish the project’s information protocol........................................................................................... 6
+5.1.9 Activities for assessment and need.................................................................................................................. 6
+5.2 Information management process — Invitation to tender............................................................................... 7
+5.2.1 Establish the appointing party’s exchange information requirements............................ 7
+5.2.2 Assemble reference information and shared resources................................................................ 8
+5.2.3 Establish tender response requirements and evaluation criteria......................................... 8
+5.2.4 Compile invitation to tender information.................................................................................................. 8
+5.2.5 Activities for invitation to tender ...................................................................................................................... 9
+5.3 Information management process — Tender response...................................................................................... 9
+5.3.1 Nominate individuals to undertake the information management function............... 9
+5.3.2 Establish the delivery team’s (pre-appointment) BIM execution plan ..........................10
+5.3.3 Assess task team capability and capacity................................................................................................10
+5.3.4 Establish the delivery team’s capability and capacity ..................................................................11
+5.3.5 Establish the delivery team’s mobilization plan................................................................................11
+5.3.6 Establish the delivery team’s risk register .............................................................................................12
+5.3.7 Compile the delivery team’s tender response .....................................................................................12
+5.3.8 Activities for tender response ...........................................................................................................................12
+5.4 Information management process — Appointment ...........................................................................................13
+5.4.1 Confirm the delivery team’s BIM execution plan ..............................................................................13
+5.4.2 Establish the delivery team’s detailed responsibility matrix .................................................13
+5.4.3 Establish the lead appointed party’s exchange information requirements...............14
+5.4.4 Establish the task information delivery plan(s) ................................................................................15
+5.4.5 Establish the master information delivery plan ................................................................................15
+5.4.6 Complete lead appointed party’s appointment documents ....................................................16
+5.4.7 Complete appointed party’s appointment documents ................................................................16
+5.4.8 Activities for appointment....................................................................................................................................16
+5.5 Information management process — Mobilization .............................................................................................17
+5.5.1 Mobilize resources ......................................................................................................................................................17
+5.5.2 Mobilize information technology ...................................................................................................................17
+5.5.3 Test the project’s information production methods and procedures .............................17
+5.5.4 Activities for mobilization ....................................................................................................................................17
+5.6 Information management process — Collaborative production of information........................18
+© ISO 2018 – All rights reserved iii
+Contents PageISO 19650-2:2018(E)
+5.6.1 Check availability of reference information and shared resources...................................18
+5.6.2 Generate information................................................................................................................................................18
+5.6.3 Undertake quality assurance check..............................................................................................................19
+5.6.4 Review information and approve for sharing......................................................................................19
+5.6.5 Information model review....................................................................................................................................20
+5.6.6 Activities for collaborative production of information................................................................20
+5.7 Information management process — Information model delivery .......................................................20
+5.7.1 Submit information model for lead appointed party authorization ................................20
+5.7.2 Review and authorize the information model.....................................................................................20
+5.7.3 Submit information model for appointing party acceptance.................................................21
+5.7.4 Review and accept the information model.............................................................................................21
+5.7.5 Activities for information model delivery...............................................................................................21
+5.8 Information management process — Project close-out ..................................................................................22
+5.8.1 Archive the project information model.....................................................................................................22
+5.8.2 Capture lessons learned for future projects..........................................................................................22
+5.8.3 Activities for project close-out..........................................................................................................................22
+Annex A (informative) Information management assignment matrix ..........................................................................24
+Bibliography .............................................................................................................................................................................................................................26
+iv © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Foreword
+ISO (the International Organization for Standardization) is a worldwide federation of national standards
+bodies (ISO member bodies). The work of preparing International Standards is normally carried out
+through ISO technical committees. Each member body interested in a subject for which a technical
+committee has been established has the right to be represented on that committee. International
+organizations, governmental and non-governmental, in liaison with ISO, also take part in the work.
+ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of
+electrotechnical standardization.
+The procedures used to develop this document and those intended for its further maintenance are
+described in the ISO/IEC Directives, Part 1. In particular, the different approval criteria needed for the
+different types of ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).
+Attention is drawn to the possibility that some of the elements of this document may be the subject of
+patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of
+any patent rights identified during the development of the document will be in the Introduction and/or
+on the ISO list of patent declarations received (see www.iso.org/patents).
+Any trade name used in this document is information given for the convenience of users and does not
+constitute an endorsement.
+For an explanation of the voluntary nature of standards, the meaning of ISO specific terms and
+expressions related to conformity assessment, as well as information about ISO's adherence to the
+World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT) see www.iso
+.org/iso/foreword.html.
+This document was prepared by Technical Committee ISO/TC 59, Buildings and civil engineering works,
+Subcommittee SC 13, Organization and digitalization of information about buildings and civil engineering
+works, including building information modelling (BIM).
+A list of all parts in the ISO 19650 series can be found on the ISO website.
+Any feedback or questions on this document should be directed to the user’s national standards body. A
+complete listing of these bodies can be found at www.iso.org/members.html.
+© ISO 2018 – All rights reserved vISO 19650-2:2018(E)
+Introduction
+0.1 Purpose
+This document is designed to enable an appointing party to establish their requirements for information
+during the delivery phase of assets and to provide the right commercial and collaborative environment
+within which (multiple) appointed parties can produce information in an effective and efficient manner.
+This document is applicable to built assets and construction projects of all sizes and all levels of
+complexity. This includes large estates, infrastructure networks, individual buildings and pieces of
+infrastructure, and the projects or programmes that deliver them. However, the requirements included
+in this document should be applied in a way that is proportionate and appropriate to the scale and
+complexity of the asset or project. In particular, procurement and mobilization of asset or project
+appointed parties should be integrated as far as possible with documented processes for technical
+procurement and mobilization.
+This document makes wide use of the phrase “shall consider”, particularly in the requirements in
+Clause 5. This phrase is used to introduce a list of items that the person in question needs to think
+about carefully in connection with the primary requirement described in the clause. The amount of
+thought involved, the time taken to complete it and the need for supporting evidence will depend on the
+complexity of the project, the experience of the person(s) involved and the requirements of any national
+policy on introducing building information modelling. On a relatively small or straightforward project,
+it can be possible to complete, or dismiss as not relevant, some of these “shall consider” items very
+quickly.
+One way to help identify which of the “shall consider” statements are relevant, can be to review each
+statement and create templates for projects of different sizes and complexity.
+This document can be used by any appointing party. If the appointing party intends this document to
+apply to any asset (project) this should be reflected in the appointment.
+This document defines the information management process, containing the activities through which
+delivery teams can collaboratively produce information and minimize wasteful activities.
+This document is primarily intended for use by the following (see Figure 1):
+— those involved in the management or production of information during the delivery phase of assets;
+— those involved in the definition and procurement of construction projects;
+— those involved in the specification of appointments and facilitation of collaborative working;
+— those involved in the design, construction, operation, maintenance and decommissioning of
+assets; and
+— those responsible for the realization of value for their organization from their asset base.
+This document contains the requirements associated with the management of information during the
+delivery phase of built assets, which will need to be reviewed and revised on a regular basis until the
+best practice is established.
+vi © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Key
+AIM asset information model
+PIM project information model
+A start of delivery phase — transfer of relevant information from AIM to PIM
+B progressive development of the design intent model into the virtual construction model
+C end of delivery phase — transfer of relevant information from PIM to AIM
+Figure 1 — Scope of this document
+0.2 National annex with relevant national standards
+There are several standards required for the successful implementation of this document, relating
+to specific regions or countries, that are currently not suitable for inclusion within an international
+standard. As such, national standards bodies are encouraged to compile and document the standards,
+relevant to the region or country they represent, within a national annex. National annexes can also
+provide localised guidance and advice on how to implement this document for projects of varying
+complexity.
+0.3 Relationship with other standards
+© ISO 2018 – All rights reserved viiISO 19650-2:2018(E)
+The concepts and principles relating to the application of the requirements within this document are
+provided in ISO 19650-1.
+General information on asset management can be found in ISO 55000.
+Appointing parties can find that consideration of the concepts and principles contained within both
+ISO 19650-1 and ISO 55000 can assist the implementation of the requirements presented in this
+document and development of asset management in their organization.
+0.4 Benefits of the ISO 19650 series
+The aim of this series is to support all parties towards achieving their business objectives through
+the effective and efficient procurement, use and management of information during the delivery
+phase of assets.
+International cooperation in the preparation of these documents has identified a common information
+management process that can be applied to the broadest range of assets, in the broadest range of
+organizations, across the broadest range of cultures and under the broadest range of appointment routes.
+0.5 Interfaces between parties and teams for the purpose of information management
+For the purpose of this document, Figure 2 shows the interfaces between parties and teams in terms of
+information management and should not be seen as identification of contractual relationships.
+The terms for both parties and teams have been used throughout this document to identify and assign
+the accountable party for each sub-activity.
+NOTE Delivery teams can join and leave the project team at any time.
+viii © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Key
+A appointing party
+B lead appointed party
+C appointed party
+… variable amount
+1 project team
+2 illustration of a delivery team
+3 task team(s)
+information requirements and information exchange
+information coordination
+Figure 2 — Interfaces between parties and teams for the purpose of information management
+© ISO 2018 – All rights reserved ixOrganization and digitization of information about
+buildings and civil engineering works, including building
+information modelling (BIM) — Information management
+using building information modelling —
+Part 2:
+Delivery phase of the assets
+1 Scope
+This document specifies requirements for information management, in the form of a management
+process, within the context of the delivery phase of assets and the exchanges of information within it,
+using building information modelling.
+This document can be applied to all types of assets and by all types and sizes of organizations, regardless
+of the chosen procurement strategy.
+2 Normative references
+The following documents are referred to in the text in such a way that some or all of their content
+constitutes requirements of this document. For dated references, only the edition cited applies. For
+undated references, the latest edition of the referenced document (including any amendments) applies.
+ISO 19650-1, Organization of information about construction works — Information management using
+building information modelling — Part 1:Concepts and Principles
+ISO 12006-2, Building construction — Organization of information about construction works — Part 2:
+Framework for classification
+3	 Terms, definitions and symbols
+3.1	 Terms and definitions
+For the purposes of this document, the terms and definitions given in ISO 19650-1 and the following apply.
+ISO and IEC maintain terminological databases for use in standardization at the following addresses:
+— ISO Online browsing platform: available at https://www.iso.org/obp
+— IEC Electropedia: available at http://www.electropedia.org/
+3.1.1 General terms
+3.1.1.1
+acceptance criteria
+evidence required for considering that requirements have been fulfilled
+[SOURCE: ISO 22263:2008, 2.1]
+INTERNATIONAL STANDARD ISO 19650-2:2018(E)
+© ISO 2018 – All rights reserved 1ISO 19650-2:2018(E)
+3.1.2 Terms related to assets and projects
+3.1.2.1
+project team
+appointing party and all delivery teams
+3.1.2.2
+plan of work
+document that details principal stages in the design, construction work and maintenance of a project
+and identifies the main tasks and people
+Note 1 to entry: A plan of work may be extended to include the stages in demolition and recycling of a project.
+[SOURCE: ISO 6707-2:2017, 3.2.19, modified — Alternative terms “staging plan, US” and “project plan,
+US” have been removed; Note 1 to entry has been added.]
+3.1.3 Terms related to information management
+3.1.3.1
+BIM execution plan
+plan that explains how the information management aspects of the appointment will be carried out by
+the delivery team
+Note 1 to entry: The pre-appointment BIM execution plan focuses on the delivery team’s proposed approach to
+information management and their capability and capacity to manage information.
+3.1.3.2
+information delivery milestone
+scheduled event for a predefined information exchange
+3.1.3.3
+master information delivery plan
+MIDP
+plan incorporating all relevant task information delivery plans (3.1.3.4)
+3.1.3.4
+task information delivery plan
+TIDP
+schedule of information containers and delivery dates, for a specific task team
+3.2 Symbols
+start
+end
+collapsed sub-process
+activity
+NOTE the symbols used within this document have been adapted from symbols defined within ISO/
+IEC 19510.
+2 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+4 Information management during the delivery phase of assets
+The information management process (Figure 3) shall be applied throughout the delivery phase for
+each appointment, regardless of project stage.
+Activities
+1 assessment and need A information model progressed by subsequent delivery
+2 invitation to tender team(s) for each appointment
+3 tender response B activities undertaken per project
+4 appointment C activities undertaken per appointment
+5 mobilization D activities undertaken during the procurement stage
+6 collaborative production of information (of each appointment)
+7 information model delivery E activities undertaken during the information planning
+8 project close-out (end of delivery phase) stage (of each appointment)
+F activities undertaken during the information production
+stage (of each appointment)
+Figure 3 — Information management process during the delivery phase of assets
+NOTE 1 It is these activities that have been used as the structure for this document, in particular Clause 5.
+NOTE 2 The order in which activities are presented in Figure 3 reflects the order in which they are undertaken.
+NOTE 3 In the event that the information management process is undertaken within a single organization,
+the appointment can be supplemented by an internal work instruction, followed by an acceptance of the work
+instruction and confirmation to proceed. See ISO 19650-1:2018, 6.3 and 8.1 for more information.
+5 Information management process during the delivery phase of assets
+5.1 Information management process — Assessment and need
+5.1.1 Appoint individuals to undertake the information management function
+The appointing party shall have regard to the effective management of information throughout the
+project and reflect the long-term asset information management strategy, as described in ISO 19650-1
+:2018, 5.3, by nominating individuals from within the appointing party’s organization to undertake the
+information management function on behalf of the appointing party.
+Alternatively, the appointing party can appoint a prospective lead appointed party or a third-party to
+undertake all or part of the information management function, in which case, the appointing party shall
+establish a scope of services.
+In doing this, the appointing party shall consider:
+— the tasks that the prospective lead appointed party or third party will be responsible for;
+© ISO 2018 – All rights reserved 3ISO 19650-2:2018(E)
+— the authority that the appointing party will delegate to the prospective lead appointed party or
+third party; and
+— the competency (knowledge or skills) that the individuals undertaking the function will need.
+NOTE Where the appointing party appoints a prospective lead appointed party or a third party to undertake
+all or part of the information management function, the use of the information management assignment matrix
+(Annex A) can help with establishing the scope of services needed.
+5.1.2 Establish the project’s information requirements
+The appointing party shall establish the project’s information requirements, as described in
+ISO 19650-1:2018, 5.3, to address the questions to which the appointing party needs answer(s) at each
+of the key decision points throughout the project.
+In doing this, the appointing party shall consider:
+— the project scope;
+— the intended purpose for which the information will be used by the appointing party;
+— the project plan of work;
+— the intended procurement route;
+— the number of key decision points throughout the project;
+— the decisions that the appointing party needs to make at each key decision point; and
+— the questions to which the appointing party needs answers, to make informed decisions.
+5.1.3 Establish the project’s information delivery milestones
+The appointing party shall establish the project’s information delivery milestones in accordance with
+the project’s plan of work.
+In doing this, the appointing party shall consider:
+— the appointing party’s key decision points;
+— its own information delivery obligations (if any);
+— the nature and substance of information to be delivered at each key decision point; and
+— the date(s) relative to each key decision point that the information model is to be delivered.
+5.1.4 Establish the project’s information standard
+The appointing party shall establish any specific information standards required by the appointing
+party’s organization within the project’s information standard.
+In doing this, the appointing party shall consider:
+a) the exchange of information:
+— within the appointing party’s organization,
+— between the appointing party and external stakeholders,
+— between the appointing party and external operators or maintainers,
+— between the prospective lead appointed party and the appointing party,
+4 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+— between prospective appointed parties on the same project, and
+— between interdependent projects;
+b) the means of structuring and classifying information;
+c) the method of assignment for level of information need; and
+d) the use of information during the operational phase of the asset.
+5.1.5 Establish the project’s information production methods and procedures
+The appointing party shall establish any specific information production methods and procedures
+required by their organization within the project’s information production methods and procedures.
+In doing this, the appointing party shall consider:
+a) the capture of existing asset information;
+b) the generation, review or approval of new information;
+c) the security or distribution of information; and
+d) the delivery of information to the appointing party.
+5.1.6 Establish the project’s reference information and shared resources
+The appointing party shall establish the reference information and shared resources that they intend
+to share with the prospective lead appointed parties during the tender process or appointment, using
+open data standards whenever possible to avoid duplication of effort and interoperability issues.
+In doing this, the appointing party shall consider:
+a) existing asset information:
+— from within the appointing party’s organization;
+— from adjacent asset owners (utility companies, etc.);
+— under license from external providers (mapping and imagery, etc.); and
+— within public libraries and other sources of historical records.
+b) shared resources, for example:
+— process output templates (BIM execution plan, master information delivery plan, etc.);
+— information container templates (2D/3D geometrical models, documents, etc.);
+— style libraries (lines, text and hatch, etc.); or
+— object libraries (2D symbols, 3D objects, etc.).
+c) library objects defined within national and regional standards.
+NOTE The appointing party can seek support from specialist suppliers to establish reference information or
+shared resources.
+5.1.7 Establish the project’s common data environment
+The appointing party shall establish (implement, configure and support) the project’s common data
+environment (CDE) to serve the overall requirements of the project and to support the collaborative
+production of information (5.6).
+© ISO 2018 – All rights reserved 5ISO 19650-2:2018(E)
+The project’s common data environment shall enable:
+a) each information container to have a unique ID, based upon an agreed and documented convention
+comprised of fields separated by a delimiter;
+b) each field to be assigned a value from an agreed and documented codification standard;
+c) each information container to have the following attributes assigned:
+— status (suitability);
+— revision;
+— classification (in accordance with the framework defined in ISO 12006-2);
+d) the ability for information containers to transition between states;
+e) the recording of the name of user and date when information container revisions transition
+between each state; and
+f) controlled access at an information container level.
+It is strongly recommended that the project CDE is in place prior to issuing the invitation to tender, so
+that information can be shared with tendering organizations in a secure manner.
+The appointing party can also appoint a third-party to host, manage or support the project’s CDE. In this
+case, it is recommended that this is done as a separate appointment before procurement of any other
+appointed party starts. Or the appointing party can also, at a later date, appoint an appointed party to
+take over the hosting, management or support of the project’s CDE. In either case, it is recommended
+that the appointing party defines a functional and non-functional requirements specification.
+5.1.8 Establish the project’s information protocol
+The appointing party shall establish the project’s information protocol, as defined below, including any
+associated license agreements, which will, subsequently and appropriately, be incorporated into all
+appointments.
+In doing this, the appointing party shall consider:
+— specific obligations of the appointing party, prospective lead appointed parties and prospective
+appointed parties relating to the management or production of information, including the use of the
+project’s common data environment;
+— any warranties or liabilities associated to the project information model;
+— background and foreground intellectual property rights of information;
+— the use of existing asset information;
+— the use of shared resources;
+— the use of information during the project, including any associated licensing terms; and
+— the re-use of information following the appointment or in the event of termination.
+5.1.9 Activities for assessment and need
+Activities for assessment and need are shown in Figure 4.
+6 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Key
+1.1 appoint individuals to undertake the information management function
+1.2 establish the project's information requirements
+1.3 establish the project's information delivery milestones
+1.4 establish the project’s information standard
+1.5 establish the project's information production methods and procedures
+1.6 establish the project’s reference information and shared resources
+1.7 establish the project's common data environment
+1.8 establish the project's information protocol
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE Activities shown in parallel are to highlight that these activities can be undertaken concurrently and
+apply to all instances.
+Figure 4 — Information management process — Assessment and need
+5.2 Information management process — Invitation to tender
+5.2.1 Establish the appointing party’s exchange information requirements
+The appointing party shall establish their exchange information requirements to be met by the
+prospective lead appointed party during the appointment.
+In doing this, the appointing party shall:
+a) establish the appointing party’s information requirements to be served during the appointment,
+and in doing so shall consider their:
+— organizational information requirements,
+— asset information requirements, and
+— project information requirements;
+b) establish the level of information need required to meet each information requirement;
+NOTE Other metrics to describe the status of information, such as level of accuracy, can be added to
+these metrics as considered appropriate.
+c) establish the acceptance criteria for each information requirement, and in doing so shall consider:
+— the project’s information standard,
+— the project’s information production methods and procedures, and
+— the use of reference information or shared resources provided by the appointing party;
+© ISO 2018 – All rights reserved 7ISO 19650-2:2018(E)
+d) establish the supporting information that the prospective lead appointed party might need, to fully
+understand or evaluate each information requirement or its acceptance criteria, and in doing so
+shall consider:
+— existing asset information,
+— shared resources,
+— supporting documents or guidance material,
+— references to relevant international, national or industry standards, and
+— exemplars of similar information deliverables;
+e) establish the dates, relative to the project’s information delivery milestones and appointing party’s
+key decision points, that each requirement has to be met, and in doing so shall consider:
+— the time needed by the appointing party to review and accept information, and
+— the appointing party’s internal assurance processes.
+5.2.2 Assemble reference information and shared resources
+The appointing party shall assemble the reference information or shared resources that they intend to
+provide to the prospective lead appointed party during the tender process or appointment.
+In doing this, the appointing party shall consider:
+— reference information or shared resources identified during project initiation;
+— information generated during previous stages of the project; and
+— the suitability for which the information can be used by the prospective lead appointed party.
+It is recommended that reference information and shared resources are made available to tendering
+organizations in a secure environment, such as the project’s common data environment.
+It is recommended that appointing parties identify the suitability for which the information can be used
+by tendering organizations and delivery teams, by way of a status code associated to each information
+container.
+5.2.3 Establish tender response requirements and evaluation criteria
+The appointing party shall establish the requirements that tendering organizations shall meet within
+their tender response.
+In doing this, the appointing party shall consider:
+— the contents of the delivery team’s (pre-appointment) BIM execution plan;
+— the competency of the prospective individuals undertaking the information management function
+on behalf of the delivery team;
+— the prospective lead appointed party’s assessment of the delivery team’s capability and capacity;
+— the delivery team’s proposed mobilization plan; and
+— the delivery team’s information delivery risk assessment.
+5.2.4 Compile invitation to tender information
+The appointing party shall compile the information to be included within the invitation to tender
+package.
+8 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+In doing this, the appointing party shall consider:
+— the appointing party’s exchange information requirements;
+— the relevant reference information and shared resources (within the project’s common data
+environment);
+— the tender response requirements and evaluation criteria (if applicable);
+— the project information delivery milestones;
+— the project’s information standard;
+— the project’s information production methods and procedure; and
+— the project’s information protocol.
+5.2.5 Activities for invitation to tender
+Activities for invitation to tender are shown in Figure 5.
+Key
+2.1 establish the appointing party’s exchange information requirements
+2.2 assemble reference information and shared resources
+2.3 establish tender response requirements and evaluation criteria
+2.4 compile invitation to tender information
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE Activities shown in parallel are to highlight that these activities can be undertaken concurrently.
+Figure 5 — Information management process — Invitation to tender
+5.3 Information management process — Tender response
+5.3.1 Nominate individuals to undertake the information management function
+The prospective lead appointed party shall have regard to the effective management of information
+throughout the appointment by nominating individuals from within its own organization to undertake
+the information management function on behalf of the lead appointed party.
+Alternatively, the prospective lead appointed party can appoint a prospective appointed party or
+third party to undertake all or part of the information management function, in which case, the lead
+appointed party shall establish a scope of services.
+In doing this, the appointing party shall consider:
+— the appointing party’s exchange information requirements;
+— the tasks that the prospective appointed party or third party will be responsible for;
+— the authority that the prospective lead appointed party will delegate to the prospective appointed
+party or third party;
+© ISO 2018 – All rights reserved 9ISO 19650-2:2018(E)
+— the competency (knowledge or skills) that the individuals undertaking the function will need; and
+— probity arrangements if potential conflicts of interest may arise.
+The appointing party can appoint the prospective lead appointed party to undertake all or part of the
+information management function on their behalf. In this scenario, to avoid any potential conflict of
+interest, it is recommended that individuals undertake the information management function on behalf
+of either the appointing party or the prospective lead appointed party.
+5.3.2 Establish the delivery team’s (pre-appointment) BIM execution plan
+The prospective lead appointed party shall establish the delivery team’s (pre-appointment) BIM
+execution plan, to be included within the prospective lead appointed party’s tender response.
+In doing this, the prospective lead appointed party shall consider:
+a) the proposed names and professional résumés of the individuals who will undertake the
+information management function on behalf of the delivery team;
+b) the delivery team’s information delivery strategy, containing:
+— the delivery team’s approach to meeting the appointing party’s exchange information
+requirements,
+— a set of objectives/goals for the collaborative production of information,
+— an overview of the delivery team’s organizational structure and commercial relationships, and
+— an overview of the delivery team’s composition, in the form of one or more task teams;
+c) the proposed federation strategy to be adopted by the delivery team;
+d) the delivery team’s high-level responsibility matrix, containing the allocated responsibility for each
+element of the information model and the key deliverables associated to each element;
+e) any proposed additions or amendments to the project’s information production methods and
+procedures that the delivery team require to facilitate the effective:
+— capture of existing asset information,
+— generation, review, approval and authorization of information,
+— security and distribution of information, and
+— delivery of information to the appointing party;
+f) any proposed additions or amendments to the project’s information standard that the delivery
+team require to facilitate the effective:
+— exchange of information between task teams,
+— distribution of information to external parties, or
+— delivery of information to the appointing party;
+g) a proposed schedule of software (including versions), hardware and IT infrastructure the delivery
+team intend to adopt.
+5.3.3 Assess task team capability and capacity
+Each task team shall undertake an assessment of their capability and capacity to deliver information
+in accordance with the appointing party’s exchange information requirements and the delivery team’s
+proposed (pre-appointment) BIM execution plan.
+10 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+In doing this, each task team shall consider:
+a) the task team’s capability and capacity to manage information, based upon:
+— the relevant experience and number of task team members who have managed information in
+accordance with the proposed information delivery strategy; and
+— the relevant education and training available to task team members;
+b) the task team’s capability and capacity to produce information, based upon:
+— the relevant experience and number of task team members who have produced information in
+accordance with the project’s information production methods and procedures; and
+— the relevant education and training available to task team members;
+c) the availability of information technology (IT) within the task team, based upon:
+— the proposed IT schedule;
+— the specification and quantity of the task team’s hardware;
+— the architecture, maximum capacity and current utilization of the task team’s IT
+infrastructure; and
+— the associated support and service level agreements available to the task team.
+5.3.4 Establish the delivery team’s capability and capacity
+The prospective lead appointed party shall establish the delivery team’s capability and capacity by
+aggregating the assessments undertaken by each task team to produce a summary of the delivery team’s
+capability to manage and produce information and its capacity for timely delivery of the information.
+5.3.5 Establish the delivery team’s mobilization plan
+The prospective lead appointed party shall establish the delivery team’s proposed mobilization plan
+that will be initiated and implemented during mobilization (5.5).
+In doing this, the prospective lead appointed party shall consider their approach, timescales and
+responsibilities for:
+— testing and documenting the proposed information production methods and procedures;
+— testing the information exchanges between task teams;
+— testing the information delivery to the appointing party;
+— configuring and testing the project’s CDE in accordance with 5.1.7;
+— configuring and testing the delivery team’s (distributed) CDE and its connectivity to the project CDE
+(if applicable) in accordance with 5.1.7;
+— procuring, implementing, configuring and testing additional software, hardware and IT
+infrastructure;
+— developing additional shared resources to be used by the delivery team;
+— developing and delivering education (knowledge required) to delivery team members;
+— developing and delivering training (skills required) to the delivery team members;
+— recruiting additional members of the delivery team to achieve the required capacity; and
+© ISO 2018 – All rights reserved 11ISO 19650-2:2018(E)
+— supporting individuals and organizations that join the delivery team during the appointment.
+5.3.6 Establish the delivery team’s risk register
+The prospective lead appointed party shall establish the delivery team’s risk register containing the
+risks associated with the timely delivery of information, in accordance with the appointing party’s
+exchange information requirements, and how the delivery team intends to manage these risks.
+In doing this, the prospective lead appointed party shall consider risks associated with:
+— assumptions the delivery team has made in relation to the appointing party’s exchange information
+requirements;
+— meeting the appointing party’s project information delivery milestones;
+— the contents of the project’s information protocol;
+— achieving the proposed information delivery strategy;
+— adopting the project’s information standard and information production methods and procedures;
+— inclusion (or non-inclusion) of proposed amendments to the project’s information standard; and
+— the mobilization of the delivery team to achieve the required capability and capacity.
+NOTE The delivery team’s risk register can be incorporated within other risk registers used throughout the
+project.
+5.3.7 Compile the delivery team’s tender response
+The prospective lead appointed party shall compile (where available) the following items for inclusion
+within delivery team’s tender response:
+— (pre-appointment) BIM execution plan (5.3.2);
+— capability and capacity assessment summary (5.3.4);
+— mobilization plan (5.3.5); and
+— information delivery risk assessment (5.3.6).
+5.3.8 Activities for tender response
+Activities for tender response are shown in Figure 6.
+12 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Key
+3.1 nominate individuals to undertake the information management function
+3.2 establish the delivery team's (pre-appointment) BIM execution plan
+3.3 assess task team capability and capacity
+3.4 establish the delivery team's capability and capacity
+3.5 establish the proposed delivery team’s mobilization plan
+3.6 establish the delivery team’s risk register
+3.7 compile the delivery team's tender response
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE 1 Activity 3.3 is shown multiple times to highlight that each task team needs to undertake the activity.
+NOTE 2 Activities shown in parallel are to highlight that these activities can be undertaken concurrently.
+Figure 6 — Information management process — Tender response
+5.4 Information management process — Appointment
+5.4.1	 Confirm the delivery team’s BIM execution plan
+The lead appointed party shall confirm the delivery team’s BIM execution plan in agreement with each
+appointed party.
+In doing this, the lead appointed party shall:
+a) confirm the names of the individual(s) who will undertake the information management function
+within the delivery team;
+b) update the delivery team’s information delivery strategy (as required);
+c) update the delivery team’s high-level responsibility matrix (as required);
+d) confirm and document the delivery team’s proposed information production methods and
+procedures;
+e) agree with the appointing party any additions or amendments to the project’s information
+standard; and
+f) confirm the schedule of software, hardware and IT infrastructure the delivery team will use.
+5.4.2 Establish the delivery team’s detailed responsibility matrix
+The lead appointed party shall further refine the high-level responsibility matrix to establish the
+detailed responsibility matrix, which identifies:
+— what information is to be produced;
+© ISO 2018 – All rights reserved 13ISO 19650-2:2018(E)
+— when the information is to be exchanged and with whom; and
+— which task team is responsible for its production.
+In doing this, the lead appointed party shall consider:
+— the information delivery milestones;
+— the high-level responsibility matrix;
+— the project’s information production methods and procedures;
+— the elements of information container breakdown structure allocated to each task team; and
+— the dependencies on the information production process.
+5.4.3 Establish the lead appointed party’s exchange information requirements
+The lead appointed party shall establish their exchange information requirements for each appointed
+party. When engaging internal teams, it is recommended that the lead appointed party establishes a
+clear schedule of information requirements as though it was a formal appointment.
+In doing this, the lead appointed party shall:
+a) define each information requirement, and in doing so shall consider:
+— the appointing party’s information requirements, which the lead appointed party requires the
+appointed party to meet, and
+— any additional information requirements that the lead appointed party requires the appointed
+party to meet;
+b) establish the level of information need required to meet each information requirement;
+NOTE Other metrics to describe the status of information, such as level of accuracy, can be added to
+these metrics as considered appropriate.
+c) establish the acceptance criteria for each information requirement, and in doing so shall consider:
+— the project’s information standard,
+— the project’s information production methods and procedures, and
+— the use of reference information or shared resources provided by the appointing party or lead
+appointed party;
+d) establish the dates that need to be met for each requirement, relative to the project’s information
+delivery milestones, and in doing so shall consider:
+— the time needed by the lead appointed party to review and authorize information, and
+— the lead appointed party’s internal assurance processes;
+e) establish the supporting information that the appointed party might need, to fully understand or
+evaluate each information requirement or its acceptance criteria, and in doing so shall consider:
+— existing asset information,
+— shared resources,
+— supporting documents or guidance material,
+— references to relevant international, national or industry standards, and
+14 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+— exemplars of similar information deliverables.
+5.4.4 Establish the task information delivery plan(s)
+Each task team shall establish, and maintain throughout its appointment, a task information delivery
+plan (TIDP).
+In doing this, each task team shall consider:
+— the project’s information delivery milestones;
+— the task team’s responsibilities within the detailed responsibility matrix;
+— the lead appointed party’s information requirements;
+— the availability of shared resources within the delivery team; and
+— the time the task team will need to produce (generate, coordinate, review and approve) information.
+The TIDP shall list and identify, for each information container:
+— the name and title;
+— the predecessors or dependencies;
+— the level of information need;
+— the (estimated) production duration;
+— the information author responsible for its production; and
+— the delivery milestones.
+5.4.5 Establish the master information delivery plan
+The lead appointed party shall aggregate the TIDP from each task team to establish the delivery team’s
+master information delivery plan (MIDP).
+In doing this, the lead appointed party shall consider:
+— the assigned responsibilities within the detailed responsibility matrix;
+— the information predecessors or dependencies on information between task teams;
+— the time the lead appointed party will need to review and authorize the information model; and
+— the time the appointing party will need to review and accept the information model.
+Once the MIDP has been established, the lead appointed party shall:
+— baseline the deliverables and dates within the MIDP;
+— inform each task team and notify if any changes are required to the TIDP; and
+— inform the appointing party of any risks or issues which could impact on the project’s information
+delivery milestones.
+© ISO 2018 – All rights reserved 15ISO 19650-2:2018(E)
+5.4.6 Complete lead appointed party’s appointment documents
+The appointing party shall take account of the following, in that they are included within the completed
+appointment documents for the lead appointed party and managed via change control throughout the
+duration of the appointment:
+— the appointing party’s exchange information requirements;
+— the project’s information standard (including any agreed additions or amendments);
+— the project’s information protocol (including any agreed additions or amendments);
+— the delivery team’s BIM Execution plan; and
+— the delivery team’s MIDP.
+5.4.7 Complete appointed party’s appointment documents
+The lead appointed party shall take account of the following, in that they are included within the
+appointment documents for each appointed party and managed via change control throughout the
+duration of the appointment:
+— the lead appointed party’s exchange information requirements;
+— the project’s information standard (including any agreed additions or amendments) (see 5.1.4);
+— the project’s information protocol (including any agreed additions or amendments);
+— the delivery team’s BIM Execution plan; and
+— the agreed TIDP.
+5.4.8 Activities for appointment
+Activities for appointment are shown in Figure 7.
+Key
+4.1 confirm the delivery team's BIM execution plan
+4.2 establish the delivery team’s detailed responsibility matrix
+4.3 establish the lead appointed party’s exchange information requirements
+4.4 establish the task information delivery plan(s)
+4.5 establish the master information delivery plan
+4.6 complete lead appointed party’s appointment documents
+4.7 complete appointed party’s appointment documents
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE 1 Activities shown in parallel are to highlight that these activities can be undertaken concurrently.
+16 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+NOTE 2 Activity 4.4 is shown multiple times to highlight that each task team need to undertake the activity.
+Figure 7 — Information management process — Appointment
+5.5 Information management process — Mobilization
+5.5.1 Mobilize resources
+The lead appointed party shall mobilize the resources, as defined within the delivery team’s mobilization
+plan (5.3.5).
+In doing this, the lead appointed party shall:
+— confirm the resource availability of each task team;
+— develop and deliver education on topics such as the project’s scope, exchange information
+requirements and delivery milestones (knowledge required) to delivery team members; and
+— develop and deliver training (skills required) to the delivery team members.
+5.5.2 Mobilize information technology
+The lead appointed party shall mobilize the information technology, as defined within the delivery
+team’s mobilization plan (5.3.5).
+In doing this, the lead appointed party shall:
+— procure, implement, configure and test software, hardware and IT infrastructure (as required);
+— configure and test the project’s CDE in accordance with 5.1.7;
+— configure and test the delivery team’s (distributed) CDE and its connectivity to the project CDE (if
+applicable) in accordance with 5.1.7;
+— test the information exchanges between task teams; and
+— test the information delivery to the appointing party.
+5.5.3 Test the project’s information production methods and procedures
+The lead appointed party shall test the project’s information production methods and procedures, as
+defined within the delivery team’s mobilization plan (5.3.5).
+In doing this, the lead appointed party shall:
+— test and document the project’s information production methods and procedures;
+— refine and verify the proposed information container breakdown structure is workable;
+— develop shared resources to be used by the delivery team; and
+— communicate the project’s information production methods and procedures to all tasks teams.
+5.5.4 Activities for mobilization
+Activities for mobilization are shown in Figure 8.
+© ISO 2018 – All rights reserved 17ISO 19650-2:2018(E)
+Key
+5.1 mobilize resources
+5.2 mobilize information technology
+5.3 test the project’s information production methods and procedures
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE Activities shown in parallel are to highlight that these activities can be undertaken concurrently.
+Figure 8 — Information management process — Mobilization
+5.6 Information management process — Collaborative production of information
+5.6.1 Check availability of reference information and shared resources
+Prior to generating information, each task team shall check that they have access to the relevant
+reference information and shared resources within the project’s common data environment. If not, they
+shall, as soon as practicable, inform the lead appointed party and assess the potential impact that this
+could have on the TIDP.
+5.6.2 Generate information
+Each task team shall generate information in accordance with their respective TIDP.
+In doing this, the task team shall:
+a) generate information:
+— in compliance with the project’s information standard, and
+— in accordance with the project’s information production methods and procedures;
+b) not generate information that:
+— exceeds the required level of information need,
+— extends beyond the allocated element of the information container breakdown structure,
+— duplicates information generated by other task teams, or
+— contains superfluous detail;
+c) coordinate and cross-reference all information with information shared within the project’s
+common data environment, in accordance with the project’s information production methods and
+procedures; and
+d) spatially coordinate geometrical models with other geometrical models shared with the
+appropriate suitability, residing within the project’s common data environment.
+In the event of a coordination issue, the relevant task teams shall collaborate to identify a possible
+resolution. If a resolution cannot be found the task teams shall notify the lead appointed party.
+18 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+5.6.3 Undertake quality assurance check
+Each task team shall undertake a quality assurance check of each information container, in accordance
+with the project’s information production methods and procedures, prior to undertaking a review of
+the information within it (5.6.4).
+In doing this, the task team shall check the information container in accordance with the project’s
+information standard.
+Once the check is complete, the task team shall:
+a) if the check is successful:
+— mark the information container as checked, and
+— record the outcome of the check; or
+b) if the check is unsuccessful:
+— reject the information container, and
+— inform the information author of the outcome and corrective action required.
+NOTE 1 It could be possible for checks to be automated within the project’s common data environment
+NOTE 2 A compliance check does not check the accuracy or appropriateness of the information within the
+information container and therefore cannot be seen as a replacement for review and approval (5.6.4).
+5.6.4 Review information and approve for sharing
+In accordance with the project’s information production methods and procedures, each task team shall
+undertake a review of the information within the information container prior to sharing within the
+project’s common data environment.
+In doing this, the task team shall consider:
+— the lead appointed party’s information requirements;
+— the level of information need; and
+— information needed for coordination by other task teams.
+Once the review is complete, the task team shall:
+a) if the review is successful:
+— assign the suitability for which the information contained within the information container can
+be used, and
+— approve the information container for sharing;
+b) if the review is unsuccessful:
+— record why the review was unsuccessful,
+— record any amendments for the task team to complete, and
+— reject the information container.
+© ISO 2018 – All rights reserved 19ISO 19650-2:2018(E)
+5.6.5 Information model review
+The delivery team shall undertake a review of the information model, in accordance with the project’s
+information production methods and procedures, to facilitate the continuous coordination of
+information across each element of the information model.
+In doing this, the delivery team shall consider:
+— the appointing party’s information requirements and acceptance criteria; and
+— the information containers listed within the master information delivery plan.
+5.6.6 Activities for collaborative production of information
+Activities for collaborative production of information are shown in Figure 9.
+Key
+6.1 check availability of reference information and shared resources
+6.2 generate information
+6.3 complete quality assurance check
+6.4 review information and approve for sharing
+6.5 information model review
+A information model progressed by subsequent delivery team(s) for each appointment
+B new information container revision
+NOTE 1 Activities shown in parallel highlight the production of information by each task team prior to the
+information model review.
+NOTE 2 The information model review undertaken in 6.5 can be repeated until such time as the information
+model is ready to be submitted for lead appointed party authorization.
+Figure 9 — Information management process — Collaborative production of information
+5.7 Information management process — Information model delivery
+5.7.1 Submit information model for lead appointed party authorization
+Prior to the delivery of the information model to the appointing party, each task team shall submit
+their information to the lead appointed party for authorization within the project’s common data
+environment.
+5.7.2 Review and authorize the information model
+The lead appointed party shall undertake a review of the information model in accordance with the
+project’s information production methods and procedures.
+20 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+In doing this, the lead appointed party shall consider:
+— the deliverables listed in the master information delivery plan;
+— the appointing party’s exchange information requirements;
+— the lead appointed party’s exchange information requirements;
+— the acceptance criteria for each information requirement; and
+— the level of information need for each information requirement.
+If the review is successful, the lead appointed party shall authorize the information model and instruct
+each task team to submit their information for appointing party acceptance within the project’s
+common data environment.
+If the review is unsuccessful, the lead appointed party shall reject the information model and instruct
+the task teams to amend the information and re-submit for lead appointed party authorization.
+Partial acceptance of the information to be exchanged (as defined within the MIDP) can lead to
+coordination issues, therefore it is recommended that the lead appointed party either authorizes or
+rejects the entire information model.
+5.7.3 Submit information model for appointing party acceptance
+Each task team shall submit their information for appointing party review and acceptance within the
+project’s common data environment.
+5.7.4 Review and accept the information model
+The appointing party shall undertake a review of the information model in accordance with the project’s
+information production methods and procedures.
+In doing this, the appointing party shall consider:
+— the deliverables listed in the master information delivery plan;
+— the appointing party’s exchange information requirements;
+— the acceptance criteria for each information requirement; and
+— the level of information need for each information requirement.
+If the review is successful, the appointing party shall accept the information model as a deliverable
+within the project’s common data environment.
+If the review is unsuccessful, the appointing party shall reject the information model and instruct the
+lead appointed party to amend the information and re-submit for appointing party’s acceptance.
+Partial acceptance of the information to be exchanged (as defined within the MIDP) can lead to
+coordination issues, therefore it is recommended that the appointing party either accepts or rejects the
+entire information model.
+5.7.5 Activities for information model delivery
+Activities for information model delivery are shown in Figure 10.
+© ISO 2018 – All rights reserved 21ISO 19650-2:2018(E)
+Key
+7.1 submit information model for lead appointed party authorization
+7.2 review and authorize the information model
+7.3 submit information model for appointing party acceptance
+7.4 review and accept the information model
+A information model progressed by subsequent delivery team(s) for each appointment
+B information model rejected by lead appointed party
+C information model rejected by appointing party
+Figure 10 — Information management process — Information model delivery
+5.8 Information management process — Project close-out
+5.8.1 Archive the project information model
+Upon acceptance of the completed project information model, the appointing party shall archive the
+information containers within the project’s common data environment in accordance with the project’s
+information production methods and procedures.
+In doing this, the appointing party shall consider:
+— which information containers will be needed as part of the asset information model;
+— future access requirements;
+— future re-use; and
+— relevant retention policies to be applied.
+5.8.2 Capture lessons learned for future projects
+In collaboration with each lead appointed party, the appointing party shall capture lessons learned
+during the project and record them in a suitable knowledge store, to be called upon by future projects.
+It is recommended that lessons learned are captured throughout the entire project.
+5.8.3 Activities for project close-out
+Activities for project close-out are shown in Figure 11.
+22 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+Key
+8.1 archive the project information model
+8.2 compile lessons learned for future projects
+A information model progressed by subsequent delivery team(s) for each appointment
+NOTE Activities shown in parallel are to highlight that these activities can be undertaken concurrently.
+Figure 11 — Information management process — Project close-out
+© ISO 2018 – All rights reserved 23ISO 19650-2:2018(E)
+Annex A
+(informative)
+Information management assignment matrix
+Table A.1 — Information management responsibility matrix template
+ID
+Key
+R Responsible for undertaking activity
+A Accountable for activity completion
+C Consulted during activity
+I Informed following activity completion
+Task
+Appointing
+party
+Third
+party
+Lead
+appointed
+party
+Appointed
+party
+5.1.1 Appoint individuals to undertake the information management function
+5.1.2 Establish the project's information requirements
+5.1.3 Establish the project's information delivery
+milestones
+5.1.4 Establish the project’s information standard
+5.1.5 Establish the project's information production
+methods and procedures
+5.1.6 Establish the project’s reference information
+and shared resources
+5.1.7 Establish the project's common data environment
+5.1.8 Establish the project's information protocol
+5.2.1 Establish the appointing party’s exchange
+information requirements
+5.2.2 Assemble reference information and shared
+resources
+5.2.3 Establish tender response requirements and
+evaluation criteria
+5.2.4 Compile invitation to tender information
+5.3.1 Nominate individuals to undertake the information management function
+5.3.2 Establish the delivery team's (pre-appointment) BIM execution plan
+5.3.3 Assess each task team capability and capacity
+5.3.4 Establish the delivery team's capability and
+capacity
+5.3.5 Establish the delivery team’s mobilization plan
+5.3.6 Establish the delivery team’s risk register
+5.3.7 Compile the delivery team's tender response
+5.4.1 Confirm the delivery team's BIM execution plan
+5.4.2 Establish the delivery team’s detailed responsibility matrix
+24 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+ID
+Key
+R Responsible for undertaking activity
+A Accountable for activity completion
+C Consulted during activity
+I Informed following activity completion
+Task
+Appointing
+party
+Third
+party
+Lead
+appointed
+party
+Appointed
+party
+5.4.3 Establish the lead appointed party’s exchange
+information requirements
+5.4.4 Establish the task information delivery plan(s)
+5.4.5 Establish the master information delivery plan
+5.4.6 Complete lead appointed party’s appointment
+documents
+5.4.7 Complete appointed party’s appointment
+documents
+5.5.1 Mobilize resources
+5.5.2 Mobilize information technology
+5.5.3 Test the project’s information production
+methods and procedures
+5.6.1 Check availability of reference information
+and shared resources
+5.6.2 Generate information
+5.6.3 Undertake quality assurance check
+5.6.4 Review information and approve for sharing
+5.6.5 Information model review
+5.7.1 Submit information model for lead appointed
+party authorization
+5.7.2 Review and authorize the information model
+5.7.3 Submit information model for appointing
+party acceptance
+5.7.4 Review and accept the information model
+5.8.1 Archive the project information model
+5.8.2 Capture lessons learned for future projects
+Table A.1 (continued)
+© ISO 2018 – All rights reserved 25ISO 19650-2:2018(E)
+Bibliography
+[1] ISO 6707-2:2017, Buildings and civil engineering works — Vocabulary — Part 2: Contract and
+communication terms
+[2] ISO/IEC 19510, Information technology — Object Management Group Business Process Model and
+Notation
+[3] ISO 21500, Guidance on project management
+[4] ISO 22263:2008, Organization of information about construction works — Framework for
+management of project information
+[5] ISO 55000, Asset management — Overview, principles and terminology
+26 © ISO 2018 – All rights reservedISO 19650-2:2018(E)
+© ISO 2018 – All rights reserved
+ICS 35.240.67; 91.010.01
+Price based on 26 pages

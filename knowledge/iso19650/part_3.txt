@@ -1,0 +1,1224 @@
+Organization and digitization of
+information about buildings and civil
+engineering works, including building
+information modelling (BIM) —
+Information management using
+building information modelling —
+Part 3:
+Operational phase of the assets
+Organisation et numérisation des informations relatives aux
+bâtiments et ouvrages de génie civil y compris modélisation des
+informations de la construction (BIM) — Gestion de l’information par
+la modélisation des informations de la construction —
+Partie 3: Phase d’exploitation des actifs
+© ISO 2020
+INTERNATIONAL
+STANDARD
+ISO
+19650-3
+First edition
+2020-07
+Reference number
+ISO 19650-3:2020(E)ISO 19650-3:2020(E)
+ii © ISO 2020 – All rights reserved
+COPYRIGHT PROTECTED DOCUMENT
+© ISO 2020
+All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may
+be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting
+on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address
+below or ISO’s member body in the country of the requester.
+ISO copyright office
+CP 401 • Ch. de Blandonnet 8
+CH-1214 Vernier, Geneva
+Phone: +41 22 749 01 11
+Email: copyright@iso.org
+Website: www.iso.org
+Published in SwitzerlandISO 19650-3:2020(E)
+Foreword ..........................................................................................................................................................................................................................................v
+Introduction................................................................................................................................................................................................................................vi
+1 Scope ................................................................................................................................................................................................................................. 1
+2 Normative references...................................................................................................................................................................................... 1
+3	 Terms, definitions, and symbols .......................................................................................................................................................... 1
+3.1 Terms and definitions ....................................................................................................................................................................... 1
+3.2 Symbols for process diagrams................................................................................................................................................... 2
+4 Information management associated with the operational phase of assets .........................................2
+4.1 Information management process associated with the operational phase of assets ................ 2
+4.2 Relationship between this document and ISO 19650-2...................................................................................... 4
+5 Information management process to support the operational phase of assets.................................4
+5.1 Information management process — assessment and need .......................................................................... 4
+5.1.1 Appoint individuals to undertake the information management function ................... 4
+5.1.2 Establish organizational information requirements ........................................................................ 4
+5.1.3 Identify the assets for which information shall be managed .................................................... 5
+5.1.4 Establish the asset information requirements....................................................................................... 5
+5.1.5 Identify the foreseeable trigger events for which information shall be managed .. 5
+5.1.6 Establish the asset information standard .................................................................................................. 6
+5.1.7 Establish the asset information production methods and procedures ............................ 6
+5.1.8 Establish the reference information and shared resources........................................................ 6
+5.1.9 Establish the common data environment .................................................................................................. 7
+5.1.10 Establish links to enterprise systems ............................................................................................................ 7
+5.1.11 Establish the asset information model ......................................................................................................... 7
+5.1.12 Establish processes to maintain the AIM.................................................................................................... 8
+5.1.13 Establish the asset information protocol.................................................................................................... 8
+5.1.14 Activities for assessment and need.................................................................................................................. 9
+5.2 Information management process — Invitation to tender/request to provide service.......... 9
+5.2.1 Decide the type of activity providing information.............................................................................. 9
+5.2.2 Establish the appointing party’s exchange information requirements.........................10
+5.2.3 Assemble reference information and shared resources.............................................................10
+5.2.4 Establish response requirements and evaluation criteria........................................................10
+5.2.5 Compile information for the invitation to tender/request to provide service........11
+5.2.6 Activities for invitation to tender/request to provide service ..............................................11
+5.3 Information management process — Response to invitation to tender/request to
+provide service.....................................................................................................................................................................................12
+5.3.1 Nominate individuals to undertake the information management function............12
+5.3.2 Establish the delivery team’s (pre-appointment) BIM execution plan ..........................12
+5.3.3 Assess task team capability and capacity................................................................................................12
+5.3.4 Establish the delivery team’s capability and capacity ..................................................................13
+5.3.5 Establish the delivery team’s mobilization plan................................................................................13
+5.3.6 Establish the delivery team’s risk register .............................................................................................13
+5.3.7 Compile the delivery team’s response........................................................................................................13
+5.3.8 Activities for response to invitation to tender/request to provide service ...............14
+5.4 Information management process — Appointment ...........................................................................................14
+5.4.1 Confirm the delivery team’s BIM execution plan ..............................................................................14
+5.4.2 Establish the delivery team’s detailed responsibility matrix .................................................15
+5.4.3 Establish the lead appointed party’s EIR (ISO 19650-3)...........................................................15
+5.4.4 Establish the task information delivery plan(s) ................................................................................15
+5.4.5 Establish the master information delivery plan ................................................................................15
+5.4.6 Complete lead appointed party’s appointment..................................................................................16
+5.4.7 Complete appointed party’s appointment..............................................................................................16
+5.4.8 Activities for appointment....................................................................................................................................16
+© ISO 2020 – All rights reserved iii
+Contents PageISO 19650-3:2020(E)
+5.5 Information management process — Mobilization .............................................................................................17
+5.5.1 Mobilize resources ......................................................................................................................................................17
+5.5.2 Mobilize information technology ...................................................................................................................17
+5.5.3 Test the asset information production methods and procedures ......................................18
+5.5.4 Maintain resources in readiness for a trigger event ......................................................................18
+5.5.5 Activities for mobilization ....................................................................................................................................18
+5.6 Information management process — Production of information...........................................................19
+5.6.1 Check availability of reference information and shared resources...................................19
+5.6.2 Generate information................................................................................................................................................19
+5.6.3 Undertake quality assurance check..............................................................................................................19
+5.6.4 Review information and approve for sharing......................................................................................20
+5.6.5 Review information model...................................................................................................................................20
+5.6.6 Authorize information model for delivery to the appointing party..................................20
+5.6.7 Activities for production of information ..................................................................................................21
+5.7 Information management process — Information model acceptance by appointing
+party..............................................................................................................................................................................................................22
+5.7.1 Submit information model for appointing party acceptance.................................................22
+5.7.2 Review and accept the information model.............................................................................................22
+5.7.3 Activities for information model acceptance by appointing party....................................22
+5.8 Information management process — AIM aggregation ...................................................................................23
+5.8.1 Aggregate an accepted information model into the AIM ...........................................................23
+5.8.2 Review and continue maintenance of the AIM ...................................................................................23
+5.8.3 Activities for AIM aggregation...........................................................................................................................23
+Annex A (informative) Guidance related to the information management process........................................25
+Bibliography.............................................................................................................................................................................................................................30
+iv © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Foreword
+ISO (the International Organization for Standardization) is a worldwide federation of national standards
+bodies (ISO member bodies). The work of preparing International Standards is normally carried out
+through ISO technical committees. Each member body interested in a subject for which a technical
+committee has been established has the right to be represented on that committee. International
+organizations, governmental and non-governmental, in liaison with ISO, also take part in the work.
+ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of
+electrotechnical standardization.
+The procedures used to develop this document and those intended for its further maintenance are
+described in the ISO/IEC Directives, Part 1. In particular, the different approval criteria needed for the
+different types of ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).
+Attention is drawn to the possibility that some of the elements of this document may be the subject of
+patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of
+any patent rights identified during the development of the document will be in the Introduction and/or
+on the ISO list of patent declarations received (see www.iso.org/patents).
+Any trade name used in this document is information given for the convenience of users and does not
+constitute an endorsement.
+For an explanation of the voluntary nature of standards, the meaning of ISO specific terms and
+expressions related to conformity assessment, as well as information about ISO's adherence to the
+World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT), see www.iso.org/
+iso/foreword.html.
+This document was prepared by ISO/TC 59, Buildings and civil engineering works, SC 13, Organization
+and digitization of information about buildings and civil engineering works, including building information
+modelling (BIM), in collaboration with the European Committee for Standardization (CEN) Technical
+Committee CEN/TC 442, Building Information Modelling (BIM), in accordance with the Agreement on
+technical cooperation between ISO and CEN (Vienna Agreement).
+A list of all parts in the ISO 19650 series can be found on the ISO website.
+Any feedback or questions on this document should be directed to the user’s national standards body. A
+complete listing of these bodies can be found at www.iso.org/members.html.
+© ISO 2020 – All rights reserved vISO 19650-3:2020(E)
+Introduction
+0.1 Purpose and application
+This document is designed to enable an appointing party (such as an asset owner, asset operator or
+outsourced asset management provider) to establish their requirements for information during the
+operational phase of an asset. This document is also designed to enable them to provide the appropriate
+collaborative environment to fulfil commercial goals. Within this environment, multiple appointed
+parties can produce information in an effective and efficient manner.
+This document is primarily intended for use by the following:
+— those involved in the management of an asset and facility (see 0.2);
+— those involved in the specification of appointments and the facilitation of collaborative working
+during the entire life cycle of an asset;
+— those involved in delivering asset management and facility management during the operational
+phase of an asset (see 0.2); and
+— those involved in specifying the information required for operational purposes that needs to be
+captured during the delivery phase of an asset.
+If this document is being applied in relation to a particular asset then this should be reflected in the
+relevant appointments.
+This document is applicable to assets of all sizes and all levels of complexity. This includes portfolios of
+buildings, campuses, infrastructure networks, individual buildings and pieces of infrastructure such as
+roads, bridges, footpaths, streetlights, water pipes or sewers. The requirements in this document should
+be applied in a way that is proportionate and appropriate to the scale and complexity of the asset.
+Continuity of information management over the lifetime of an asset is important and it is recommended
+that all feasible steps (including transfer of the asset information model) are taken to ensure this
+whenever an asset is transferred from one owner to another.
+Figure 1 shows the application of information management during the operational phase (shaded)
+in conjunction with the delivery phase (unshaded apart from points A and B where information is
+transferred). Figure 1 also shows how information management according to the ISO 19650 series
+takes place within the context of asset and project management which itself takes place within the
+context of organizational management. ISO 9001, ISO 55000 and ISO 21500, indicated in Figure 1, are
+not requirements for applying this document.
+vi © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Key
+AIM asset information model
+PIM project information model
+A start of delivery phase — transfer of relevant information from AIM to PIM
+B start of operational phase — transfer of relevant information from PIM to AIM
+C post-occupancy/implementation evaluation or performance review
+D trigger events during the operational phase
+NOTE Information can be transferred between PIM and AIM during the delivery phase as well as at points A and B.
+Figure 1 — Scope of this document
+The concepts and principles from ISO 19650-1, concerning different forms of information requirements,
+have been applied in this document. The application of these concepts and principles has been tailored
+to respond to the particular nature of asset management activities. In support of this, a simplified
+illustration of the progression of information requirements is shown in Figure 2.
+Figure 2 — Simplified illustration of the progression of information requirements
+© ISO 2020 – All rights reserved viiISO 19650-3:2020(E)
+The information management process specified in this document can be applied to trigger events that
+are foreseen and scheduled in advance as well as to trigger events that are not scheduled in advance or
+cannot be foreseen. These two types of trigger event differ in terms of when the preparatory activities
+of identifying and appointing the lead appointed party can take place.
+Examples of the first type of trigger event are: annual maintenance tasks, strategic estate reviews and
+call-off arrangements for common-place repairs. For this type of trigger event, it is possible and sensible
+to select and appoint the lead appointed party well before any of these trigger events takes place.
+For the second type of trigger event there are two distinct scenarios. The first is the deliberate
+decision to initiate a project such as the construction of a bridge or underpass. Here, the information
+management process could follow either ISO 19650-2 or this document. The decision will depend on
+the scale and complexity and the requirements on those involved are stated in 4.2. The second scenario
+includes trigger events that are so rare or unpredictable that having appointments in place can be
+inappropriate or not possible. The selection and appointment occur after the trigger event takes place.
+Examples include unexpected breakdowns of equipment, accidents and extreme floods.
+Finally, there is the separate situation of an asset being acquired from an existing owner, where
+information is exchanged as part of the transaction.
+All these situations are catered for in the arrangement of Clause 5. Annex A provides guidance to
+support some of the requirements contained in Clause 5. Clause 5 also includes illustrations of the
+breakdown of each step in the information management process and a reminder of where each step
+comes in the overall process, in Figures 5 to 12.
+0.2 Asset management and facility management
+Asset management and facility management have developed as two distinct management disciplines,
+despite both of them being concerned with managing the physical assets and services of an organization.
+Asset management and facility management have developed their own standards and language of
+preferred terms.
+This document recognizes that both asset management and facility management play their own
+part in the lifecycle of an asset, but for simplicity the main body of this document use the term asset
+management to cover both disciplines.
+0.3 Use of phrase “shall consider”
+This document makes use of the phrase “shall consider”, particularly in Clause 5. This phrase is used
+to introduce a list of items that the person in question needs to think about carefully in connection
+with the primary requirement described in the subclause. The amount of thought involved, the time
+taken to complete it, and the need for supporting evidence will depend on the complexity of the asset,
+the experience of the person(s) involved, and the requirements of any national policy on building
+information modelling. On a relatively small or straightforward asset, it can be possible to complete, or
+dismiss as not relevant, some of these “shall consider” items very quickly.
+One way to help identify which of the “shall consider” statements are relevant can be to review each
+statement and create templates for assets of different sizes and complexity.
+0.4 National annex with relevant national standards
+There are several standards required for the successful implementation of this document, relating
+to specific regions or countries, that are currently not suitable for inclusion within an international
+standard. As such, national standards bodies are encouraged to compile and document the standards,
+relevant to the region or country they represent, within a national annex. National annexes can also
+provide localized guidance and advice on how to implement this document for assets and trigger events
+of varying complexity.
+viii © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+0.5 Relationship with other standards
+The concepts and principles relating to the application of the requirements within this document are
+provided in ISO 19650-1. Requirements for a security-minded approach to managing asset information
+are provided in ISO 19650-5.
+For those occasions when the operational phase of an asset leads into a delivery phase, the requirements
+provided in ISO 19650-2 should be used in conjunction with this document.
+General information on a management system for asset management, including terminology applicable
+to asset management, can be found in ISO 55000. General information on a management system for
+facility management can be found in ISO 41001 and ISO 41011.
+Consideration of the concepts and principles contained within both ISO 19650-1 and ISO 55000 can
+assist appointing parties with the implementation of the requirements of this document and the
+development of asset management in their organization.
+0.6 Benefits of this document
+The aim of this document is to support all parties towards achieving their business objectives through
+effective and efficient production, use and management of information during the operational and end
+of life phases of assets where building information modelling is used.
+International cooperation in the preparation of this document has identified a common information
+management process that can be applied to the broadest range of assets. This applies to the
+broadest range of organizations, across the broadest range of cultures, under the broadest range of
+appointment routes.
+The benefits of the information management process should be kept under review during the
+operational phase of the asset life cycle and this should be done through regular formal reviews of the
+costs and benefits of the entire process to all parties.
+0.7 Interfaces between parties and teams for the purpose of information management
+For the purpose of this document, Figure 3 shows the interfaces between parties and teams with respect
+to information management in the operational phase and should not be seen as indicating contractual
+relationships.
+The appointing party referred to in Figure 3 can be the owner of the asset, the operator of the asset
+(for example through a long-term concession agreement), or the outsourced asset or facility manager
+(typically appointed for a period of several years).
+Delivery teams for the operational phase typically join and leave the asset/facility management and
+operation team at any appropriate time during the life cycle of the asset. Where information is produced
+by a task team within the appointing party’s organization, for example a maintenance department, that
+task team should still comply with the requirements of this document as an appointed party or as a lead
+appointed party.
+Figure 3 shows that delivery teams for asset management and operation activities can be of varying
+size and complexity and can include different numbers of task teams. Where multiple delivery teams
+are appointed at the same time, the appointing party can require them to coordinate their production
+of information with each other.
+© ISO 2020 – All rights reserved ixISO 19650-3:2020(E)
+Key
+A appointing party
+B lead appointed party
+C appointed party
+... variable amount
+1 asset/facility management and operation team
+2 illustration of a delivery team
+3 task teams
+information requirements and information exchange
+information coordination between lead appointed parties if required by appointing party
+Figure 3 — Interface between parties and teams for the purpose of information management
+x © ISO 2020 – All rights reservedOrganization and digitization of information about
+buildings and civil engineering works, including building
+information modelling (BIM) — Information management
+using building information modelling —
+Part 3:
+Operational phase of the assets
+1 Scope
+This document specifies requirements for information management, in the form of a management
+process, within the context of the operational phase of assets and the exchanges of information within
+it, using building information modelling.
+This document can be applied to all types of assets and by organizations of all types and sizes involved
+in the operational phase of assets.
+The requirements in this document can be achieved through direct actions carried out by the
+organization in question or can be delegated to another party.
+2 Normative references
+The following documents are referred to in the text in such a way that some or all of their content
+constitutes requirements of this document. For dated references, only the edition cited applies. For
+undated references, the latest edition of the referenced document (including any amendments) applies.
+ISO 12006-2, Building construction — Organization of information about construction works — Part 2:
+Framework for classification
+ISO 19650-1:2018, Organization and digitization of information about buildings and civil engineering
+works, including building information modelling (BIM) — Information management using building
+information modelling — Part 1: Concepts and principles
+ISO 19650-2, Organization and digitization of information about buildings and civil engineering works,
+including building information modelling (BIM) — Information management using building information
+modelling — Part 2: Delivery phase of the assets
+ISO 19650-5, Organization and digitization of information about buildings and civil engineering works,
+including building information modelling (BIM) — Information management using building information
+modelling — Part 5: Security-minded approach to information management
+3	 Terms, definitions, and symbols
+3.1	 Terms and definitions
+For the purposes of this document, the terms and definitions given in ISO 19650-1 and the following apply.
+ISO and IEC maintain terminological databases for use in standardization at the following addresses:
+— ISO Online browsing platform: available at https://www.iso.org/obp
+— IEC Electropedia: available at http://www.electropedia.org/
+INTERNATIONAL STANDARD ISO 19650-3:2020(E)
+© ISO 2020 – All rights reserved 1ISO 19650-3:2020(E)
+3.1.1
+asset management
+coordinated activity of an organization to realize value from assets
+Note 1 to entry: Realization of value will normally involve a balancing of costs, risks, opportunities and
+performance benefits.
+Note 2 to entry: Activity can also refer to the application of the elements of the asset management system.
+Note 3 to entry: The term “activity” has a broad meaning and can include, for example, the approach, the planning,
+the execution and implementation of a plan.
+[SOURCE: ISO 55000:2014, 3.3.1, modified — In Note 3 to entry, "the plans and their implementation"
+have been replaced by "the execution and implementation of a plan".]
+3.1.2
+facility management
+facilities management
+organizational function which integrates people, place and process within the built environment with
+the purpose of improving the quality of life of people and the productivity of the core business
+[SOURCE: ISO 41011:2017, 3.1.1, modified — The abbreviated term "FM" has been removed.]
+3.2	 Symbols for process diagrams
+start
+trigger event
+end
+collapsed sub-process
+decision
+NOTE The symbols used within this document have been adapted from symbols defined within
+ISO/IEC 19510.
+4 Information management associated with the operational phase of assets
+4.1 Information management process associated with the operational phase of assets
+The information management process (Figure 4) shall be applied throughout the operational phase of
+each asset identified through the use of 5.1.3, and in the case of an existing asset shall be applied to all
+legacy information relating to that asset.
+The information management process shall operate within or link with such enterprise systems or
+organizational functions as necessary to optimize its implementation.
+2 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Key
+Information management
+activities
+Activity groupings Decision points, questions
+and actions
+1 assessment and need A activities undertaken during H type of trigger event providing
+2 invitation to tender/request the operational phase of assets information
+to provide service B activities undertaken for each K continuation of the appointment
+3 response to invitation to tender/ appointment made before L continuation of this information
+request to provide service trigger event management process
+4 appointment C activities undertaken for each M via an appointment made before
+5 mobilization appointment made after a trigger event
+6 production of information trigger event or delivery phase N received from another
+7 information model acceptance using ISO 19650-2 appointing party/asset owner
+by appointing party D activities undertaken when P via an appointment made after
+8 AIM aggregation acquiring an asset a trigger event or delivery phase
+E activities undertaken during the using ISO 19650-2
+procurement stage Q1 yes — lead appointed party
+(of each appointment) waits for next trigger event
+F activities undertaken during Q2 yes — lead appointed party
+the information planning progresses to next delivery
+stage (of each appointment) milestone
+G activities undertaken during Q3 yes — appointing party still
+the information production has responsibility for the asset
+stage (of each appointment) R no
+NOTE 1 This process is intended to reduce the quantity of information to be reconciled at step 8 and reduces the
+effort of doing so.
+NOTE 2 There can be several lead appointed parties responding to the same trigger event — see A.3 for
+examples of trigger events.
+NOTE 3 Activities identified by C can apply during the operational or the delivery phases of the lifecycle.
+Activities identified by B and D apply during the operational phase of the lifecycle.
+NOTE 4 Sub-processes within the information management activities 1 to 8 are shown in Figures 5 to 12.
+Figure 4 — Information management process to support the operational phase of assets
+© ISO 2020 – All rights reserved 3ISO 19650-3:2020(E)
+4.2 Relationship between this document and ISO 19650-2
+The appointing party in this document shall decide whether the requirements of ISO 19650-2 apply to
+particular trigger events and/or in relation to particular assets. In doing this, the appointing party shall
+consider:
+— the scale and complexity of the asset(s);
+— the scale and complexity of the response to the trigger event(s); and
+— the scale and complexity of the delivery team(s) appointed as part of the response to the trigger
+event(s).
+If it is decided that ISO 19650-2 does apply, and the appointing party in ISO 19650-2 is different from
+the appointing party in this document, then these two appointing parties shall:
+— ensure that their respective responsibilities within ISO 19650-2 and this document are clearly
+established and communicated to each other; and
+— ensure that information requirements from the appointing party in this document are specified to
+all relevant lead appointed parties appointed under ISO 19650-2.
+Where both ISO 19650-2 and this document are being applied, there should be consistency between the
+asset information standard and the project’s information standard, and between the asset information
+production methods and procedures and the project’s information production methods and procedures.
+5 Information management process to support the operational phase of assets
+5.1 Information management process — assessment and need
+5.1.1 Appoint individuals to undertake the information management function
+The appointing party shall nominate individuals from within its organization to undertake the
+information management function.
+Alternatively, the appointing party can appoint a prospective lead appointed party or a third party to
+undertake all or part of the information management function. In which case the appointing party shall
+establish a scope of services for that appointment.
+In doing this, the appointing party shall consider the tasks that the prospective lead appointed party or
+third party shall be responsible for.
+In all cases, the appointing party shall consider the capability and capacity of any individuals or
+organizations being nominated or appointed to undertake the information management function.
+5.1.2	 Establish organizational information requirements
+The appointing party shall identify any existing organizational information requirements (OIR) or
+establish, document and maintain its OIR, see Figure 2, to meet the needs of its organizational functions
+and its asset management system.
+NOTE 1 OIR can be derived from the appointing party itself and from its stakeholders (for example the asset
+owner when the appointing party is the asset operator).
+NOTE 2 OIR can include, or be derived from, existing information requirements.
+NOTE 3 Some typical activities that can give rise to OIR are listed in A.2.
+4 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+5.1.3	 Identify the assets for which information shall be managed
+The appointing party shall identify those assets where management of asset information can provide
+net benefit, including assets that are planned to be built or acquired. In doing this, the appointing party
+shall consider:
+— the ownership of the assets and the information associated with them;
+— any asset breakdown structure being used by the appointing party;
+— the impact of each asset on the efficiency of the business operation;
+— the impact of each asset on the effectiveness of the business operation;
+— the criticality of each asset for key business operations; and
+— the condition of each asset.
+NOTE 1 The assessment of net benefit includes both costs and benefits. This assessment can be on the
+basis of organizational criteria including, but not limited to, financial analysis, risk to health and safety, risk of
+environmental damage, risk to corporate and personal reputation, the resources required to capture and maintain
+information for each asset, the anticipated resources required to capture asset information retrospectively.
+NOTE 2 For some organizations these considerations can be taken into account in the OIR (see 5.1.2).
+5.1.4	 Establish the asset information requirements
+For each asset identified in 5.1.3, the appointing party shall establish the asset information requirements
+(AIR), see Figure 2, necessary to enable it to meet its OIR. The AIR shall include requirements from all
+relevant interested parties, including departments within the appointing party and interested thirdparty organizations such as local authorities or regulators. In doing this, the appointing party shall
+consider:
+— the purpose(s) for which asset information needs to be managed as an effective organizational
+resource, see ISO 55000;
+— the ownership of the assets and the information associated with them;
+— information required across groups of assets as well as for individual assets; and
+— where an ISO 55001 asset management system is in place, the impact of its asset management
+strategy and plans.
+NOTE 1 Some example AIR are listed in A.4.
+NOTE 2 Where an ISO 55001 asset management system is in place, “appointing party” is synonymous with the
+term “organization” in ISO 55001.
+5.1.5	 Identify the foreseeable trigger events for which information shall be managed
+The appointing party shall identify and record foreseeable trigger events, representing those events
+during the operational phase when new or updated information concerning an asset will be generated
+or required.
+NOTE 1 Some example trigger events are suggested in A.3. More than one trigger event can occur at the
+same time.
+NOTE 2 Different types of asset, particularly at system or equipment level, can be subject to identical or
+similar trigger events. However, the asset management response and the asset information generated or updated
+can be different in each case.
+© ISO 2020 – All rights reserved 5ISO 19650-3:2020(E)
+NOTE 3 Some trigger events can be identified independently from the assets, for example severe weather or
+geological activities. Once the assets have been identified it is possible that other trigger events will become
+apparent.
+5.1.6 Establish the asset information standard
+The appointing party shall establish any specific information standards required by the appointing
+party’s organization within the asset information standard.
+In doing this, the appointing party shall consider:
+a) the exchange of information
+— within the appointing party’s organization;
+— between the appointing party and external stakeholders;
+— between the appointing party and lead appointed parties specifically appointed through
+ISO 19650-2;
+— between the prospective lead appointed party and the appointing party;
+— between prospective lead appointed parties in the same asset management and operation
+team; and
+— between interdependent or successive asset management and operation teams;
+b) the means of structuring information and classifying information (in accordance with the
+framework in ISO 12006-2);
+c) the method of assignment for level of information need;
+d) the use of information for any future delivery phase associated with the asset; and
+e) the use of information during the operational phase.
+5.1.7 Establish the asset information production methods and procedures
+The appointing party shall establish any specific information production methods and procedures
+required by their organization within the asset information production methods and procedures.
+In doing this, the appointing party shall consider:
+a) the capture of existing asset information;
+b) the generation, review or approval of new information;
+c) the security of information; and
+d) the delivery of information to the appointing party, including the format to be used such that
+information exchange is compatible with the systems and processes already operated by the
+appointing party.
+5.1.8 Establish the reference information and shared resources
+The appointing party shall establish the reference information and resources that they intend to share
+with the prospective lead appointed parties during the tender process and during the appointment,
+using open data standards whenever possible to avoid interoperability issues.
+NOTE 1 Reference information can come from a range of sources, for example from the appointing party itself,
+from adjacent asset owners such as utility companies, from external providers, or from public sources.
+6 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+NOTE 2 Shared resources can include templates for information generated to manage the information
+management process itself (for example a master information delivery plan), templates for information
+containers (for example data sets or documents), style libraries or object libraries.
+5.1.9 Establish the common data environment
+The appointing party shall establish the common data environment (CDE) in accordance with
+ISO 19650-1:2018, Clause 12. This shall be a combination of workflow and information storage solutions,
+to support the information management process for the asset(s).
+The CDE shall enable:
+a) each information container to have a unique ID, based on an agreed and documented convention;
+b) each information container to have the following attributes assigned:
+— status;
+— revision;
+— classification (in accordance with the framework established in ISO 12006-2);
+c) information containers to transition between states;
+d) a journal of information transactions, recording name of user, date and time when information
+containers transition between states; and
+e) controlled access at the information container level.
+5.1.10	 Establish links to enterprise systems
+If existing enterprise systems are used to store asset information then the appointing party shall
+establish or adapt information quality and information security processes within those systems
+to ensure they comply with the requirements of this document, irrespective of where or how the
+information is stored.
+NOTE 1 Existing enterprise systems can be outside the direct control of the appointing party.
+NOTE 2 Examples of enterprise systems that can be linked into the AIM are given in A.5.
+5.1.11 Establish the asset information model
+The appointing party shall establish or review and adapt as necessary the asset information model
+(AIM) to hold all information specified in AIR related to the asset or assets identified in 5.1.3. The AIM
+shall be a federated information model which can include contents from different information providers
+(appointed parties).
+In doing this, the appointing party shall consider:
+a) the suitability of existing information systems;
+b) the ability to integrate or link information from a project information model at any time during a
+project;
+c) any legal requirements relating to storage of information (and particularly personal information);
+d) the ability of the AIM to separate information being used for analysis and reporting from
+information being updated by asset delivery teams; and
+e) the need for a security-minded approach to the design and operation of the AIM including the
+appropriate requirements from ISO 19650-5 and the management activities agreed as a result of
+applying ISO 19650-5.
+© ISO 2020 – All rights reserved 7ISO 19650-3:2020(E)
+NOTE 1 The AIM can be held across any combination of new and existing enterprise systems provided that
+these are appropriately linked and the contents of the AIM are controlled using the common data environment
+(CDE) workflow described in ISO 19650-1.
+NOTE 2 There are many ways of creating and structuring the AIM. This document does not specify or preclude
+the use of particular storage technologies, provided that such technologies support the CDE workflow.
+5.1.12 Establish processes to maintain the AIM
+The appointing party shall establish or follow existing suitable processes to maintain the AIM for as
+long as is appropriate. These shall include processes to:
+— allocate tasks for the production, maintenance, retention, transmission, access to, assurance and
+archiving of information;
+— transfer AIM maintenance requirements and/or ownership of the AIM when there is a change of
+asset owner or appointing party;
+— establish the content, meaning, format and medium for representation, retention, transmission and
+retrieval of information;
+— establish version control, check integrity and verify information against AIR and update the AIM as
+appropriate;
+— improve information quality to support organizational objectives;
+— archive or dispose of obsolete, unreliable or unwanted information;
+— archive the AIM, in part or in whole, at decommissioning/end of life;
+— ensure the AIM complies with requirements for security as described in ISO 19650-5;
+— store information in such a way that it is safe, readily retrievable and use preventative maintenance
+to protect it from physical and technological deterioration or obsolescence; and
+— maintain the agreed level of alignment between the contents of the AIM and the state of the
+physical asset.
+NOTE 1 The appropriate period for maintaining the AIM can be based on an expected period of ownership, the
+length of an occupancy agreement, the period of an operating agreement, or the length of an asset management
+agreement. The period can also be constrained by strategic, contractual, statutory, legal, regulatory, health and
+safety, environmental, social as well as fiscal constraints.
+NOTE 2 The agreed level of alignment can be defined in terms of the time interval between changes occurring
+to the asset and those changes being reflected in the AIM.
+5.1.13 Establish the asset information protocol
+The appointing party shall establish the asset information protocol to set out the rights and obligations
+of the appointing party and the appointed parties in relation to the AIM, and shall incorporate the
+information protocol into all appointments.
+In doing this, the appointing party shall consider:
+— obligations relating to the management or production of information, including use of the CDE;
+— any warranties or liabilities associated with the AIM;
+— background and foreground intellectual property rights relating to the AIM;
+— the use of reference information and shared resources;
+— the use of information during the appointment, including any associated licensing terms; and
+8 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+— the re-use of information following the appointment or in the event of termination.
+5.1.14 Activities for assessment and need
+Activities for assessment and need are shown in Figure 5.
+Key
+1.1 appoint individuals to undertake the information management function
+1.2 establish organizational information requirements
+1.3 identify assets for which information shall be managed
+1.4 identify the asset information requirements
+1.5 identify the foreseeable trigger events for which information shall be managed
+1.6 establish the asset information standard
+1.7 establish the asset information production methods and procedures
+1.8 establish the reference information and shared resources
+1.9 establish the common data environment
+1.10 establish links to enterprise systems
+1.11 establish the asset information model
+1.12 establish processes to maintain the AIM
+1.13 establish the asset information protocol
+Figure 5 — Information management process — Assessment and need
+5.2	 Information management process — Invitation to tender/request to provide service
+5.2.1	 Decide the type of activity providing information
+The appointing party shall appoint a lead appointed party in relation to each trigger event during the
+operational phase, including trigger events not originally identified during 5.1.5. This decision affects
+whether the information management process follows branch M, N or P in Figure 4.
+© ISO 2020 – All rights reserved 9ISO 19650-3:2020(E)
+The method of appointment shall be proportionate to the scale and complexity of the asset management
+activities required to respond to the trigger event and shall take account of any specific procurement
+processes the appointing party needs to follow.
+NOTE 1 The appointment requirements related to asset information can be incorporated into the appointment
+process for overall asset management activities.
+NOTE 2 Where a request to provide service is made rather than a formal tendering process (for example to
+appoint an in-house team), the requirement in 5.2.5 can be adapted accordingly.
+5.2.2	 Establish the appointing party’s exchange information requirements
+For each appointment and trigger event, the appointing party shall establish the exchange information
+requirements for this document [EIR (ISO 19650-3)] necessary to enable it to meet its AIR, and therefore
+to meet the appropriate OIR.
+In doing this, the appointing party shall:
+a) establish any security-minded considerations identified through ISO 19650-5;
+b) establish the information to be captured during the response to the trigger event, consistent with
+any definition of level of information need (see ISO 19650-1:2018, 11.2);
+c) establish the timing and frequency of information exchange during the appointment; and
+d) establish the acceptance criteria for each information requirement, and in doing so shall consider:
+— the asset information standard,
+— the asset information production methods and procedures, and
+— the use of reference information or shared resources provided by the appointing party.
+NOTE 1 This includes the trigger events identified in 5.1.5. In these cases, preparation of the EIR (ISO 19650-3)
+in advance of the trigger event happening means that the appointment of the lead appointed party or lead
+appointed parties is not delayed. This is important in the case of trigger events that are likely to require an
+emergency response, such as foreseeable breakdowns of critical equipment.
+NOTE 2 This subclause is particularly important where the response to the trigger event initiates a new-build
+or substantial refurbishment project.
+5.2.3 Assemble reference information and shared resources
+The appointing party shall assemble the reference information or shared resources that they intend to
+provide to the prospective lead appointed party during the tender process or as part of the appointment.
+In doing this, the appointing party shall consider:
+— reference information or shared resources identified in 5.1.8;
+— information produced during previous appointments; and
+— the status code associated with the information, as described in ISO 19650-1:2018, 12.1.
+5.2.4	 Establish response requirements and evaluation criteria
+The appointing party shall establish its evaluation criteria for responses received from prospective
+lead appointed parties.
+In doing this, the appointing party shall consider:
+— the complexity of the information requirements;
+10 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+— the alignment of the BIM execution plan with the asset information standard, the asset information
+production methods and procedures, the asset information protocol and the EIR (ISO 19650-3); and
+— the levels of capability and capacity expected to be provided in the delivery team.
+5.2.5	 Compile information for the invitation to tender/request to provide service
+The appointing party shall compile the information to be included in the invitation to tender or in the
+request to provide service. In doing this, the appointing party shall consider:
+— the EIR (ISO 19650-3);
+— the relevant reference information and shared resources;
+— the response requirements and evaluation criteria;
+— the asset information standard;
+— the asset information production methods and procedures; and
+— the asset information protocol.
+5.2.6	 Activities for invitation to tender/request to provide service
+Activities for invitation to tender/request to provide service are shown in Figure 6.
+Key
+2.1 decide the type of activity providing information
+2.2 establish the appointing party’s EIR (ISO 19650-3)
+2.3 assemble reference information and shared resources
+2.4 establish response requirements and evaluation criteria
+2.5 compile information for the invitation to tender/request to provide service
+Figure 6 — Information management process — Invitation to tender/request to provide service
+© ISO 2020 – All rights reserved 11ISO 19650-3:2020(E)
+5.3	 Information management process — Response to invitation to tender/request to
+provide service
+5.3.1 Nominate individuals to undertake the information management function
+The prospective lead appointed party shall nominate individuals from within its organization to
+undertake the information management function on behalf of its delivery team.
+Alternatively, the prospective lead appointed party can appoint a prospective appointed party or a third
+party to undertake all or part of the information management function. In which case the prospective
+lead appointed party shall establish a scope of services for that appointment.
+In doing this, the prospective lead appointed party shall consider:
+— the tasks that the prospective appointed party or third party shall be responsible for; and
+— the capability and capacity of any individuals or organizations being nominated or appointed to
+undertake the information management function.
+5.3.2	 Establish the delivery team’s (pre-appointment) BIM execution plan
+The prospective lead appointed party shall establish the delivery team’s (pre-appointment) BIM
+execution plan, to describe its approach and the resources required to achieve the requirements in the
+EIR (ISO 19650-3).
+In doing this, the prospective lead appointed party shall consider:
+— the resources required for the information management function;
+— the timing, quantity and scope of information exchanges required by the appointing party;
+— any requirement to federate information with other lead appointed parties; and
+— the prospective lead appointed party’s plan to appoint other appointed parties as task teams within
+their delivery team in the operational phase, including the need to pass some EIR (ISO 19650-3) to
+these appointed parties.
+NOTE 1 The appointing party can specify the format for this description of approach and can provide guidance
+or templates to prospective lead appointed parties.
+NOTE 2 The prospective lead appointed party can add some of its own information requirements to any EIR
+(ISO 19650-3) passed on to an appointed party (see 5.4.3).
+5.3.3	 Assess task team capability and capacity
+Each task team shall undertake an assessment of their capability and capacity to deliver information in
+accordance with the EIR (ISO 19650-3) and the delivery team’s information delivery plan.
+In doing this, each task team shall consider:
+— its capability and capacity to manage information, based on the relevant experience and training of
+task team members with the asset information standard, and number of such task team members;
+— its capability and capacity to produce information, based on the relevant experience and training
+of task team members with the asset information production methods and procedures, and the
+number of such task team members; and
+— the availability of information technology (IT) within the task team, based on software and
+hardware requirements set out either in the EIR (ISO 19650-3) or the delivery team’s information
+delivery plan.
+12 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+5.3.4	 Establish the delivery team’s capability and capacity
+The prospective lead appointed party shall establish the delivery team’s capability and capacity by
+aggregating the assessments provided by each task team.
+5.3.5	 Establish the delivery team’s mobilization plan
+The prospective lead appointed party shall establish the delivery team’s mobilization plan, to be
+implemented during mobilization (see 5.5).
+In doing this, the prospective lead appointed party shall consider the delivery team’s approach,
+timescales and responsibilities for:
+— testing and documenting the information production methods and procedures;
+— testing information exchange between task teams;
+— testing information exchange with the appointing party;
+— testing the CDE solution and access to shared information and resources;
+— procuring, implementing, configuring and testing additional software, hardware and IT
+infrastructure;
+— developing additional shared resources to be used by the delivery team;
+— undertaking education and/or training to develop the required capability within the delivery team;
+— recruiting additional task teams or members of task teams to achieve the required capacity within
+the delivery team; and
+— supporting new members (organizations or individuals) that join the delivery team during the
+appointment.
+5.3.6	 Establish the delivery team’s risk register
+The prospective lead appointed party shall establish the delivery team’s risk register in relation to
+production and delivery of information.
+In doing this, the prospective lead appointed party shall consider:
+— assumptions made by the delivery team in its BIM execution plan;
+— the clarity of the appointing party’s EIR (ISO 19650-3); and
+— the requirements of the asset information standard and the asset information production methods
+and procedures.
+NOTE The delivery team’s risk register can be incorporated within other risk registers used during the
+appointment.
+5.3.7	 Compile the delivery team’s response
+The prospective lead appointed party shall compile the following items (where available) into the
+delivery team's response:
+— (pre-appointment) BIM execution plan (5.3.2);
+— capability and capacity assessments (5.3.4);
+— mobilization plan (5.3.5); and
+— risk register (5.3.6).
+© ISO 2020 – All rights reserved 13ISO 19650-3:2020(E)
+5.3.8	 Activities for response to invitation to tender/request to provide service
+Activities for response to invitation to tender/request to provide service are shown in Figure 7.
+Key
+3.1 nominate individuals to undertake information management function
+3.2 establish the delivery team’s (pre-appointment) BIM execution plan
+3.3 assess task team capability and capacity
+3.4 establish the delivery team’s capability and capacity
+3.5 establish the delivery team’s mobilization plan
+3.6 establish the delivery team’s risk register
+3.7 compile the delivery team’s response
+Figure 7 — Information management process — Response to invitation to tender/request to
+provide service
+5.4 Information management process — Appointment
+5.4.1	 Confirm the delivery team’s BIM execution plan
+The lead appointed party shall review and confirm the BIM execution plan prepared in 5.3.2, in
+consultation with each task team. This shall include a review and confirmation of the resources (both
+human and technical) to be deployed during the appointment, and testing of the technical approach to
+be used during information exchange.
+The lead appointed party shall communicate the BIM execution plan to all appointed parties, shall keep
+it under review during the lead appointed party’s appointment and shall update and recirculate it as
+necessary.
+14 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+5.4.2	 Establish the delivery team’s detailed responsibility matrix
+The lead appointed party shall establish a detailed responsibility matrix, to confirm the information to
+be produced, when the information is to be exchanged with whom, and which task team is responsible
+for its production. In doing this, the lead appointed party shall consider:
+— the information delivery milestones;
+— the capability and capacity across the delivery team;
+— the asset information production methods and procedures;
+— the elements of information container breakdown structure allocated to each task team; and
+— the task team dependencies within the information production process.
+5.4.3	 Establish the lead appointed party’s EIR (ISO 19650-3)
+Where a delivery team in the operational phase includes other appointed parties as task teams, the lead
+appointed party shall issue to them appropriate EIR (ISO 19650-3) and the associated considerations as
+described in 5.2.2.
+NOTE See 0.5 and Figure 3 for an explanation of the relationship between a lead appointed party and any
+other appointed parties in a delivery team.
+5.4.4	 Establish the task information delivery plan(s)
+Each task team shall establish, and maintain throughout its appointment, a task information delivery
+plan (TIDP).
+In doing this, each task team shall consider:
+— the asset management information delivery milestones;
+— the task team’s responsibilities within the detailed responsibility matrix;
+— the lead appointed party’s EIR (ISO 19650-3);
+— the availability of reference information and shared resources within the delivery team; and
+— the time the task team will need to produce its information.
+The TIDP shall list and identify for each information container:
+— the unique ID and title;
+— the predecessors or dependencies;
+— the level of information need;
+— the estimated production duration;
+— the information author responsible for its production; and
+— the delivery milestone(s).
+5.4.5	 Establish the master information delivery plan
+The lead appointed party shall aggregate the TIDP from each task team to establish the delivery team’s
+master information delivery plan (MIDP), inform each task team of any changes required to its TIDP,
+and add or update any risks in the delivery team’s risk register informing the appointing party as
+required.
+© ISO 2020 – All rights reserved 15ISO 19650-3:2020(E)
+In doing this, the lead appointed party shall consider:
+— the responsibilities assigned in the detailed responsibility matrix;
+— the information predecessors and dependencies between task teams and any changes to TIDPs
+required as a result;
+— the time needed for the lead appointed party to review and authorize information being delivered; and
+— the time needed for the appointing party to review and accept information being delivered.
+5.4.6	 Complete lead appointed party’s appointment
+The appointing party shall appoint each lead appointed party, allowing sufficient time for the lead
+appointed party to mobilize before information production needs to start.
+In doing this, the appointing party shall consider the capability and capacity of each prospective lead
+appointed party according to its pre-existing evaluation criteria (5.2.4).
+NOTE Assessment of capability and capacity is an important activity to ensure that each delivery team, led
+by a lead appointed party, is able to deliver effective management of information.
+The appointing party shall ensure that the following are included in the completed appointment
+documents for the lead appointed party and managed using change control:
+— the appointing party’s EIR (ISO 19650-3);
+— the asset information standard (including any agreed additions or amendments);
+— the asset information production methods and procedures (including any agreed additions or
+amendments);
+— the asset information protocol (including any agreed additions or amendments);
+— the delivery team’s BIM execution plan; and
+— the delivery team’s MIDP.
+5.4.7	 Complete appointed party’s appointment
+The lead appointed party shall appoint each appointed party, allowing sufficient time for the appointed
+party to mobilize before information production needs to start.
+In doing this, the lead appointed party shall ensure that the following are included in the completed
+appointment documents for the appointed party and managed using change control:
+— the lead appointed party’s EIR (ISO 19650-3);
+— the asset information standard (including any agreed additions or amendments);
+— the asset information production methods and procedures (including any agreed additions or
+amendments);
+— the asset information protocol (including any agreed additions or amendments);
+— the delivery team’s BIM execution plan; and
+— the relevant TIDP.
+5.4.8 Activities for appointment
+Activities for appointment are shown in Figure 8.
+16 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Key
+4.1 confirm the delivery team’s BIM execution plan
+4.2 establish the delivery team’s detailed responsibility matrix
+4.3 establish the lead appointed party’s EIR (ISO 19650-3)
+4.4 establish the task information delivery plans(s)
+4.5 establish the master information delivery plan
+4.6 complete lead appointed party’s appointment
+4.7 complete appointed party’s appointment
+Figure 8 — Information management process — Appointment
+5.5 Information management process — Mobilization
+5.5.1 Mobilize resources
+The lead appointed party shall mobilize the resources, as set out in the delivery team’s mobilization
+plan. In doing this, the lead appointed party shall confirm the resources across the delivery team, and
+in doing this shall consider the approach towards training and education across the delivery team.
+5.5.2	 Mobilize information technology
+The lead appointed party shall mobilize the information technology, as set out in the delivery team’s
+mobilization plan. In doing this, the lead appointed party shall:
+— procure, implement, configure and test software, hardware and IT infrastructure (as required);
+— test the use of the appointing party’s CDE;
+— test the information exchange between task teams; and
+— test the information exchange with the appointing party.
+© ISO 2020 – All rights reserved 17ISO 19650-3:2020(E)
+5.5.3 Test the asset information production methods and procedures
+The lead appointed party shall test the asset information production methods and procedures, as set
+out in the delivery team’s mobilization plan. In doing this, the lead appointed party shall:
+— test and document the asset information production methods and procedures;
+— validate the proposed information container breakdown structure as workable and refine if
+necessary;
+— develop shared resources to be used by the delivery team as necessary; and
+— communicate the asset information production methods and procedures to all task teams within
+their delivery team.
+5.5.4 Maintain resources in readiness for a trigger event
+The lead appointed party shall ensure that all resources (both human and technical) as specified in 5.5.1
+to 5.5.3, will remain in readiness for the occurrence of any trigger event covered by the appointment.
+5.5.5 Activities for mobilization
+Activities for mobilization are shown in Figure 9.
+Key
+5.1 mobilize resources
+5.2 mobilize information technology
+5.3 test the asset information production methods and procedures
+5.4 maintain resources in readiness for a trigger event
+Figure 9 — Information management process — Mobilization
+18 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+5.6 Information management process — Production of information
+5.6.1	 Check availability of reference information and shared resources
+Each task team shall check that they have access to the relevant reference information and shared
+resources, within the CDE, before they generate information. If they do not have access, they shall
+inform the lead appointed party as soon as practicable and assess the potential impact on their TIDP.
+5.6.2 Generate information
+Each task team shall generate information, in the work in progress state, in accordance with their TIDP.
+In doing this, the task team shall:
+a) generate information that:
+— complies with the asset information standard, and
+— is in accordance with the asset information production methods and procedures;
+b) not generate information that:
+— exceeds the required level of information need,
+— extends beyond the allocated element of the information container breakdown structure, and
+— duplicates information generated by other task teams;
+c) coordinate and cross reference all information with information shared with the appropriate
+suitability within the CDE.
+In the event of a coordination issue, the relevant task teams shall collaborate to identify a possible
+resolution. If a resolution cannot be found the task teams shall notify the lead appointed party.
+5.6.3	 Undertake quality assurance check
+Each task team shall undertake a quality assurance check of each information container, in accordance
+with the asset information production methods and procedures and with the asset information
+standard.
+Once the check is complete, the task team shall:
+a) if the check is successful:
+— mark the information container as checked,
+— record the outcome of the check; or
+b) if the check is unsuccessful:
+— reject the information container, and
+— inform the information author of the outcome and corrective action required.
+NOTE 1 Some of these checks can be automated within the CDE.
+NOTE 2 A quality assurance check does not check the accuracy or appropriateness of the information within
+the information container and is not a replacement for review and approval (5.6.4).
+© ISO 2020 – All rights reserved 19ISO 19650-3:2020(E)
+5.6.4 Review information and approve for sharing
+Each task team shall review the information within each information container before sharing the
+information container within the CDE.
+In doing this, the task team shall consider:
+— the EIR (ISO 19650-3) issued to them by the lead appointed party;
+— the required level of information need; and
+— the extent of information needed for coordination by other task teams.
+Once the review is complete, the task team shall:
+a) if the review is successful:
+— assign the status code to indicate the permitted uses (suitability) of the information in the
+information container,
+— approve the information container for sharing; and
+— mark the information container as being in the shared state; or
+b) if the review is unsuccessful:
+— record why the review was unsuccessful,
+— record any amendments for the task team to complete, and
+— reject the information container.
+5.6.5 Review information model
+To facilitate the continuous coordination of information across each element of its information
+model, the delivery team shall undertake an information model review, in accordance with the asset
+information production methods and procedures and the asset information standard.
+In doing this, the delivery team shall consider:
+— the EIR (ISO 19650-3) and acceptance criteria issued to the lead appointed party by the
+appointing party;
+— the EIR (ISO 19650-3) and acceptance criteria issued to the task teams by the lead appointed
+party; and
+— the information containers listed within the delivery team’s MIDP.
+5.6.6	 Authorize information model for delivery to the appointing party
+To enable a decision to authorize the delivery of the delivery team’s information model to the appointing
+party, the lead appointed party shall review the information model in accordance with the asset
+information production methods and procedures and the asset information standard.
+In doing this, the lead appointed party shall consider the same items as were considered by the task
+teams in 5.6.4 and by the delivery team in 5.6.5.
+Once the review is complete, the lead appointed party shall:
+a) if the review is successful:
+— authorize the delivery team’s information model, and
+20 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+— instruct each task team to mark their information containers within the CDE as suitable for
+appointing party acceptance; or
+b) if the review is unsuccessful:
+— record why the review was unsuccessful,
+— reject the information model, and
+— instruct task teams to amend the relevant information containers and resubmit the information
+model for lead appointed party authorization.
+Partial authorization of the delivery team’s information model can lead to coordination issues and it
+is recommended that the lead appointed party either authorizes or rejects the whole delivery team
+information model.
+5.6.7 Activities for production of information
+Activities for production of information are shown in Figure 10.
+Key
+6.1 check availability of reference information and shared resources
+6.2 generate information
+6.3 undertake quality assurance check
+6.4 review information and approve for sharing
+6.5 review information model
+6.6 authorize information model for delivery to the appointing party
+X new information container revision
+Figure 10 — Information management process — Production of information
+© ISO 2020 – All rights reserved 21ISO 19650-3:2020(E)
+5.7	 Information management process — Information model acceptance by
+appointing party
+5.7.1	 Submit information model for appointing party acceptance
+If the process follows branches M or P in Figure 4 the lead appointed party shall submit the delivery
+team’s information model for appointing party acceptance within the CDE.
+If the process follows branch N in Figure 4 the appointing party shall receive the information model
+from the other appointing party or asset owner.
+5.7.2 Review and accept the information model
+The appointing party shall review the information model received in 5.7.1 in accordance with the asset
+information production methods and procedures.
+In doing this, the appointing party shall consider:
+— its AIR (particularly for a process that follows branch N in Figure 4);
+— its EIR (ISO 19650-3) and acceptance criteria issued to the lead appointed party (for a process that
+follows branches M or P in Figure 4);
+— the delivery team’s MIDP (for a process that has followed branches M or P in Figure 4);
+— the level of information need identified as a result of 5.1.6 and 5.4.4; and
+— delivery of information against the above.
+Once the review is complete, the appointing party shall:
+a) if the review is successful:
+— accept the information model as a deliverable within the CDE, and either
+— instruct the lead appointed party to mark each information container in the information model
+as being in the published state (for a process that follows branches M or P in Figure 4), or
+— mark each information container in the information model as being in the published state (for a
+process that follows branch N in Figure 4); or
+b) if the review is unsuccessful:
+— record why the review was unsuccessful,
+— reject the information model, and either
+— instruct the lead appointed party to amend the information model and resubmit it for appointing
+party acceptance (for a process that follows branches M or P in Figure 4), or
+— identify the changes required in the information model and either request the other appointing
+party/asset owner to make those changes or make the changes itself (for a process that follows
+branch N in Figure 4).
+Partial acceptance of an information model can lead to coordination issues and it is recommended that
+the appointing party either accepts or rejects the whole information model submitted by the delivery
+team or received from the other appointing party/asset owner.
+5.7.3	 Activities for information model acceptance by appointing party
+Activities for information model acceptance by appointing party are shown in Figure 11.
+22 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Key
+7.1 submit information model for appointing party acceptance
+7.2 review and accept the information model
+Y information model rejected by appointing party
+Figure 11 — Information management process — Information model acceptance by
+appointing party
+5.8 Information management process — AIM aggregation
+5.8.1 Aggregate an accepted information model into the AIM
+The appointing party shall be responsible for the process to incorporate an accepted information model
+into its AIM and reconcile that information with the existing contents of the AIM, irrespective of its
+source. This shall include a process to incorporate the accepted information model into its existing
+enterprise systems, where appropriate.
+5.8.2 Review and continue maintenance of the AIM
+The appointing party shall review whether the AIM continues to fulfil the requirements of 5.1.11 and
+is being maintained according to 5.1.12. If either of these is not met, then the appointing party shall
+implement appropriate mitigating measures.
+5.8.3 Activities for AIM aggregation
+Activities for AIM aggregation are shown in Figure 12.
+© ISO 2020 – All rights reserved 23ISO 19650-3:2020(E)
+Key
+8.1 aggregate an accepted information model into the AIM
+8.2 review and continue maintenance of the AIM
+Figure 12 — Information management process — AIM aggregation
+24 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+Annex A
+(informative)
+Guidance related to the information management process
+A.1 General
+This annex contains guidance to support some of the requirements contained in Clause 5. The lists in
+A.2 to A.5 are only examples of activities, events, information requirements and systems and should not
+be considered as comprehensive or complete. Appointing parties should use these examples to inform
+the development of their information requirements. Additional guidance is also contained in ISO 55002.
+A.2	 Examples of activities requiring asset information and example
+organizational information requirements
+A wide range of organizational activities, including asset management and facility management
+activities, can lead to the organizational information requirements (OIR) mentioned in 5.1.2. These can
+be grouped according to whether they are strategic, tactical or operational. Doing so can help identify
+both the frequency at which information will be required and the types of stakeholders who require
+it. Organizational views on which activities belong to which group (strategic, tactical, operational) can
+differ, so the following examples have not been grouped:
+— asset accounting, activity costing, forecasting;
+— planning and budgeting;
+— demand management and customer expectation policy;
+— capital investment and life cycle costing;
+— innovation and change management;
+— interfacing with regulatory bodies;
+— publication of asset information for use by the public;
+— asset operation or utilization;
+— asset modifications, refurbishment, replacement, reuse/redeployment, disposal, recycling;
+— spares, materials and purchasing;
+— data, information and knowledge management;
+— contractor and supplier management;
+— human resources, skills development and competencies;
+— maintenance, inspection, condition and performance monitoring;
+— contingency planning and emergencies;
+— energy efficiency and environmental aspects, for example renewable resources, recycling, waste
+management, air purity, hygiene;
+— risk assessment and management; and
+© ISO 2020 – All rights reserved 25ISO 19650-3:2020(E)
+— safety, health and environmental management.
+The following are example OIR, which can also be grouped according to whether they are strategic,
+tactical or operational.
+Information to support:
+— the financial benefits of planned improvement activities;
+— a means to predict the performance of the asset to support operational decision making;
+— the operational and financial impact of asset unavailability or failure;
+— the life cycle cost comparisons of alternative capital investments;
+— expiry dates of warranties;
+— an assessment of the end of an asset’s economic life, for example when the asset related expenditure
+exceeds the associated income;
+— quality targets for the performance of assets;
+— service levels for asset management and facility management;
+— the cost of specific activities (activity-based costing), for example the total cost of maintaining a
+specific asset/asset system;
+— asset replacement values;
+— financial analysis of planned income and expenditure;
+— the financial and resource impact of deviating from plans that can result in a change in asset
+availability or performance (for example what is the financial impact of deferring the maintenance
+of a specific generator by six months?);
+— overall financial performance; and
+— identification, assessment and control of asset related risks.
+NOTE In the context of OIR, the term “organizational” relates to an organization and not to the act of
+organizing something.
+A.3 Example trigger events
+The types of trigger events for which the information management process should be operated will be
+established by the appointing party (5.1.5). Examples of trigger events include:
+— the organization’s decision to manage information relating to an existing asset according to this
+document;
+— performance evaluation of an asset, including failure trends from similar components used
+elsewhere and experience-based learning and feedback from asset performance;
+— inspection of an asset;
+— maintenance work on an asset, whether planned or reactive;
+— minor works on an asset, such as minor repairs, component replacements or minor upgrades;
+— initiating a project to deliver a new asset;
+— major works on an existing asset such as major repairs, refurbishments or major upgrades;
+— creation of a new asset;
+26 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+— asset replacement;
+— end-of-life works, such as decommissioning, demolition or deactivation and preservation;
+— planning for and, where appropriate, implementing an emergency response;
+— risk assessment of an asset;
+— change in value of an asset;
+— change in regulations applying to an asset;
+— change in information demanded by an appropriate regulator;
+— change in organizational requirements relating to the asset, for example change of operating
+parameters or conditions;
+— change in ownership of an asset;
+— change in operator of an asset; and
+— change in maintainer of an asset.
+NOTE As stated in 4.2, it is possible for the information management response to a trigger event to involve
+ISO 19650-2 as well as this document.
+A.4	 Examples of information that can be required within an AIM
+A.4.1 Managerial information
+The following are examples of information that can be required within an AIM to support managerial OIR:
+— unique asset identifiers;
+— locations of the assets, possibly using spatial referencing or geographical information systems;
+— spatial data relating to assets, for example pavement areas, room sizes;
+— warranties and guarantee periods;
+— access planning and work schedules;
+— historical record of proactive and reactive maintenance tasks performed;
+— future schedule of maintenance and inspection tasks including details of overdue tasks, and including
+details of the maintenance organization and details of qualifications/certifications required to
+carry out each task;
+— asset related standards, process(es) and procedure(s);
+— the presence of any hazardous contents or waste;
+— details of asset destination at end of current life;
+— details of emergency plans including responsibilities and contact details; and
+— details of historical asset failures, causes and consequences (if known).
+A.4.2 Technical information
+The following are examples of information that can be required within an AIM to support technical OIR:
+— engineering data and design parameters;
+© ISO 2020 – All rights reserved 27ISO 19650-3:2020(E)
+— details of technical dependencies and interdependencies of assets;
+— commissioning dates and data; and
+— operational data including performance characteristics and design limits.
+A.4.3 Legal information
+The following are examples of information that can be required within an AIM to support legal OIR:
+— details of ownership and maintenance demarcation where assets interface across a system or
+network of assets;
+— work instructions together with diagrams and reporting requirements, legal obligations such as
+health and safety file information, and safety/environmental considerations;
+— asset related contractual information; and
+— task risk assessments and control measures.
+A.4.4 Commercial information
+The following are examples of information that can be required within an AIM to support
+commercial OIR:
+— descriptions of assets and the asset systems they serve;
+— functions of assets, including any interdependencies to the activities that require them;
+— vendor data (details of the organization that supplied the asset) including asset lead time;
+— the condition and duty of assets including intensity of use;
+— key performance indicators;
+— condition and performance targets or standards;
+— criteria of non-conformance and the actions to be taken;
+— the criticality of assets and spaces to the organization; and
+— identities and levels of spares held, inter-changeability, specifications and storage locations.
+A.4.5 Financial information
+The following are examples of information that can be required within an AIM to support financial OIR:
+— whole life costs of asset deployment including cost of historical and planned maintenance tasks;
+— operating costs;
+— downtime impact;
+— current asset replacement value; and
+— original purchase/leasing costs.
+A.5	 Linked enterprise systems
+The nature and extent of existing systems that the appointing party chooses to link in to the AIM (see
+5.1.11) can vary. Examples of functionality provided by enterprise systems include:
+— document management;
+28 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+— work/programme planning and scheduling;
+— computer aided facilities management and asset management;
+— enterprise resource planning;
+— materials management and spares inventory;
+— purchasing;
+— supplier relationship management;
+— customer relationship management;
+— accounting and financial planning;
+— asset utilization;
+— property management;
+— engineering design and modelling;
+— performance reporting;
+— condition monitoring;
+— geographical information systems (GIS) and spatial analysis toolkits (for the analysis of GIS data);
+— asset possession/shutdown/outage planning;
+— supervisory control and data acquisition (SCADA);
+— knowledge management; and
+— staff location, scheduling and despatch.
+© ISO 2020 – All rights reserved 29ISO 19650-3:2020(E)
+Bibliography
+[1] ISO 6707-1, Buildings and civil engineering works — Vocabulary — Part 1: General terms
+[2] ISO 9001, Quality management systems — Requirements
+[3] ISO/IEC 19510, Information technology — Object Management Group Business Process Model and
+Notation
+[4] ISO 21500, Guidance on project management
+[5] ISO 41001, Facility management — Management systems — Requirements with guidance for use
+[6] ISO 41011:2017, Facility management — Vocabulary
+[7] ISO 55000:2014, Asset management — Overview, principles and terminology
+[8] ISO 55001, Asset management — Management systems — Requirements
+[9] ISO 55002, Asset management — Management systems — Guidelines for the application of
+ISO 55001
+30 © ISO 2020 – All rights reservedISO 19650-3:2020(E)
+© ISO 2020 – All rights reserved
+ICS 35.240.67; 91.010.01
+Price based on 30 pages
