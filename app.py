@@ -10,6 +10,13 @@ import requests
 import streamlit as st
 from openai import OpenAI
 
+# RAG imports
+from rag_ingest import DocumentIngester
+from rag_chunking import TextChunker
+from rag_store import VectorStore
+from rag_retriever import DocumentRetriever
+from rag_prompting import RAGPromptBuilder
+
 
 # =========================================================
 # App Identity
@@ -449,6 +456,48 @@ def load_knowledge_into_session() -> None:
     st.session_state.knowledge_ready = bool(knowledge)
 
 
+def init_rag_system() -> None:
+    """Initialize the RAG system with existing knowledge."""
+    try:
+        api_key = st.session_state.get("api_key")
+        if not api_key:
+            st.warning("RAG system requires OpenRouter API key. Please set it in settings.")
+            return
+
+        # Initialize components
+        ingester = DocumentIngester()
+        chunker = TextChunker()
+        vector_store = VectorStore(base_url=OPENROUTER_BASE_URL, api_key=api_key)
+        retriever = DocumentRetriever(vector_store)
+        prompt_builder = RAGPromptBuilder()
+
+        # Index existing ISO knowledge if not already done
+        if not vector_store.load_collection("engineering_docs"):
+            documents = ingester.ingest_directory(str(ISO_KNOWLEDGE_DIR))
+            if documents:
+                chunked_docs = chunker.chunk_documents(documents)
+                vector_store.create_collection("engineering_docs")
+                vector_store.add_documents(chunked_docs)
+
+        # Store in session
+        st.session_state.rag_ingester = ingester
+        st.session_state.rag_chunker = chunker
+        st.session_state.rag_store = vector_store
+        st.session_state.rag_retriever = retriever
+        st.session_state.rag_prompt_builder = prompt_builder
+        st.session_state.rag_initialized = True
+
+    except Exception as e:
+        error_msg = str(e)
+        if "402" in error_msg and "Insufficient credits" in error_msg:
+            st.error("❌ **OpenRouter Credits Required**\n\nYour OpenRouter account needs credits to use the RAG system. Please:\n\n1. Visit [OpenRouter Credits](https://openrouter.ai/settings/credits)\n2. Purchase credits for your account\n3. The RAG system will work once credits are available")
+        elif "401" in error_msg and "User not found" in error_msg:
+            st.error("❌ **Invalid OpenRouter API Key**\n\nThe API key is not recognized. Please:\n\n1. Check your API key at [OpenRouter Keys](https://openrouter.ai/keys)\n2. Ensure you're using the correct account\n3. Generate a new key if needed")
+        else:
+            st.error(f"Failed to initialize RAG system: {e}")
+        st.session_state.rag_initialized = False
+
+
 # =========================================================
 # RTL / Style Helpers
 # =========================================================
@@ -743,6 +792,24 @@ def save_subject(subject: Dict[str, Any]) -> None:
     file_path = SUBJECTS_DIR / f"{subject['id']}.json"
     with file_path.open("w", encoding="utf-8") as f:
         json.dump(subject, f, ensure_ascii=False, indent=2)
+
+    # Ingest subject material into RAG
+    if st.session_state.get("rag_initialized") and subject.get("cleaned_content"):
+        try:
+            chunker = st.session_state.rag_chunker
+            vector_store = st.session_state.rag_store
+
+            # Create document from subject content
+            doc_content = subject["cleaned_content"]
+            metadata = {
+                "subject_id": subject["id"],
+                "subject_title": subject.get("title", ""),
+                "source_type": "user_subject"
+            }
+            langchain_docs = chunker.chunk_text(doc_content, metadata)
+            vector_store.add_documents(langchain_docs)
+        except Exception as e:
+            st.warning(f"Failed to index subject in RAG: {e}")
 
 
 def delete_subject_file(subject_id: str) -> None:
@@ -1162,58 +1229,38 @@ def retrieve_relevant_iso_chunks(
     extra_text: str = "",
     max_chunks: int = 6,
 ) -> List[Dict[str, Any]]:
-    query_text = build_search_query_from_subject(subject, extra_text=extra_text)
-    query_tokens = tokenize_for_match(query_text)
-
-    chunk_index = build_iso_chunk_index()
-    if not chunk_index:
+    """Retrieve relevant chunks using RAG system."""
+    if not st.session_state.get("rag_initialized"):
         return []
 
-    detected_parts = detect_relevant_iso_parts_from_text(query_text)
-    scored_items: List[Dict[str, Any]] = []
+    query_text = build_search_query_from_subject(subject, extra_text=extra_text)
 
-    for chunk in chunk_index:
-        score = score_iso_chunk(query_tokens, chunk)
+    try:
+        retriever = st.session_state.rag_retriever
+        retrieved_docs = retriever.retrieve(query_text, k=max_chunks)
 
-        if detected_parts and chunk.get("part_number") in detected_parts:
-            score += 8
+        # Convert to expected format
+        chunks = []
+        for i, doc in enumerate(retrieved_docs):
+            # Extract part number from metadata or filename
+            part_number = None
+            filename = doc.metadata.get('filename', '')
+            match = re.search(r"part[_\-\s]?(\d+)", filename.lower())
+            if match:
+                part_number = int(match.group(1))
 
-        source_type = subject.get("source_type", "")
-        guidance_focus = subject.get("guidance_focus", "")
+            chunks.append({
+                "part_number": part_number,
+                "chunk_index": i + 1,
+                "chunk_text": doc.page_content,
+                "score": 1.0,  # Simplified scoring
+            })
 
-        if source_type == "iso_standard":
-            score += 5
+        return chunks
 
-        if guidance_focus == "iso_work_guidance":
-            score += 7
-
-        if score > 0:
-            scored = dict(chunk)
-            scored["score"] = score
-            scored_items.append(scored)
-
-    scored_items.sort(
-        key=lambda x: (
-            int(x.get("score", 0)),
-            int(x.get("part_number") or 0),
-            int(x.get("chunk_index") or 0),
-        ),
-        reverse=True,
-    )
-
-    selected: List[Dict[str, Any]] = []
-    used_keys = set()
-
-    for item in scored_items:
-        key = (item.get("part_number"), item.get("chunk_index"))
-        if key in used_keys:
-            continue
-        used_keys.add(key)
-        selected.append(item)
-        if len(selected) >= max_chunks:
-            break
-
-    return selected
+    except Exception as e:
+        st.error(f"RAG retrieval failed: {e}")
+        return []
 
 
 def build_iso_context_block(subject: Dict[str, Any], extra_text: str = "") -> str:
@@ -1918,6 +1965,8 @@ def process_user_input(
     subject: Optional[Dict[str, Any]],
     texts: Dict[str, str],
 ) -> Dict[str, Any]:
+    raw = normalize_user_input(user_input)
+
     if state == "awaiting_material":
         return {
             "next_state": "awaiting_pages",
@@ -1926,7 +1975,6 @@ def process_user_input(
         }
 
     if state == "awaiting_pages":
-        raw = normalize_user_input(user_input)
 
         try:
             pages = int(raw)
@@ -2343,6 +2391,10 @@ def render_runtime_settings(subject: Dict[str, Any]) -> Optional[OpenAI]:
             st.session_state.api_key = api_key_input
             st.session_state.available_models = []
             st.session_state.selected_model = None
+            # Re-initialize RAG system with new API key
+            st.session_state.rag_initialized = False
+            if api_key_input:
+                init_rag_system()
 
         st.markdown(f"[{texts['get_key']}]({OPENROUTER_KEYS_URL})")
 
@@ -3001,6 +3053,10 @@ def load_runtime_data() -> None:
 
     if not st.session_state.get("iso_knowledge"):
         load_knowledge_into_session()
+
+    # Initialize RAG system only if API key is available
+    if not st.session_state.get("rag_initialized") and st.session_state.get("api_key"):
+        init_rag_system()
 
 
 def prepare_app_session() -> None:

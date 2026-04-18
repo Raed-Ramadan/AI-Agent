@@ -13,6 +13,7 @@ A production-minded Streamlit app that serves as a structured teaching system fo
 - **OpenRouter Integration**: Uses OpenRouter for AI-powered explanations with free model filtering.
 - **Streaming Responses**: Buffered streaming output for teaching content.
 - **Export Options**: Export lesson content as TXT or JSON.
+- **RAG-Enhanced Knowledge**: Retrieval-Augmented Generation for context-aware responses using indexed engineering documents.
 - **Clean Minimal UI**: Professional, educational interface inspired by Visual Studio Code.
 
 ## What Makes It Different
